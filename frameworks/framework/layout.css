@@ -1,0 +1,548 @@
+@namespace oxy "http://www.oxygenxml.com/extensions/author";
+@namespace xi url('http://www.w3.org/2001/XInclude');
+@media oxygen AND (min-width : 25cm) {
+/* ---------------------------------------------------------- PAGE ----------------------------------------------------------*/
+	oxy|document {
+		background-color: #fbfbfb;
+	}
+	TEI {
+		border: 1px solid #c6c6c6;
+		background-color: white;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0.25in;
+		margin-bottom: 0.25in;
+		width: 27cm;
+		min-height: 10cm;
+	}
+	/* Padding inside the page. */
+	TEI {
+		padding-top: 2em;
+		padding-right: 1em;
+		padding-left: 2em;
+		padding-bottom: 5em;
+	}
+}
+/* ---------------------------------------------------------- DETAILS ----------------------------------------------------------*/
+TEI {
+	background-color: white;
+	-oxy-display-tags: none !important;
+	color: black;
+	font-family: 'Roboto', 'Helvetica', sans-serif;
+	font-size: 11pt;
+}
+* {
+	-oxy-display-tags: none;
+}
+/* --------- HIDE -----------*/
+text,
+publicationStmt,
+publicationStmt *,
+teiHeader listBibl,
+teiHeader revisionDesc {
+	display: none;
+	/*display:block;
+border:solid gray 0.1px;
+color:gray;
+-oxy-editable: false;
+background-color: #f2f2f2;*/
+}
+/*######################################################### MAIN ###################################################*/
+/* ---------------------------------------------------------- BLOCK / BOXED ----------------------------------------------------------*/
+titleStmt,
+msIdentifier,
+msItem,
+objectDesc,
+decoNote,
+history {
+	display: block;
+	border: solid black 0.1px;
+	padding: 5px;
+}
+/* ---------------------------------------------------------- LABELS ----------------------------------------------------------*/
+TEI:before {
+	font-weight: bold;
+	font-size: 14pt;
+	content: 'Compendium - Transcript'
+}
+titleStmt:before {
+	font-weight: bold;
+	font-size: 14pt;
+	content: 'Title'
+}
+msIdentifier:before {
+	font-weight: bold;
+	font-size: 14pt;
+	content: 'Manuscript'
+}
+msItem[*|id]:before {
+	font-weight: bold;
+	font-size: 14pt;
+	content: attr(*|id)
+}
+msItem[n]:before {
+	font-weight: bold;
+	font-size: 14pt;
+	content: oxy_concat(attr(n), ' (corresp: ')
+ oxy_editor(type, text, 
+edit, "@corresp", 
+width, 10%, 
+fontInherit, true)
+ ')';
+}
+objectDesc:before {
+	font-weight: bold;
+	font-size: 14pt;
+	content: 'Materiality'
+}
+decoNote:before {
+	font-weight: bold;
+	font-size: 14pt;
+	content: oxy_concat('Decoration (', attr(type), ')')
+}
+history:before {
+	font-weight: bold;
+	font-size: 14pt;
+	content: 'History/Provenance'
+}
+/* ---------------------------------------------------------- COLLAPSE / SHOW TEXT ----------------------------------------------------------*/
+msDesc *,
+titleStmt * {
+	visibility: -oxy-collapse-text;
+}
+msDesc p,
+layout {
+	visibility: visible;
+}
+/*######################################################### FORM ###################################################*/
+/* ---------------------------------------------------------- BLOCK ----------------------------------------------------------*/
+titleStmt > title,
+titleStmt > author,
+msIdentifier > settlement > placeName,
+msIdentifier > settlement > country,
+msIdentifier > repository,
+msIdentifier > idno,
+msIdentifier > altIdentifier > idno,
+msItem > locus,
+msItem > incipt,
+msItem > explicit,
+msItem > title,
+msItem > textLang,
+msItem > note,
+msItem > note > p,
+supportDesc,
+supportDesc material,
+supportDesc height,
+supportDesc width,
+supportDesc condition,
+supportDesc condition > p,
+layoutDesc,
+layout,
+decoNote > p,
+decoNote figure,
+origin > date
+{
+	display: block;
+}
+/* ---------------------------------------------------------- LABELS ----------------------------------------------------------*/
+titleStmt > title:before,
+msItem[n] > title:before {
+	display: inline-block;
+	width: 20%;
+	content: "Title:"
+}
+titleStmt > author:before,
+msItem > author:before {
+	display: inline-block;
+	width: 20%;
+	content: "Author:"
+}
+msIdentifier > settlement > placeName:before {
+	display: inline-block;
+	width: 20%;
+	content: "City:"
+}
+msIdentifier > settlement > country:before {
+	display: inline-block;
+	width: 20%;
+	content: "Country:"
+}
+msIdentifier > repository:before {
+	display: inline-block;
+	width: 20%;
+	content: "Institution:"
+}
+msIdentifier > idno:before {
+	display: inline-block;
+	width: 20%;
+	content: "Shelfmark"
+}
+msIdentifier > altIdentifier > idno:before {
+	display: inline-block;
+	width: 20%;
+	content: "(?) Alt.Identifier (Link):"
+}
+msItem > locus:before {
+	display: inline-block;
+	width: 20%;
+	content: "Foliation:"
+}
+msItem > incipit:before {
+	display: inline-block;
+	width: 20%;
+	content: "Incipit:"
+}
+msItem > explicit:before {
+	display: inline-block;
+	width: 20%;
+	content: "Explicit:"
+}
+msItem[*|id] > title[type = uniform]:before {
+	display: inline-block;
+	width: 20%;
+	content: "Title (uniform):"
+}
+msItem[*|id] > title[type = archival]:before {
+	display: inline-block;
+	width: 20%;
+	content: "Title (archival):"
+}
+msItem > textLang:before {
+	display: inline-block;
+	width: 20%;
+	content: "Main Text Language:"
+}
+msItem > note:before {
+	display: inline-block;
+	width: 20%;
+	content: oxy_concat('Note (', attr(type), '): ');
+}
+supportDesc:before {
+	display: inline-block;
+	width: 20%;
+	content: "Material (short):"
+}
+supportDesc material:before {
+	display: inline-block;
+	width: 20%;
+	content: "Material (full):"
+}
+height:before {
+	display: inline-block;
+	width: 20%;
+	content: "Height:"
+}
+width:before {
+	display: inline-block;
+	width: 20%;
+	content: "Width:"
+}
+condition:before {
+	display: inline-block;
+	width: 20%;
+	content: "Condition:"
+}
+layoutDesc:before {
+	display: inline-block;
+	width: 20%;
+	content: "Layout Description:"
+}
+origin > date:before {
+	display: inline-block;
+	width: 20%;
+	content: "Date:"
+}
+/* ---------------------------------------------------------- CONTENT ----------------------------------------------------------*/
+titleStmt > title {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 70%, fontInherit, true)
+}
+titleStmt > author {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 40%, 
+fontInherit, true)
+ oxy_label(
+text, " ID: ")
+ oxy_editor(type, text, 
+edit, '@ref', 
+width, 20%, 
+fontInherit, true)
+}
+msIdentifier > settlement > placeName {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 70%, 
+fontInherit, true)
+}
+msIdentifier > settlement > country {
+	content: 
+	oxy_editor(type, combo, 
+edit, '#text', 
+editable, false, 
+values, ',CH'
+ width, 70%, 
+fontInherit, true)
+}
+msIdentifier > repository {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 70%, 
+fontInherit, true)
+}
+msIdentifier > idno {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 40%, 
+fontInherit, true)
+}
+msIdentifier > altIdentifier > idno {
+	content: 
+	oxy_editor(type, text, 
+edit, "@corresp", 
+width, 70%, 
+fontInherit, true)
+}
+msItem[*|id] > locus {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 20%, 
+fontInherit, true)
+ oxy_label(
+text, " from: ")
+ oxy_editor(type, text, 
+edit, "@from", 
+width, 20%, 
+fontInherit, true)
+ oxy_label(
+text, " to: ")
+ oxy_editor(type, text, 
+edit, "@to", 
+width, 20%, 
+fontInherit, true)
+}
+msItem[n] > locus {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 20%, 
+fontInherit, true)
+}
+msItem > incipit,
+msItem > explicit {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 70%, 
+fontInherit, true)
+}
+msItem > author {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 40%, 
+fontInherit, true)
+ oxy_label(
+text, " language: ")
+ oxy_editor(type, combo, 
+edit, '@xml:lang', 
+editable, false, 
+values, ',la,en,de'
+ width, 20%, 
+fontInherit, true)
+}
+msItem[*|id] > title {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 40%, 
+fontInherit, true)
+ oxy_label(
+text, " language: ")
+ oxy_editor(type, combo, 
+edit, '@xml:lang', 
+editable, false, 
+values, ',la,en,de'
+ width, 20%, 
+fontInherit, true)
+}
+msItem[n] > title {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 40%, 
+fontInherit, true)
+}
+msItem > textLang {
+	content: 
+	oxy_editor(type, combo, 
+edit, '@xml:lang', 
+editable, false, 
+values, ',Latin,English,German'
+ width, 40%, 
+fontInherit, true)
+ oxy_label(
+text, " language: ")
+ oxy_editor(type, combo, 
+edit, '@mainLang', 
+editable, false, 
+values, ',la,en,de'
+ width, 20%, 
+fontInherit, true)
+}
+msItem > note {
+	content: 
+	oxy_editor(type, button, 
+actionID, add_p, 
+transparent, true, 
+color, #FFFFFF)
+}
+supportDesc {
+	content: 
+	oxy_editor(type, combo, 
+edit, '@material', 
+editable, false, 
+values, ',parch'
+ width, 10%, 
+fontInherit, true);
+}
+supportDesc material {
+	content: 
+	oxy_editor(type, combo, 
+edit, '#text', 
+editable, false, 
+values, ',Parchment'
+ width, 20%, 
+fontInherit, true)
+}
+supportDesc height,
+supportDesc width {
+	content: 
+	oxy_editor(type, text, 
+edit, '@quantity', 
+width, 10%, 
+fontInherit, true
+)
+ oxy_editor(type, combo, 
+edit, '@unit', 
+editable, false, 
+values, ',mm,cm'
+ width, 5%, 
+fontInherit, true
+)
+ oxy_label(
+text, ' (?) quantity+unit): '
+)
+ oxy_editor(type, text, 
+edit, '#text', 
+width, 20%, 
+fontInherit, true)
+	;
+}
+supportDesc > condition {
+	content: 
+	oxy_editor(type, combo, 
+edit, '@n', 
+editable, false, 
+values, ',fragm'
+ width, 10%, 
+fontInherit, true
+)
+}
+decoNote {
+	content: 
+	oxy_editor(type, button, 
+actionID, add_figure, 
+transparent, true, 
+color, #FFFFFF)
+}
+decoNote figure {
+	margin-left: 20%;
+	content: 
+	oxy_editor(type, combo, 
+edit, '@corresp', 
+editable, false, 
+values, ',#A,#E,#T,#J,#CA'
+ width, 10%, 
+fontInherit, true
+)
+}
+decoNote label {
+	content: 
+	oxy_editor(type, text, 
+edit, "#text", 
+width, 80%, 
+fontInherit, true)
+}
+origin {
+	content: 
+	oxy_editor(type, button, 
+actionID, add_date_when, 
+transparent, true, 
+color, #FFFFFF)
+ oxy_editor(type, button, 
+actionID, add_date_range, 
+transparent, true, 
+color, #FFFFFF)
+}
+origin > date[when] {
+	content: 
+	oxy_editor(type, text, 
+edit, '#text', 
+width, 20%, 
+fontInherit, true)
+ oxy_label(
+text, ' when: '
+)
+ oxy_editor(type, text, 
+edit, '@when', 
+width, 10%, 
+fontInherit, true)
+oxy_label(
+text, ' [Format: 0000-00-00]',
+styles,'font-size:smaller;'
+)
+	;
+}
+origin > date[notBefore] {
+	content: 
+	oxy_editor(type, text, 
+edit, '#text', 
+width, 20%, 
+fontInherit, true)
+ oxy_label(
+text, ' not before: '
+)
+ oxy_editor(type, text, 
+edit, '@notBefore', 
+width, 10%, 
+fontInherit, true)
+ oxy_label(
+text, ' and not after: '
+)
+ oxy_editor(type, text, 
+edit, '@notAfter', 
+width, 10%, 
+fontInherit, true)
+oxy_label(
+text, ' [Format: 0000-00-00]',
+styles,'font-size:smaller;'
+)
+	;
+}
+/* --------------------------- p-like ---------------------------*/
+msItem > note > p,
+supportDesc > condition > p,
+layoutDesc > layout,
+decoNote > p {
+	background-color: #ebfaeb;
+	padding: 5px;
+	margin-left: 20%;
+}
