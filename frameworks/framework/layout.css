@@ -34,6 +34,9 @@ TEI {
 * {
 	-oxy-display-tags: none;
 }
+oxy|comment {
+    display:none !important;
+}
 /* --------- HIDE -----------*/
 text,
 publicationStmt,
@@ -80,7 +83,7 @@ msItem[*|id]:before {
 	font-size: 14pt;
 	content: attr(*|id)
 }
-msItem[n]:before {
+msItem[corresp]:before {
 	font-weight: bold;
 	font-size: 14pt;
 	content: oxy_concat(attr(n), ' (corresp: ')
@@ -140,13 +143,14 @@ layoutDesc,
 layout,
 decoNote > p,
 decoNote figure,
-origin > date
+origin > date,
+provenance > p
 {
 	display: block;
 }
 /* ---------------------------------------------------------- LABELS ----------------------------------------------------------*/
 titleStmt > title:before,
-msItem[n] > title:before {
+msItem[corresp] > title:before {
 	display: inline-block;
 	width: 20%;
 	content: "Title:"
@@ -175,16 +179,17 @@ msIdentifier > repository:before {
 msIdentifier > idno:before {
 	display: inline-block;
 	width: 20%;
-	content: "Shelfmark"
+	content: "Shelfmark:"
 }
 msIdentifier > altIdentifier > idno:before {
 	display: inline-block;
 	width: 20%;
-	content: "(?) Alt.Identifier (Link):"
+	content: "Alt.Identifier (URL):"
 }
 msItem > locus:before {
 	display: inline-block;
 	width: 20%;
+	color: black;
 	content: "Foliation:"
 }
 msItem > incipit:before {
@@ -230,11 +235,13 @@ supportDesc material:before {
 height:before {
 	display: inline-block;
 	width: 20%;
+	color:black;
 	content: "Height:"
 }
 width:before {
 	display: inline-block;
 	width: 20%;
+	color:black;
 	content: "Width:"
 }
 condition:before {
@@ -247,11 +254,17 @@ layoutDesc:before {
 	width: 20%;
 	content: "Layout Description:"
 }
-origin > date:before {
+origin > date[when]:before {
 	display: inline-block;
 	width: 20%;
-	content: "Date:"
+	content: "Date (exact):"
 }
+origin > date[notBefore]:before {
+	display: inline-block;
+	width: 20%;
+	content: "Date (range):"
+}
+
 /* ---------------------------------------------------------- CONTENT ----------------------------------------------------------*/
 titleStmt > title {
 	content: 
@@ -263,13 +276,13 @@ titleStmt > author {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
-width, 40%, 
+width, 30%, 
 fontInherit, true)
  oxy_label(
-text, " ID: ")
+text, " Ref. (URL): ")
  oxy_editor(type, text, 
 edit, '@ref', 
-width, 20%, 
+width, 30%, 
 fontInherit, true)
 }
 msIdentifier > settlement > placeName {
@@ -284,7 +297,7 @@ msIdentifier > settlement > country {
 	oxy_editor(type, combo, 
 edit, '#text', 
 editable, false, 
-values, ',CH'
+values, ',CH,AUT,DE'
  width, 70%, 
 fontInherit, true)
 }
@@ -310,25 +323,32 @@ width, 70%,
 fontInherit, true)
 }
 msItem[*|id] > locus {
+	visibility: visible;
+color:gray;
 	content: 
-	oxy_editor(type, text, 
-edit, "#text", 
-width, 20%, 
-fontInherit, true)
- oxy_label(
-text, " from: ")
- oxy_editor(type, text, 
+	oxy_label(
+text, " from: ",
+styles, 'color:black;')
+
+oxy_editor(type, text, 
 edit, "@from", 
 width, 20%, 
 fontInherit, true)
+
  oxy_label(
-text, " to: ")
+text, " to: ",
+styles, 'color:black;')
+
  oxy_editor(type, text, 
 edit, "@to", 
 width, 20%, 
 fontInherit, true)
+
+oxy_label(
+text, ' = '
+)
 }
-msItem[n] > locus {
+msItem[corresp] > locus {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
@@ -354,7 +374,7 @@ text, " language: ")
  oxy_editor(type, combo, 
 edit, '@xml:lang', 
 editable, false, 
-values, ',la,en,de'
+values, ',la,en,de,fr,el'
  width, 20%, 
 fontInherit, true)
 }
@@ -369,11 +389,11 @@ text, " language: ")
  oxy_editor(type, combo, 
 edit, '@xml:lang', 
 editable, false, 
-values, ',la,en,de'
+values, ',la,en,de,fr,el'
  width, 20%, 
 fontInherit, true)
 }
-msItem[n] > title {
+msItem[corresp] > title {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
@@ -409,7 +429,7 @@ supportDesc {
 	oxy_editor(type, combo, 
 edit, '@material', 
 editable, false, 
-values, ',parch'
+values, ',parchment'
  width, 10%, 
 fontInherit, true);
 }
@@ -424,26 +444,31 @@ fontInherit, true)
 }
 supportDesc height,
 supportDesc width {
+	visibility: visible;
+/*-oxy-editable:false;*/
+color:gray;
 	content: 
 	oxy_editor(type, text, 
-edit, '@quantity', 
+edit, '@quantity',
+editable, true,
 width, 10%, 
 fontInherit, true
 )
- oxy_editor(type, combo, 
-edit, '@unit', 
-editable, false, 
-values, ',mm,cm'
- width, 5%, 
-fontInherit, true
-)
  oxy_label(
-text, ' (?) quantity+unit): '
+text, ' (mm) ',
+styles, 'color:black;'
 )
- oxy_editor(type, text, 
-edit, '#text', 
-width, 20%, 
-fontInherit, true)
+oxy_label(
+text, ' = '
+)
+
+/*
+oxy_editor(type, text, 
+edit, '#text',
+width, 10%, 
+fontInherit, true,
+styles, 'color:gray;'
+)*/
 	;
 }
 supportDesc > condition {
@@ -451,7 +476,7 @@ supportDesc > condition {
 	oxy_editor(type, combo, 
 edit, '@n', 
 editable, false, 
-values, ',fragm'
+values, ',fragm,comp,incomp,unclear'
  width, 10%, 
 fontInherit, true
 )
@@ -469,8 +494,8 @@ decoNote figure {
 	oxy_editor(type, combo, 
 edit, '@corresp', 
 editable, false, 
-values, ',#A,#E,#T,#J,#CA'
- width, 10%, 
+values, ',#jerusalem,#ark,#tribes,#encampments,#christ-apostles,#jerusalem-TA,#jerusalem-TB,#jerusalem-TC,#jerusalem-TD,#jerusalem-TE,#jerusalem-TF,#ark-VA,#ark-VB,#ark-VC,#encampments-TA,#encampments-TB,#encampments-TC,#tribes-TA,#tribes-TB,#tribes-TC,#tribes-TD,#tribes-TE,#tribes-TF,#christ-apostles-VA,#christ-apostles-VB,#christ-apostles-VC,#christ-apostles-VD,#christ-apostles-VE,#christ-apostles-VF'
+ width, 20%, 
 fontInherit, true
 )
 }
@@ -478,7 +503,7 @@ decoNote label {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
-width, 80%, 
+width, 70%, 
 fontInherit, true)
 }
 origin {
@@ -541,7 +566,8 @@ styles,'font-size:smaller;'
 msItem > note > p,
 supportDesc > condition > p,
 layoutDesc > layout,
-decoNote > p {
+decoNote > p,
+provenance > p{
 	background-color: #ebfaeb;
 	padding: 5px;
 	margin-left: 20%;
