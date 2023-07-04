@@ -57,7 +57,8 @@ msIdentifier,
 msItem,
 objectDesc,
 decoNote,
-history {
+history,
+additional{
 	display: block;
 	border: solid black 0.1px;
 	padding: 5px;
@@ -86,11 +87,12 @@ msItem[*|id]:before {
 msItem[corresp]:before {
 	font-weight: bold;
 	font-size: 14pt;
-	content: oxy_concat(attr(n), ' (corresp: ')
+	content: oxy_concat(attr(type), ' (corresp: ')
  oxy_editor(type, text, 
 edit, "@corresp", 
-width, 10%, 
-fontInherit, true)
+width, 20%, 
+fontInherit, true
+)
  ')';
 }
 objectDesc:before {
@@ -264,33 +266,43 @@ origin > date[notBefore]:before {
 	width: 20%;
 	content: "Date (range):"
 }
+surrogates:before {
+	display: inline-block;
+	width: 20%;
+	color:black;
+	content: "Surrogates (URL):"
+}
 
 /* ---------------------------------------------------------- CONTENT ----------------------------------------------------------*/
 titleStmt > title {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
-width, 70%, fontInherit, true)
+width, 70%, fontInherit, true
+)
 }
 titleStmt > author {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
 width, 30%, 
-fontInherit, true)
+fontInherit, true
+)
  oxy_label(
 text, " Ref. (URL): ")
  oxy_editor(type, text, 
 edit, '@ref', 
 width, 30%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msIdentifier > settlement > placeName {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
 width, 70%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msIdentifier > settlement > country {
 	content: 
@@ -299,28 +311,32 @@ edit, '#text',
 editable, false, 
 values, ',CH,AUT,DE'
  width, 70%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msIdentifier > repository {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
 width, 70%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msIdentifier > idno {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
 width, 40%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msIdentifier > altIdentifier > idno {
 	content: 
 	oxy_editor(type, text, 
 edit, "@corresp", 
 width, 70%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msItem[*|id] > locus {
 	visibility: visible;
@@ -333,7 +349,8 @@ styles, 'color:black;')
 oxy_editor(type, text, 
 edit, "@from", 
 width, 20%, 
-fontInherit, true)
+fontInherit, true
+)
 
  oxy_label(
 text, " to: ",
@@ -342,7 +359,8 @@ styles, 'color:black;')
  oxy_editor(type, text, 
 edit, "@to", 
 width, 20%, 
-fontInherit, true)
+fontInherit, true
+)
 
 oxy_label(
 text, ' = '
@@ -353,7 +371,8 @@ msItem[corresp] > locus {
 	oxy_editor(type, text, 
 edit, "#text", 
 width, 20%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msItem > incipit,
 msItem > explicit {
@@ -361,14 +380,16 @@ msItem > explicit {
 	oxy_editor(type, text, 
 edit, "#text", 
 width, 70%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msItem > author {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
 width, 40%, 
-fontInherit, true)
+fontInherit, true
+)
  oxy_label(
 text, " language: ")
  oxy_editor(type, combo, 
@@ -376,14 +397,16 @@ edit, '@xml:lang',
 editable, false, 
 values, ',la,en,de,fr,el'
  width, 20%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msItem[*|id] > title {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
 width, 40%, 
-fontInherit, true)
+fontInherit, true
+)
  oxy_label(
 text, " language: ")
  oxy_editor(type, combo, 
@@ -391,14 +414,16 @@ edit, '@xml:lang',
 editable, false, 
 values, ',la,en,de,fr,el'
  width, 20%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msItem[corresp] > title {
 	content: 
 	oxy_editor(type, text, 
 edit, "#text", 
 width, 40%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msItem > textLang {
 	content: 
@@ -407,7 +432,8 @@ edit, '@xml:lang',
 editable, false, 
 values, ',Latin,English,German'
  width, 40%, 
-fontInherit, true)
+fontInherit, true
+)
  oxy_label(
 text, " language: ")
  oxy_editor(type, combo, 
@@ -415,7 +441,8 @@ edit, '@mainLang',
 editable, false, 
 values, ',la,en,de'
  width, 20%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 msItem > note {
 	content: 
@@ -431,7 +458,8 @@ edit, '@material',
 editable, false, 
 values, ',parchment'
  width, 10%, 
-fontInherit, true);
+fontInherit, true
+);
 }
 supportDesc material {
 	content: 
@@ -440,7 +468,8 @@ edit, '#text',
 editable, false, 
 values, ',Parchment'
  width, 20%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 supportDesc height,
 supportDesc width {
@@ -481,10 +510,24 @@ values, ',fragm,comp,incomp,unclear'
 fontInherit, true
 )
 }
-decoNote {
+decoNote[type=miniatures] {
 	content: 
 	oxy_editor(type, button, 
-actionID, add_figure, 
+actionID, add_figure_miniature, 
+transparent, true, 
+color, #FFFFFF)
+}
+decoNote[type=graph] {
+	content: 
+	oxy_editor(type, button, 
+actionID, add_figure_graph, 
+transparent, true, 
+color, #FFFFFF)
+}
+decoNote[type=diagrams] {
+	content: 
+	oxy_editor(type, button, 
+actionID, add_figure_diagram, 
 transparent, true, 
 color, #FFFFFF)
 }
@@ -504,7 +547,8 @@ decoNote label {
 	oxy_editor(type, text, 
 edit, "#text", 
 width, 70%, 
-fontInherit, true)
+fontInherit, true
+)
 }
 origin {
 	content: 
@@ -522,14 +566,16 @@ origin > date[when] {
 	oxy_editor(type, text, 
 edit, '#text', 
 width, 20%, 
-fontInherit, true)
+fontInherit, true
+)
  oxy_label(
 text, ' when: '
 )
  oxy_editor(type, text, 
 edit, '@when', 
 width, 10%, 
-fontInherit, true)
+fontInherit, true
+)
 oxy_label(
 text, ' [Format: 0000-00-00]',
 styles,'font-size:smaller;'
@@ -541,26 +587,46 @@ origin > date[notBefore] {
 	oxy_editor(type, text, 
 edit, '#text', 
 width, 20%, 
-fontInherit, true)
+fontInherit, true
+)
  oxy_label(
 text, ' not before: '
 )
  oxy_editor(type, text, 
 edit, '@notBefore', 
 width, 10%, 
-fontInherit, true)
+fontInherit, true
+)
  oxy_label(
 text, ' and not after: '
 )
  oxy_editor(type, text, 
 edit, '@notAfter', 
 width, 10%, 
-fontInherit, true)
+fontInherit, true
+)
 oxy_label(
 text, ' [Format: 0000-00-00]',
 styles,'font-size:smaller;'
 )
 	;
+}
+surrogates {
+visibility: visible;
+color:gray;
+	content: 
+	oxy_editor(type, text, 
+edit, '@corresp', 
+width, 70%, 
+fontInherit, true
+)
+oxy_label(
+text, '',
+width, 20%
+)
+oxy_label(
+text, '= '
+)
 }
 /* --------------------------- p-like ---------------------------*/
 msItem > note > p,
