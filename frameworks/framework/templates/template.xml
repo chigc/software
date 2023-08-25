@@ -1,3 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="out/chigc_tei.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" rendition="chigc_transcript"><teiHeader><fileDesc><titleStmt><title type="main" ana="rdfs:label"/><author ref=""/></titleStmt><publicationStmt><publisher><ref target="https://uni-tuebingen.de"/><orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName></publisher><publisher><ref target="https://www.uni-wuppertal.de"/><orgName ref="https://d-nb.info/gnd/64944-2">University of Wuppertal</orgName></publisher><publisher><ref target="https://informationsmodellierung.uni-graz.at"/><orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName></publisher><authority><ref target="https://uni-tuebingen.de"/><orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName></authority><authority><ref target="https://informationsmodellierung.uni-graz.at"/><orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName></authority><distributor><ref target="https://gams.uni-graz.at"/><orgName>GAMS - Geisteswissenschaftliches Asset Management System</orgName></distributor><availability><licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence><licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</licence></availability><pubPlace>Graz/Tübingen/Wuppertal</pubPlace><date when="2023">2023</date><idno type="PID" ana="dcterms:identifier"/><ref target="info:fedora/context:chigc" type="context"/><ref target="info:fedora/context:chigc.ed" type="context"/></publicationStmt><sourceDesc><msDesc><msIdentifier><settlement><placeName ana="dcterms:location"/><country ana="dcterms:location"/></settlement><repository ana="ead:repository"/><idno type="signature" ana="dcterms:identifier"/><altIdentifier><idno type="URI" corresp=""/></altIdentifier></msIdentifier><msContents><msItem xml:id="comp-hist" ana="chigc:Item"><locus from="" to=""/><incipit/><explicit/><author xml:lang=""/><title type="uniform" xml:lang="" ana="rdfs:label"/><title type="archival" xml:lang=""/><textLang ana="dcterms:language" mainLang=""/><note type="citation"/><note type="internal"/><note type="external"/><note type="extension"/></msItem><msItem type="co-transmission" corresp="" ana="chigc:Item"><locus/><title/></msItem><msItem type="transmission-context" corresp="" ana="chigc:Item"><locus/><title/></msItem></msContents><physDesc><objectDesc ana="chigc:manifestationType" form=""><supportDesc ana="dcterms:medium" material=""><support ana="dcterms:PhysicalMedium"><material ana="rdf:type"/></support><extent ana="memo:sizeMeasurement"><height ana="memo:hasLength" unit="" quantity=""/><width unit="" ana="memo:hasWitdh" quantity=""/></extent><condition ana="chigc:condition" type=""><p/></condition></supportDesc><layoutDesc><layout/></layoutDesc></objectDesc><decoDesc><decoNote type="diagrams" corresp="#comp-hist"><p/><figure corresp="" ana="chigc:diagram"><label ana="rdfs:label"/></figure></decoNote><decoNote type="miniatures" corresp="#comp-hist"/><decoNote type="graph" corresp="#comp-hist"/> </decoDesc></physDesc><history><origin/><provenance><p/></provenance></history><additional><surrogates corresp="" type="metadata" ana="chigc:description"/></additional></msDesc><listBibl/></sourceDesc></fileDesc><revisionDesc status="draft"><change when=""><p>Table-data transformed to TEI-File per Entry with MsDesc</p></change></revisionDesc></teiHeader><text><body/></text></TEI>
+<TEI rendition="chigc_transcript" xmlns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main"/>
+                <author ref="https://viaf.org/viaf/17579848/">Peter of Poitiers</author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <ref target="https://uni-tuebingen.de"/>
+                    <orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName>
+                </publisher>
+                <publisher>
+                    <ref target="https://www.uni-wuppertal.de"/>
+                    <orgName ref="https://d-nb.info/gnd/64944-2">University of Wuppertal</orgName>
+                </publisher>
+                <publisher>
+                    <ref target="https://informationsmodellierung.uni-graz.at"/>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
+                </publisher>
+                <authority>
+                    <ref target="https://uni-tuebingen.de"/>
+                    <orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName>
+                </authority>
+                <authority>
+                    <ref target="https://informationsmodellierung.uni-graz.at"/>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
+                </authority>
+                <distributor>
+                    <ref target="https://gams.uni-graz.at"/>
+                    <orgName> GAMS - Geisteswissenschaftliches Asset Management System </orgName>
+                </distributor>
+                <availability>
+                    <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
+                    <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 </licence>
+                </availability>
+                <pubPlace> Graz/Tübingen/Wuppertal</pubPlace>
+                <date when="2023">2023</date>
+                <idno ana="dcterms:identifier" type="PID"/>
+                <ref target="info:fedora/context:chigc" type="context"/>
+                <ref target="info:fedora/context:chigc.ed" type="context"/>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement>
+                            <placeName ana="dcterms:location">Aufbewahrungsort</placeName>
+                            <country ana="dcterms:location">Land</country>
+                        </settlement>
+                        <repository ana="ead:repository"/>
+                        <idno ana="dcterms:identifier" type="signature"/>
+                        <altIdentifier>
+                            <!-- alternative -->
+                            <idno ana="chigc:hasSigla" type="sigla">Siglas</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <msItem ana="chigc:Item" xml:id="compendium-historiae">
+                            <locus facs="" from="" to=""/>
+                            <!-- Mehrere Möglich -->
+                            <incipit>Incipit</incipit>
+                            <author xml:lang="en">Peter of Poitiers</author>
+                            <title ana="rdfs:label" type="uniform" xml:lang="la">Compendium Historiae</title>
+                            <!-- Alternativ -->
+                            <textLang ana="dcterms:language" mainLang=""/>
+                            <note type="citation">Zitat</note>
+                            <!-- Alternative -->
+                            <note type="internal">Interne Anmerkungen</note>
+                            <!--Alternativ -->
+                            <note type="Extension" status=""><p></p></note>
+                        </msItem>
+                        <msItem ana="chigc:Item" corresp="#xy" type="co-transmission">
+                            <!-- Co-Transmission fixed aber nicht necessary -->
+                            <locus/>
+                            <title ana="rdfs:label">Mitüberlieferung graphische Elemente</title>
+                            <note/>
+                        </msItem>
+                        <msItem ana="chigc:Item" corresp="#xy" type="transmission-context">
+                            <!-- Co-Transmission fixed aber nicht necessary -->
+                            <locus/>
+                            <title ana="rdfs:label">Anmerkungen/Überlieferungskontext</title>
+                            <note/>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc ana="chigc:manifestationType" form="textträger">
+                            <supportDesc ana="dcterms:medium" material="material">
+                                <support ana="dc:terms:PhysicalMedium">
+                                    <material ana="rdf:type">Material</material>
+                                </support>
+                                <extent ana="memo:sizeMeasurement">
+                                    <height ana="memo:hasLength" quantity="" unit="mm">Höhe</height>
+                                    <!-- mehrere Möglich, add button -->
+                                    <width ana="memo:hasWitdh" quantity="" unit="mm">Breite</width>
+                                    <!-- mehrere Möglich, add button -->
+                                </extent>
+                                <condition ana="chigc:condition" type="">
+                                    <p>unclear</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <!-- mehrere Möglich, add button -->
+                                    <p n="">Pagebreak <dim type="folio">Folio</dim>
+                                    </p>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <decoDesc>
+                            <decoNote corresp="#compendium-historiae" type="diagrams">
+                                <!-- mehrere Möglich, add button -->
+                                <figure ana="chigc:diagram" corresp="#">
+                                    <label ana="rdfs:label"/>
+                                    <figDesc>
+                                        <locus/>
+                                        <note/>
+                                    </figDesc>
+                                </figure>
+                                <figure ana="chigc:diagram" corresp="#">
+                                    <label ana="rdfs:label"/>
+                                    <figDesc>
+                                        <locus/>
+                                        <note/>
+                                    </figDesc>
+                                </figure>
+                                <figure ana="chigc:diagram" corresp="#">
+                                    <label ana="rdfs:label"/>
+                                    <figDesc>
+                                        <locus/>
+                                        <note/>
+                                    </figDesc>
+                                </figure>
+                                <figure ana="chigc:diagram" corresp="#">
+                                    <label ana="rdfs:label"/>
+                                    <figDesc>
+                                        <locus/>
+                                        <note/>
+                                    </figDesc>
+                                </figure>
+                                <figure ana="chigc:diagram" corresp="#">
+                                    <label ana="rdfs:label"/>
+                                    <figDesc>
+                                        <locus/>
+                                        <note/>
+                                    </figDesc>
+                                </figure>
+                                <figure ana="chigc:diagram" corresp="#">
+                                    <label ana="rdfs:label"/>
+                                    <figDesc>
+                                        <locus/>
+                                        <note/>
+                                    </figDesc>
+                                </figure>
+                            </decoNote>
+                            <decoNote corresp="#compendium-historiae" type="graph">
+                                <!-- mehrere Möglich, add button aber optional -->
+                                <figure ana="chigc:graph">
+                                    <figure ana="chigc:graphOrientation">
+                                        <figDesc/>
+                                    </figure>
+                                    <figure ana="chigc:LineaChristiLocalisation">
+                                        <!-- mehrere Möglich, add button aber optional -->
+                                        <figDesc/>
+                                    </figure>
+                                    <figure ana="chigc:MedaillonsRendition">
+                                        <!-- mehrere Möglich, add button aber optional -->
+                                        <figDesc/>
+                                    </figure>
+                                </figure>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <date ana="crm:E52_Time-Span" type="exact" when="Index Date">Date (literature)</date>
+                            <!-- mehrere Möglich, add button  -->
+                        </origin>
+                        <provenance>
+                            <p>Herstellungsort</p>
+                            <p>Provenienz</p>
+                        </provenance>
+                    </history>
+                    <additional>
+                        <adminInfo>
+                            <!-- Optional - für den LinkDump aber rausrendern  -->
+                            <note>
+                                <note/>
+                                <note/>
+                                <note/>
+                                <note/>
+                            </note>
+                        </adminInfo>
+                        <surrogates>
+                            <!-- mehrere Möglich - Image Availability, Metadata und IIIF -->
+                            <p ana="chigc:ImageAvailability" type="ImageAvailability">HS/Bilder gesehen? Status of Availability. Link zur Handschrift (Abbildungen)</p>
+                        </surrogates>
+                    </additional>
+                </msDesc>
+                <listBibl>
+                    <bibl/>
+                    <bibl/>
+                    <note>Externe Anmerkungen</note>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc status="STATUS">
+            <!-- Verpflichtend für die Qualitycontrol -->
+            <change type="transformation" when="2023-08-18+02:00">
+                <p>Table-data transformed to TEI-File per Entry with MsDesc</p>
+            </change>
+            <change type="manuscriptLiveView">
+                <p>Manuscript was seen live by Vor Ort (mit Datum und Personenkürzel).</p>
+            </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Transcription</p>
+        </body>
+    </text>
+</TEI>
