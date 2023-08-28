@@ -206,12 +206,7 @@
         </fileDesc>
         <revisionDesc status="STATUS">
             <!-- Verpflichtend für die Qualitycontrol -->
-            <change type="transformation" when="2023-08-18+02:00">
-                <p>Table-data transformed to TEI-File per Entry with MsDesc</p>
-            </change>
-            <change type="manuscriptLiveView">
-                <p>Manuscript was seen live by Vor Ort (mit Datum und Personenkürzel).</p>
-            </change>
+            <change type="transformation" when="2023-08-18+02:00"><p>Table-data transformed to TEI-File per Entry with MsDesc</p></change>
         </revisionDesc>
     </teiHeader>
     <text>

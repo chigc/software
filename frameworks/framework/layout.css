@@ -58,8 +58,8 @@ availability,
 pubPlace,
 publicationStmt > date,
 publicationStmt > ref,
-teiHeader listBibl,
-teiHeader revisionDesc {
+teiHeader listBibl
+ {
     display: none;
 
 }
@@ -74,7 +74,8 @@ msItem,
 objectDesc,
 decoNote,
 history,
-additional {
+additional,
+revisionDesc{
     display: block;
     border: solid black 0.1px;
     padding: 5px;
@@ -153,6 +154,11 @@ history:before {
     font-weight: bold;
     font-size: 14pt;
     content: 'History/Provenance'
+}
+revisionDesc:before {
+    font-weight: bold;
+    font-size: 14pt;
+    content: 'Status'
 }
 
 /* ---------------------------------------------------------- COLLAPSE / SHOW TEXT ----------------------------------------------------------*/
@@ -949,3 +955,33 @@ actionID, delete_element,
 transparent, true, 
 color, #FF0000)
 }
+
+/*Flags*/
+change {
+	display:block;
+	content: 
+	oxy_editor(type, datePicker, 
+	edit, "@when", 
+	format, "yyyy-MM-dd", 
+	width, 10%)
+}
+change > p {
+	-oxy-editable:false;
+}
+change[type='transformation']:after {
+	content: 
+	oxy_editor(type, button, 
+	actionID, add_change-msLiveView, 
+	transparent, true, 
+	color, #FF0000)
+}
+change[type='manuscriptLiveView']:after {
+	content: 
+	oxy_editor(type, button, 
+	actionID, add_change-readyForPublication, 
+	transparent, true, 
+	color, #FF0000)
+}
+
+
+
