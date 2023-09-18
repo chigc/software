@@ -50,16 +50,12 @@
                         </settlement>
                         <repository ana="ead:repository"/>
                         <idno ana="dcterms:identifier" type="signature"/>
-                        <altIdentifier>
-                            <!-- alternative -->
-                            <idno ana="chigc:hasSigla" type="sigla">Siglas</idno>
-                        </altIdentifier>
                     </msIdentifier>
                     <msContents>
                         <msItem ana="chigc:Item" xml:id="compendium-historiae">
-                            <locus facs="" from="" to=""/>
+                            <locus from="" to=""/>
                             <!-- Mehrere Möglich -->
-                            <incipit>Incipit</incipit>
+                            <incipit/>
                             <author xml:lang="en">Peter of Poitiers</author>
                             <title ana="rdfs:label" type="uniform" xml:lang="la">Compendium Historiae</title>
                             <!-- Alternativ -->
@@ -68,32 +64,35 @@
                             <!-- Alternative -->
                             <note type="internal">Interne Anmerkungen</note>
                             <!--Alternativ -->
-                            <note type="Extension" status=""><p></p></note>
+                            <note status="" type="Extension">
+                                <p/>
+                            </note>
                         </msItem>
                         <msItem ana="chigc:Item" corresp="#xy" type="co-transmission">
-                            <!-- Co-Transmission fixed aber nicht necessary -->
                             <locus/>
-                            <title ana="rdfs:label">Mitüberlieferung graphische Elemente</title>
+                            <title ana="rdfs:label">Graphical Co-Transmissions found</title>
                             <note/>
                         </msItem>
                         <msItem ana="chigc:Item" corresp="#xy" type="transmission-context">
                             <!-- Co-Transmission fixed aber nicht necessary -->
                             <locus/>
-                            <title ana="rdfs:label">Anmerkungen/Überlieferungskontext</title>
+                            <title ana="rdfs:label">Transmission Context (other important works in the manuscript)</title>
                             <note/>
                         </msItem>
                     </msContents>
                     <physDesc>
-                        <objectDesc ana="chigc:manifestationType" form="textträger">
+                        <objectDesc ana="chigc:manifestationType" form="codex">
                             <supportDesc ana="dcterms:medium" material="material">
                                 <support ana="dc:terms:PhysicalMedium">
-                                    <material ana="rdf:type">Material</material>
+                                    <material ana="rdf:type">Unknown</material>
                                 </support>
                                 <extent ana="memo:sizeMeasurement">
-                                    <height ana="memo:hasLength" quantity="" unit="mm">Höhe</height>
+                                    <height ana="memo:hasLength" quantity="" unit="mm"/>
                                     <!-- mehrere Möglich, add button -->
-                                    <width ana="memo:hasWitdh" quantity="" unit="mm">Breite</width>
+                                    <width ana="memo:hasWitdh" quantity="" unit="mm"/>
                                     <!-- mehrere Möglich, add button -->
+                                    <height ana="memo:hasLength" quantity="" unit="mm" xmlns=""/>
+                                    <width ana="memo:hasWitdh" quantity="" unit="mm" xmlns=""/>
                                 </extent>
                                 <condition ana="chigc:condition" type="">
                                     <p>unclear</p>
@@ -102,7 +101,7 @@
                             <layoutDesc>
                                 <layout>
                                     <!-- mehrere Möglich, add button -->
-                                    <p n="">Pagebreak <dim type="folio">Folio</dim>
+                                    <p n="">Pagebreak at Folio <dim type="folio">Folio</dim>
                                     </p>
                                 </layout>
                             </layoutDesc>
@@ -207,6 +206,8 @@
         <revisionDesc status="STATUS">
             <!-- Verpflichtend für die Qualitycontrol -->
             <change type="transformation" when="2023-08-18+02:00"><p>Table-data transformed to TEI-File per Entry with MsDesc</p></change>
+            <change type="manuscriptLiveView" when=""><p>Manuscript was seen live by Vor Ort (mit Datum und Personenkürzel).</p></change>
+            <change type="readyForPublication" when=""><p>Manuscript ready for publication.</p></change>
         </revisionDesc>
     </teiHeader>
     <text>
