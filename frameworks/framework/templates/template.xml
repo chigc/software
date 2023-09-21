@@ -108,67 +108,95 @@
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
-                        <decoDesc>
-                            <decoNote corresp="#compendium-historiae" type="diagrams">
-                                <!-- mehrere Möglich, add button -->
-                                <figure ana="chigc:diagram" corresp="#">
-                                    <label ana="rdfs:label"/>
-                                    <figDesc>
-                                        <locus/>
-                                        <note/>
-                                    </figDesc>
-                                </figure>
-                                <figure ana="chigc:diagram" corresp="#">
-                                    <label ana="rdfs:label"/>
-                                    <figDesc>
-                                        <locus/>
-                                        <note/>
-                                    </figDesc>
-                                </figure>
-                                <figure ana="chigc:diagram" corresp="#">
-                                    <label ana="rdfs:label"/>
-                                    <figDesc>
-                                        <locus/>
-                                        <note/>
-                                    </figDesc>
-                                </figure>
-                                <figure ana="chigc:diagram" corresp="#">
-                                    <label ana="rdfs:label"/>
-                                    <figDesc>
-                                        <locus/>
-                                        <note/>
-                                    </figDesc>
-                                </figure>
-                                <figure ana="chigc:diagram" corresp="#">
-                                    <label ana="rdfs:label"/>
-                                    <figDesc>
-                                        <locus/>
-                                        <note/>
-                                    </figDesc>
-                                </figure>
-                                <figure ana="chigc:diagram" corresp="#">
-                                    <label ana="rdfs:label"/>
-                                    <figDesc>
-                                        <locus/>
-                                        <note/>
-                                    </figDesc>
-                                </figure>
+                        <decoDesc>                          
+                            <decoNote type="graph" corresp="#compendium-historiae" ana="chigc:Graph"> 
+                                <list>
+                                    <item ana="chigc:graphOrientation" type="orientation">
+                                        <p>Orientation: <seg></seg></p>
+                                        <note></note>
+                                    </item>
+                                    <item ana="chigc:LineaChristiLocalisation" type="linea-christi">
+                                        <p type="presence">Linea Christi present: <seg/></p>
+                                        <p type="orientation"><seg/></p>             
+                                        <note></note>
+                                    </item>
+                                    <item ana="chigc:ColorCoding" type="color-coding">
+                                        <p>Color-Coding: <seg/></p>                      
+                                        <note></note>
+                                    </item>
+                                    <item ana="chigc:MedaillonsRendition" type="medaillon-rendition">
+                                        <p type="circle-only">Circle Only: <seg/></p>
+                                        <p type="circle-double">Cirlce Double: <seg/></p>
+                                        <p type="circles-otherShapes">Circle AND other Shapes: <seg/></p>
+                                        <p type="otherShapes-only">Other Shapes only: <seg/></p>
+                                        <p type="medaillon-color">Medaillon color: <seg/></p>
+                                        <p type="six-ages-emphasized">Six Ages Emphasized: <seg/></p>
+                                        <p type="adam-eve">Adam and Eve Medaillons: <seg/></p>
+                                        <note></note>
+                                    </item>
+                                    <item ana="chigc:graphInscriptions" type="inscriptions">
+                                        <p></p>
+                                        <note></note>
+                                    </item>
+                                </list>       
+                            </decoNote>     
+                            <!-- Pictures in Medaillons and outside --> 
+                            <!-- <xsl:if test="contains($row/t:cell[23], 'Y')">-->
+                            <decoNote type="illustratedMedaillons" corresp="#compendium-historiae" ana="chigc:IllustratedMedaillons"> 
+                                <list>
+                                    <item xml:id="" corresp="" sameAs="" type="all-pictured">
+                                        <p >All Medaillons are illustrated: <seg status=""/></p>
+                                        <note></note>
+                                    </item>
+                                    <item xml:id="" corresp="" sameAs="" type="six-ages-pictured">
+                                        <p >Six Ages Pictured: <seg status=""/></p>
+                                        <note></note>
+                                    </item>
+                                    <item type="jesus-pictured">                
+                                        <p type="jesus-natus" corresp="" sameAs="">Jesus Natus: <seg/></p>
+                                        <p type="jesus-puer" corresp="" sameAs="">Jesus Puer: <seg/></p>
+                                        <p type="jesus-passus" corresp="" sameAs="">Jesus Passus: <seg/></p>
+                                        <p type="jesus-resurgens" corresp="" sameAs="">Jesus Resurgens: <seg/></p>
+                                        <p type="jesus-other" corresp="" sameAs="">Other [e.g., Pater]: <seg/></p>
+                                        <note></note>
+                                    </item>
+                                    <item corresp="" sameAs="" type="extras">
+                                        <p type="cain-abel" corresp="" sameAs="">Cain and Abel: <seg/></p>
+                                        <p type="moses-Aaron" corresp="" sameAs="">Moses and Aaron: <seg/></p>
+                                        <p type="nebuchadnezzar" corresp="" sameAs="">Nebuchadnezzar: <seg/></p>
+                                        <p type="alexander" corresp="" sameAs="">Alexander: <seg/></p>
+                                        <p type="tower-babel" corresp="" sameAs="">Tower of Babel: <seg/></p>
+                                        <p type="city-babel" corresp="" sameAs="">City of Babel: <seg/></p>
+                                        <note></note>
+                                    </item>
+                                    <item  type="other-medaillons">
+                                        <p type="" corresp="" sameAs="" xml:id="">                 
+                                        </p>
+                                        <note></note>
+                                    </item>                                    
+                                </list>
                             </decoNote>
-                            <decoNote corresp="#compendium-historiae" type="graph">
-                                <!-- mehrere Möglich, add button aber optional -->
-                                <figure ana="chigc:graph">
-                                    <figure ana="chigc:graphOrientation">
-                                        <figDesc/>
-                                    </figure>
-                                    <figure ana="chigc:LineaChristiLocalisation">
-                                        <!-- mehrere Möglich, add button aber optional -->
-                                        <figDesc/>
-                                    </figure>
-                                    <figure ana="chigc:MedaillonsRendition">
-                                        <!-- mehrere Möglich, add button aber optional -->
-                                        <figDesc/>
-                                    </figure>
-                                </figure>
+                            <decoNote type="illustrations"  ana="chigc:Pictures">
+                                <list>
+                                    <item ana="chigc:Picture" corresp="#" sameAs="">
+                                        <p></p>
+                                        <note></note>
+                                    </item>
+                                </list>
+                            </decoNote>
+                            <decoNote corresp="#compendium-historiae" type="diagrams" ana="chigc:Diagrams">
+                                <!-- mehrere Möglich, add button -->
+                                <list><item corresp="#" sameAs="">
+                                    <label ana="rdfs:label"/>
+                                    <locus/>
+                                    <note/>                                   
+                                </item>
+                                    <item corresp="#" sameAs="">
+                                        <label ana="rdfs:label"/>
+                                        <locus/>
+                                        <note/>                                   
+                                    </item>
+                                </list>
                             </decoNote>
                         </decoDesc>
                     </physDesc>
