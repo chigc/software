@@ -183,10 +183,10 @@
 											<String>add date (exact)</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/circle-check.png</String>
+											<String>${framework}/icons/plus.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/circle-check.png</String>
+											<String>${framework}/icons/plus.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -245,10 +245,10 @@
 											<String>add date (range not before / after)</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/circle-help.png</String>
+											<String>${framework}/icons/plus.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/circle-help.png</String>
+											<String>${framework}/icons/plus.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -493,10 +493,10 @@
 											<String>add flag "readyForPublication"</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/plus.png</String>
+											<String>${framework}/icons/ready.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/plus.png</String>
+											<String>${framework}/icons/ready.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -508,13 +508,13 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>//ancestor-or-self::revisionDesc[not(change[@type='readyForPublication'])]</String>
+														<String>contains(//change[@type="manuscriptRecord"]/@when, '20') </String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0" type="readyForPublication" when="">&lt;p>Manuscript ready for publication.&lt;/p>&lt;/change></String>
+																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0" type="readyForPublication" when="">&lt;p>Manuscript is ready for Publication in Database.&lt;/p>&lt;/change></String>
 															</entry>
 															<entry>
 																<String>goToNextEditablePosition</String>
@@ -522,7 +522,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::change[@type='manuscriptLiveView']</String>
+																<String>ancestor-or-self::change[@type='contentCheck']</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -1363,6 +1363,290 @@
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_provenance</String>
+										</field>
+										<field name="name">
+											<String>Add Provenance</String>
+										</field>
+										<field name="description">
+											<String>Adds another Provenance input field</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;p xmlns="http://www.tei-c.org/ns/1.0">&lt;/p></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>if (//provenance/p) then //provenance/p[last()] else //provenance
+</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>seen_live</String>
+										</field>
+										<field name="name">
+											<String>seen live</String>
+										</field>
+										<field name="description">
+											<String>Adds a field to note when and by whom the manuscript was seen IRL.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/tick.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/tick.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>//ancestor-or-self::revisionDesc[not(change[@type='manuscriptLiveView'])]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;change 
+xmlns="http://www.tei-c.org/ns/1.0"  type="manuscriptLiveView" when="">&lt;p>Manuscript was seen live  by &lt;persName>&lt;/persName>.&lt;/p>&lt;/change>  </String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>if (//change[@type='transformation']) then //change[@type='transformation'] else //revisionDesc</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>not_seen_live</String>
+										</field>
+										<field name="name">
+											<String>not seen live</String>
+										</field>
+										<field name="description">
+											<String>Adds a field to note that a manuscript was not seen live.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/no.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/no.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>//ancestor-or-self::revisionDesc[not(change[@type='manuscriptLiveView'])]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;change 
+xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>Manuscript was not seen live.&lt;/p>&lt;/change>  </String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>if (//change[@type='transformation']) then //change[@type='transformation'] else //revisionDesc</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_change-readyForReview</String>
+										</field>
+										<field name="name">
+											<String>Change ready for Review</String>
+										</field>
+										<field name="description">
+											<String>Adds the Review Status Field</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/ready.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/ready.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>contains(//change[@type="manuscriptRecord"]/@when, '20') </String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0"  type="contentCheck" when="">&lt;p>Manuscript was reviewed by&lt;persName>&lt;/persName>.&lt;/p>&lt;/change></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>if (//change[@type='transformation']) then //change[@type='transformation'] else //change[@type='manuscriptRecord']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>//ancestor-or-self::revisionDesc[not(change[@type="contentCheck"])]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0"  type="contentCheck" when="">&lt;p>Manuscript was reviews by&lt;persName>&lt;/persName>.&lt;/p>&lt;/change></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>if (//change[@type='transformation']) then //change[@type='transformation'] else //change[@type='manuscriptRecord']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>publication_save</String>
+										</field>
+										<field name="name">
+											<String>Publication save</String>
+										</field>
+										<field name="description">
+											<String>Saves the Manuscript in the Publication Folder</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/save.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/save.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap/>
+													</field>
+													<field name="operationID">
+														<String></String>
 													</field>
 												</actionMode>
 											</actionMode-array>

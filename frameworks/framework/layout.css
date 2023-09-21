@@ -2,17 +2,6 @@
 @namespace xi url('http://www.w3.org/2001/XInclude');
 @media oxygen AND (min-width : 25cm) {
 
-/* ---------------------------------------------------------- ToDos ----------------------------------------------------------*/
-/* 
- * 
- * 
- * 
- * Cool to have but not relevant:
- * 
- * 
- * Buttons; Delete @facs in msItem [*|Id] 
- * concat von o:chigc + PID */
-
 /* ---------------------------------------------------------- PAGE ----------------------------------------------------------*/
     oxy|document {
         background-color: #fbfbfb;
@@ -57,14 +46,11 @@ distributor,
 availability,
 pubPlace,
 publicationStmt > date,
-publicationStmt > ref,
-teiHeader listBibl
+publicationStmt > ref
  {
     display: none;
 
 }
-
-
 /*######################################################### MAIN ###################################################*/
 /* ---------------------------------------------------------- BLOCK / BOXED ----------------------------------------------------------*/
 titleStmt,
@@ -72,13 +58,13 @@ publicationStmt,
 msIdentifier,
 msItem,
 objectDesc,
-
 decoNote,
 history,
 additional,
-revisionDesc{
+revisionDesc, 
+listBibl {
     display: block;
-    border: solid black 0.1px;
+   /* border: solid black 0.1px;*/
     padding: 5px;
     
 }
@@ -103,17 +89,6 @@ publicationStmt:before {
     content: "Project PID:"
 }
 
-/*msIdentifier:before {
-	font-weight: bold;
-	font-size: 14pt;
-	content: 'Manuscript - General Information'
-}*/
-/*msItem[*|id]:before { ###bei den Contents eingearbeitet damit ich hier eine Buttonleiste machen kann :) ### }
-	font-weight: bold;
-	font-size: 14pt;
-	display:block;
-	content: 'Compendium - General Information'	
-}*/
 msItem[type=co-transmission]:before {
     font-weight: bold;
     font-size: 14pt;
@@ -145,6 +120,7 @@ fontInherit, true
 }
 objectDesc:before {
     display: block;
+    
     content: 
     oxy_label(text, 'Materiality',
     styles, 'font-weight:bold; font-size: large;')
@@ -160,24 +136,69 @@ decoNote:before {
     font-size: 14pt;
     content: oxy_concat('Decoration (', attr(type), ')')
 }
-history:before {
+
+additional:before{
+    display: block;
     font-weight: bold;
     font-size: 14pt;
-    content: 'History/Provenance'
+    content: 'Image Availability and Additional Links'
+}
+history:before {
+
+    content: 
+    oxy_label(text,
+    'History/Provenance',
+    styles, 'font-weight:bold; font-size:large;')
+    oxy_label(text, '         Add Date-Range')
+    oxy_editor(type, button, 
+actionID, add_date_range, 
+transparent, true, 
+color, #FFFFFF)
+oxy_label(text, '         Add Exact Date')
+oxy_editor(type, button, 
+actionID, add_date_when, 
+transparent, true, 
+color, #FFFFFF)
+oxy_label(text, '         Add Provenance')
+oxy_editor(type, button, 
+actionID, add_provenance, 
+transparent, true, 
+color, #FFFFFF)
+}
+
+listBibl:before{
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 14pt;
+    content: 'Bibliography'
+    
 }
 revisionDesc:before {
-    font-weight: bold;
-    font-size: 14pt;
-    content: 'Status'
+    padding-bottom: 15px;
+    content: 
+    oxy_label(text, 'Status', styles, 'font-weight:bold; font-size:large; display:block;')
+    oxy_label(text, '                          Manuscript was seen live  ', styles, 'display:block')
+    oxy_editor(type, button, 
+actionID, seen_live, 
+transparent, true, 
+color, #FF0000)
+oxy_editor(type, button, 
+actionID, not_seen_live, 
+transparent, true, 
+color, #FF0000)
 }
+
+
 
 /* ---------------------------------------------------------- COLLAPSE / SHOW TEXT ----------------------------------------------------------*/
 msDesc *,
 titleStmt *,
-publicationStmt * {
+publicationStmt *,
+sourceDesc * {
+
     visibility: -oxy-collapse-text;
 }
-msDesc p,
+msDesc,
 layout  {
     visibility: visible;
 }/*  ##########################ausgrauen am Schluss!!! ############################## */
@@ -201,7 +222,6 @@ msItem > note,
 msItem > note > p,
 objectDesc,
 supportDesc,
-supportDesc material,
 supportDesc height,
 supportDesc width,
 supportDesc condition,
@@ -211,7 +231,8 @@ layout,
 decoNote > p,
 decoNote figure,
 origin > date,
-provenance > p
+provenance > p,
+listBibl
 {
     display: block;
 }
@@ -287,12 +308,18 @@ msItem > textLang[otherLangs]:before {
     content: "Other Language:"
 }
 
-msItem > note[status]:before {
+msItem > note[type="Extension"]:before {
     display: inline-block;
     width: 20%;
     content: 'Extension:'
 }
-msItem > note:not([status]):before {
+msItem > note[type='citation']:before {
+    display: inline-block;
+    width: 20%;
+    content: oxy_concat('Note (', attr(type), '): ');
+}
+
+msItem > note[type='internal']:before {
     display: inline-block;
     width: 20%;
     content: oxy_concat('Note (', attr(type), '): ');
@@ -300,21 +327,25 @@ msItem > note:not([status]):before {
 supportDesc:before {
     display: inline-block;
     width: 20%;
-    content: "Material (attributively):"
+    content: "Material:"
 }
-supportDesc material:before {
-    display: inline-block;
-    width: 20%;
-    content: "Material (full):"
+
+extent:before {
+    display: block;
+    margin-top: 10px;
+    color: black;   
+    content: 'Measurement:'
 }
 height:before {
     display: inline-block;
+    margin-left: 10em;
     width: 20%;
     color: black;
     content: "Height:"
 }
 width:before {
     display: inline-block;
+    margin-left: 10em;
     width: 20%;
     color: black;
     content: "Width:"
@@ -330,6 +361,20 @@ layoutDesc:before {
     content: 
     oxy_label(text, "Layout Description:  ")    
 }
+
+history > provenance:before{
+    display: inline-block;
+    content: "Provenance:"
+}
+
+history > provenance > p:first-of-type:before{
+    font-size: small;
+    content: 'Place of Creation   '
+}
+history > provenance > p:not(first-of-type):before{
+    font-size: small;
+    content: 'Provenance              '
+}
 origin > date[when]:before {
     display: inline-block;
     width: 20%;
@@ -340,8 +385,19 @@ origin > date[notBefore]:before {
     width: 20%;
     content: "Date (range):"
 }
+
+/* ########################################### Additional ############################################# */
+
+adminInfo:before {
+    display: block;
+    width: 20%;
+    color: black;
+    content: "Additional Links:"
+ } 
+
+
 surrogates:before {
-    display: inline-block;
+    display: block;
     width: 20%;
     color: black;
     content: "Surrogates (URL):"
@@ -383,8 +439,7 @@ actionID, delete_content,
 transparent, true, 
 color, #FF0000)}
 
-
-/* General Information */
+/* ############################################################### General Information */
 
 msIdentifier:before {
     content: 
@@ -437,7 +492,6 @@ fontInherit, true
 )
 }
 
-/*  Sigla auf Max 1x einschränken wenn vorhanden .. bzw. das Schema nachziehen - vorkommen 0-1 */
 msIdentifier > altIdentifier > idno {
     content: 
     oxy_editor(type, text, 
@@ -636,8 +690,6 @@ msItem[*|id] > title[type = uniform] {
 text, "                   language: la")
 }
 
-
-/*  Archival as additional */
 msItem[*|id] > title[type = archival] { 
     content: 
     oxy_label(text, 'Title (Archival):',
@@ -707,7 +759,7 @@ transparent, true,
 color, #FF0000)
 }
 
-msItem > note:not([status]) {
+msItem > note[type='internal'] {
     content:
      oxy_editor(type,text,edit, '#text', width, 80%, fontInherit, true)
     oxy_editor(type, button, 
@@ -715,9 +767,15 @@ actionID, add_p,
 transparent, true, 
 color, #FFFFFF)
 }
-
-
-msItem[*|id] > note[status] {
+msItem > note[type='citation'] {
+    content:
+     oxy_editor(type,text,edit, '#text', width, 80%, fontInherit, true)
+    oxy_editor(type, button, 
+actionID, add_p, 
+transparent, true, 
+color, #FFFFFF)
+}
+msItem[*|id] > note[type='Extension'] {
     content:        
  oxy_label(
 text, " extended: ")
@@ -728,7 +786,7 @@ values, ' ,yes,no,unknown'
  width, 20%, 
 fontInherit, true
 )}
-msItem > note[status] > p {
+msItem > note[type='Extension'] > p {
     padding: 5px;
 	margin-left: 20%;
     content:
@@ -738,7 +796,6 @@ msItem > note[status] > p {
     width, 80%,   
     fontInherit, true)
 }
-
 /*  ############################   Co-Transmissions and Transmission-Context ########################################### */
 
 msItem[type=co-transmission] {
@@ -749,8 +806,6 @@ actionID, delete_element,
 transparent, true, 
 color, #FF0000)
 }
-
-
 msItem[type=transmission-context] {
 padding: 5px;
 content:
@@ -807,7 +862,6 @@ color, #FF0000)
 }
 
 /* ############################################   MATERIALITY ##############################################*/
-
 objectDesc {
    padding: 5px;
    content:
@@ -822,30 +876,17 @@ fontInherit, true);
 supportDesc {
 
 	content: 
-	oxy_editor(type, combo,
-	edit, '@material',
-	editable, false,
-	values, oxy_xpath('lower-case(//support/material/text())'),
-	width, 20%,
-	fontInherit, true);
-	/*oxy_editor(type, combo, 
+oxy_editor(type, combo, 
 edit, '@material', 
 editable, false, 
-values, 'paper,parchment, unknown'
+values, 'paper,parchment,parchment-paper, paper-parchment, unknown'
  width, 10%, 
-fontInherit, true);*/
-}
-supportDesc > support > material {
-	content: 
-	oxy_editor(type, combo, 
-edit, '#text', 
-editable, false, 
-values, 'Paper,Parchment, Unknown'
- width, 20%, 
 fontInherit, true);
 }
-supportDesc height {
+
+supportDesc height[quantity] {
 	visibility: visible;
+	margin-bottom: -1em;
     color:gray;
 	content: 
 	oxy_editor(type, text, 
@@ -861,22 +902,55 @@ styles, 'color:black;'
 oxy_label(
 text, ' = '
 )
-
 oxy_editor(type, combo,
 edit, '#text',
 width, 10%, 
 values, oxy_xpath("concat(//supportDesc/extent/height/@quantity, 'mm')")
 )
-
 oxy_editor(type, button, 
 actionID, delete_element, 
 transparent, true, 
 color, #FFFFFF);
-
 }
 
+supportDesc height[min] {
+	visibility: visible;
+	margin-bottom: -1em;
+    color:gray;
+	content: 
+	oxy_label(text, 'min: ', styles, 'font-size:small;')
+	oxy_editor(type, text, 
+edit, '@min',
+editable, true,
+width, 10%, 
+fontInherit, true
+)
+oxy_label(text, '    max: ', styles, 'font-size:small;')
+oxy_editor(type, text, 
+edit, '@max',
+editable, true,
+width, 10%, 
+fontInherit, true
+)
+ oxy_label(
+text, ' (mm) ',
+styles, 'color:black;'
+)
+oxy_label(
+text, ' = '
+)
+oxy_editor(type, combo,
+edit, '#text',
+width, 10%, 
+values, oxy_xpath("concat(//supportDesc/extent/height/@min, '-', //supportDesc/extent/height/@max, 'mm')")
+)
+oxy_editor(type, button, 
+actionID, delete_element, 
+transparent, true, 
+color, #FFFFFF);
+}
 
-supportDesc width {
+supportDesc width[quantity] {
 	visibility: visible;
 
 color:gray;
@@ -907,12 +981,53 @@ actionID, delete_element,
 transparent, true, 
 color, #FFFFFF);
 }
+
+supportDesc width[min] {
+	visibility: visible;
+	margin-bottom: -1em;
+    color:gray;
+	content: 
+	oxy_label(text, 'min: ', styles, 'font-size:small;')
+	oxy_editor(type, text, 
+edit, '@min',
+editable, true,
+width, 10%, 
+fontInherit, true
+)
+oxy_label(text, '    max: ', styles, 'font-size:small;')
+oxy_editor(type, text, 
+edit, '@max',
+editable, true,
+width, 10%, 
+fontInherit, true
+)
+ 
+ oxy_label(
+text, ' (mm) ',
+styles, 'color:black;'
+)
+oxy_label(
+text, ' = '
+)
+
+oxy_editor(type, combo,
+edit, '#text',
+width, 10%, 
+values, oxy_xpath("concat(//supportDesc/extent/width/@min, '-', //supportDesc/extent/width/@max, 'mm')")
+)
+
+oxy_editor(type, button, 
+actionID, delete_element, 
+transparent, true, 
+color, #FFFFFF);
+
+}
 supportDesc > condition {
 	content: 
 	oxy_editor(type, combo, 
 edit, '@type', 
 editable, false, 
-values, ',fragm,comp,incomp,unclear'
+values, ',fragmentory,complete,incomplete,unclear'
  width, 10%, 
 fontInherit, true
 )
@@ -922,7 +1037,7 @@ supportDesc > condition > p {
     oxy_editor(type, text, 
 edit, '#text',
 editable, true,
-width, 10%, 
+width, 70%, 
 fontInherit, true
 )
 }
@@ -938,7 +1053,7 @@ layoutDesc > layout > p {
     values, ',1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18', 
     width, 5%,
     fontInherit, true)
-    oxy_label(text, '  ')
+    oxy_label(text, '  Pagebreak at Folio ')
     }
 
 layoutDesc > layout > p > dim {
@@ -995,17 +1110,7 @@ width, 70%,
 fontInherit, true
 )
 }
-origin {
-	content: 
-	oxy_editor(type, button, 
-actionID, add_date_when, 
-transparent, true, 
-color, #FFFFFF)
- oxy_editor(type, button, 
-actionID, add_date_range, 
-transparent, true, 
-color, #FFFFFF)
-}
+/* ##################################### DATE/PROVENANCE ##############################################*/
 origin > date[when] {
 	content: 
 	oxy_editor(type, text, 
@@ -1024,8 +1129,7 @@ fontInherit, true
 oxy_label(
 text, ' [Format: 0000-00-00]',
 styles,'font-size:smaller;'
-)
-	;
+);
 }
 origin > date[notBefore] {
 	content: 
@@ -1053,33 +1157,88 @@ fontInherit, true
 oxy_label(
 text, ' [Format: 0000-00-00]',
 styles,'font-size:smaller;'
-)
-	;
+);
 }
-surrogates {
-visibility: visible;
-color:gray;
+history > provenance > p{
+    margin-bottom: -1em;
+    margin-left: 12em;
+    content:
+	oxy_editor(type,text,edit,'#text', width, 80%, fontInherit, true)
+	oxy_editor(type, button, 
+actionID, delete_element, 
+transparent, true, 
+color, #FF0000)
+}
+/*  ############################################ IMAGE AVAILABILITY / LINKS ######################################### */
+adminInfo > note > note {
+    margin-left: 15em;
+    content:
+        oxy_editor(type, text,
+        edit, '#text',
+        width, 70%,
+        fontInherit, true)
+        oxy_editor(type, button, 
+        actionID, delete_element, 
+        transparent, true, 
+        color, #FF0000)
+}
+additional > 
+surrogates > p[type='metadata'] {
+margin-left: 10em;
+display: block;
 	content: 
+	oxy_label(text, 'Metadata (URL):  ', styles, 'font-size:small;')
 	oxy_editor(type, text, 
 edit, '@corresp', 
 width, 70%, 
 fontInherit, true
 )
-oxy_label(
-text, '',
-width, 20%
-)
-oxy_label(
-text, '= '
+}
+surrogates > p[type='IIIF'] {
+    margin-left: 10em;
+    display: block;
+	content: 
+	oxy_label(text, 'IFFF (URL):  ', styles, 'font-size:small;')
+	oxy_editor(type, text, 
+edit, '@resp', 
+width, 70%, 
+fontInherit, true
 )
 }
+surrogates > p[type='ImageAvailability'] {
+    margin-left: 10em;
+	content: 
+	oxy_label(text, 'Image Availability:  ', styles, 'font-size:small; display:block;')
+	oxy_editor(type, text, 
+edit, '#text', 
+width, 30%,
+styles, 'display:inline-block;',
+fontInherit, true)
+oxy_label(text, '   URL:  ',  styles, 'font-size:small; display:block;') 
+oxy_editor(type, text, 
+edit, '@corresp', 
+width, 40%,
+styles, 'display:inline-block;',
+fontInherit, true)
+}
 
+/* ############################################# BIBLIOGRAPHY        ################################################################## */
+
+listBibl > bibl {
+    display:block;
+    content:
+    oxy_editor(type, text, edit, '#text', width, 100%, fontInherit, true)
+}
+listBibl > note {
+display:block;
+margin-top: 1em;
+    content:
+    oxy_label(text, 'Note (external): ')
+    oxy_editor(type, text, edit, '#text', width, 70%, fontInherit, true)
+}
 /* p-like */
 msItem > note:not([status]) > p,
-supportDesc > condition > p,
-/*layoutDesc > layout,*/
-decoNote > p,
-provenance > p{
+decoNote > p {
 	padding: 5px;
 	margin-left: 19.6%;
 	content:
@@ -1090,7 +1249,7 @@ transparent, true,
 color, #FF0000)
 }
 
-/*Flags*/
+/*############################# RevisionDesc FLAGS ####################################*/
 change {
 	display:block;
 	content: 
@@ -1099,23 +1258,41 @@ change {
 	format, "yyyy-MM-dd", 
 	width, 10%)
 }
-change > p {
-	-oxy-editable:false;
+change > p > persName {
+    content:
+    oxy_editor(type,text,edit,'#text',width,20%,fontInherit,true)
 }
-change[type='transformation']:after {
+
+change[type='manuscriptRecord']:after {
 	content: 
+	oxy_label(text, '   READY FOR REVIEW   ', styles, 'font-weight:bold; color:#00ba00;')
 	oxy_editor(type, button, 
-	actionID, add_change-msLiveView, 
+	actionID, add_change-readyForReview, 
 	transparent, true, 
-	color, #FF0000)
+	color, #FF0000)	
 }
-change[type='manuscriptLiveView']:after {
+
+change[type='contentCheck']:after {
 	content: 
+	oxy_label(text, '   READY FOR PUBLICATION  ', styles, 'font-weight:bold; color:#00ba00;')
 	oxy_editor(type, button, 
 	actionID, add_change-readyForPublication, 
 	transparent, true, 
 	color, #FF0000)
+	
 }
-
-
+change[type='manuscriptLiveView']:after {
+	content: 
+	oxy_editor(type, button, 
+	actionID, delete_element, 
+	transparent, true, 
+	color, #FF0000)
+}
+change[type='NOmanuscriptLiveView']:after {
+	content: 
+	oxy_editor(type, button, 
+	actionID, delete_element, 
+	transparent, true, 
+	color, #FF0000)
+}
 
