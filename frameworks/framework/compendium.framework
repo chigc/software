@@ -212,7 +212,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::origin</String>
+																<String>//origin</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -274,7 +274,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::origin</String>
+																<String>//origin</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -508,7 +508,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>contains(//change[@type="manuscriptRecord"]/@when, '20') </String>
+														<String>contains(//change[@type="contentCheck"]/@when, '20') </String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -708,7 +708,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String></String>
+														<String>//msItem[@xml:id='compendium-historiae']/locus</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -718,11 +718,35 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>//msItem[@xml:id='compendium-historiae']/locus</String>
+																<String>//msItem[@xml:id='compendium-historiae']/locus[last()] </String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
 																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(//msItem[@xml:id='compendium-historiae']/locus)</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;locus xmlns="http://www.tei-c.org/ns/1.0" from="" to="">&lt;/locus></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//msItem[@xml:id='compendium-historiae']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as first child</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -871,7 +895,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String></String>
+														<String>not(//msItem[@xml:id='compendium-historiae']/explicit)</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -925,7 +949,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String></String>
+														<String>not(//msItem[@xml:id='compendium-historiae']/title[@type='archival'])</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -979,7 +1003,31 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String></String>
+														<String>//msItem[@xml:id='compendium-historiae']/textLang[@otherLangs]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;textLang xmlns="http://www.tei-c.org/ns/1.0" ana="dcterms:language" otherLangs="">&lt;/textLang></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//msItem[@xml:id='compendium-historiae']/textLang[last()]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(//msItem[@xml:id='compendium-historiae']/textLang[@otherLangs])</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -1562,37 +1610,13 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>contains(//change[@type="manuscriptRecord"]/@when, '20') </String>
+														<String>not(//change[@when=""]) </String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0"  type="contentCheck" when="">&lt;p>Manuscript was reviewed by&lt;persName>&lt;/persName>.&lt;/p>&lt;/change></String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>if (//change[@type='transformation']) then //change[@type='transformation'] else //change[@type='manuscriptRecord']</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>After</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>//ancestor-or-self::revisionDesc[not(change[@type="contentCheck"])]</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0"  type="contentCheck" when="">&lt;p>Manuscript was reviews by&lt;persName>&lt;/persName>.&lt;/p>&lt;/change></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1693,6 +1717,508 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_medaillon</String>
+										</field>
+										<field name="name">
+											<String>Add Medaillon</String>
+										</field>
+										<field name="description">
+											<String>Adds another section to describe an illustrated Medaillon</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;p xmlns="http://www.tei-c.org/ns/1.0" corresp="" sameAs="" type="" xml:id=""> &lt;/p></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//item[@type="other-medaillons"]/p[last()]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_graph-info</String>
+										</field>
+										<field name="name">
+											<String>Add Graph Info</String>
+										</field>
+										<field name="description">
+											<String>Adds Section to note down Deoration Info of the graph</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(//item[@ana="chigc:graphOrientation"])</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;decoNote xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:Graph" corresp="#compendium-historiae" type="graph">
+                                &lt;list>
+                                    &lt;item ana="chigc:graphOrientation" type="orientation">
+                                        &lt;p>Orientation: &lt;seg/>&lt;/p>
+                                        &lt;note/>
+                                    &lt;/item>
+                                    &lt;item ana="chigc:LineaChristiLocalisation" type="linea-christi">
+                                        &lt;p type="presence">Linea Christi present&lt;/p>
+                                        &lt;p type="orientation">&lt;seg/>&lt;/p>
+                                        &lt;note/>
+                                    &lt;/item>
+                                    &lt;item ana="chigc:ColorCoding" type="color-coding">
+                                        &lt;p>Color-Coding: &lt;seg/>&lt;/p>
+                                        &lt;note/>
+                                    &lt;/item>
+                                    &lt;item ana="chigc:MedaillonsRendition" type="medaillon-rendition">
+                                        &lt;p type="circle-only">Circle Only&lt;/p>
+                                        &lt;p type="circle-double">Cirlce Double&lt;/p>
+                                        &lt;p type="circles-otherShapes">Circle AND other Shapes&lt;/p>
+                                        &lt;p type="otherShapes-only">Other Shapes only&lt;/p>
+                                        &lt;p type="medaillon-color">Medaillon color&lt;/p>
+                                        &lt;p type="six-ages-emphasized">Six Ages Emphasized&lt;/p>
+                                        &lt;p type="adam-eve">Adam and Eve Medaillons&lt;/p>
+                                        &lt;note/>
+                                    &lt;/item>
+                                    &lt;item ana="chigc:graphInscriptions" type="inscriptions">
+                                        &lt;p/>
+                                        &lt;note/>
+                                    &lt;/item>
+                                &lt;/list>
+                            &lt;/decoNote></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//decoNote[@type='graph']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Replace</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_diagram</String>
+										</field>
+										<field name="name">
+											<String>Add Diagram</String>
+										</field>
+										<field name="description">
+											<String>Adds a Section to note a new diagram</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>//decoNote[@type='diagrams']/list/item</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="#" sameAs="">
+                                        &lt;label ana="rdfs:label"/>
+                                        &lt;locus/>
+                                        &lt;note/>
+                                    &lt;/item></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//decoNote[@type='diagrams']/list/item[last()]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(//decoNote[@type='diagrams']/list/item)</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="#" sameAs="">
+                                        &lt;label ana="rdfs:label"/>
+                                        &lt;locus/>
+                                        &lt;note/>
+                                    &lt;/item></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//decoNote[@type='diagrams']/list</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as first child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_medaillon-info</String>
+										</field>
+										<field name="name">
+											<String>Add Medaillon Info</String>
+										</field>
+										<field name="description">
+											<String>Adds Section to note down Decoration Info of the Medaillons</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(//item[@type='all-pictured'])</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String> &lt;decoNote xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedMedaillons">
+                                &lt;list>
+                                    &lt;item type="all-pictured">
+                                        &lt;p>All Medaillons are illustrated&lt;/p>
+                                        &lt;note/>
+                                    &lt;/item>
+                                    &lt;item corresp="" sameAs="" type="six-ages-pictured" xml:id="">
+                                        &lt;p>Six Ages Pictured&lt;/p>
+                                        &lt;note/>
+                                    &lt;/item>
+                                    &lt;item type="jesus-pictured">
+                                        &lt;p corresp="" sameAs="" type="jesus-natus">Jesus Natus&lt;/p>
+                                        &lt;p corresp="" sameAs="" type="jesus-puer">Jesus Puer&lt;/p>
+                                        &lt;p corresp="" sameAs="" type="jesus-passus">Jesus Passus&lt;/p>
+                                        &lt;p corresp="" sameAs="" type="jesus-resurgens">Jesus Resurgens&lt;/p>
+                                        &lt;p corresp="" sameAs="" type="jesus-other">Other [e.g., Pater]&lt;/p>
+                                        &lt;note/>
+                                    &lt;/item>
+                                    &lt;item type="extras">
+                                        &lt;p corresp="" sameAs="" type="cain-abel">Cain and Abel&lt;/p>
+                                        &lt;p corresp="" sameAs="" type="moses-Aaron">Moses and Aaron&lt;/p>
+                                        &lt;p corresp="" sameAs="" type="nebuchadnezzar">Nebuchadnezzar&lt;/p>
+                                        &lt;p corresp="" sameAs="" type="alexander">Alexander&lt;/p>
+                                        &lt;p corresp="" sameAs="" type="tower-babel">Tower of Babel&lt;/p>
+                                        &lt;p corresp="" sameAs="" type="city-babel">City of Babel&lt;/p>
+                                        &lt;note/>
+                                    &lt;/item>
+                                    &lt;item type="other-medaillons">
+                                        &lt;p corresp="" sameAs="" type="" xml:id=""> &lt;/p>
+                                        &lt;note/>
+                                    &lt;/item>
+                                &lt;/list>
+                            &lt;/decoNote></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//decoNote[@type='illustratedMedaillons']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Replace</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_picture-info</String>
+										</field>
+										<field name="name">
+											<String>Adds picture</String>
+										</field>
+										<field name="description">
+											<String>Adds Section to note down Pictures outside of graph</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(//decoNote[@type='illustrations']/list/item)</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:Picture" corresp="#" sameAs="">
+                                        &lt;p/>
+                                        &lt;note/>
+                                    &lt;/item></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//decoNote[@type='illustrations']/list</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as first child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>//decoNote[@type='illustrations']/list/item</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:Picture" corresp="#" sameAs="">
+                                        &lt;p/>
+                                        &lt;note/>
+                                    &lt;/item></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//decoNote[@type='illustrations']/list/item[last()]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>change_range-height</String>
+										</field>
+										<field name="name">
+											<String>Change Range Height</String>
+										</field>
+										<field name="description">
+											<String>Changes the Measurements to a range</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(//height/text())</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;height xmlns="http://www.tei-c.org/ns/1.0" ana="memo:hasLength" min="" max="" unit="mm"/></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Replace</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>change_range-width</String>
+										</field>
+										<field name="name">
+											<String>Change Range Width</String>
+										</field>
+										<field name="description">
+											<String>Changes the Measurements to a range</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(//width/text())</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;width xmlns="http://www.tei-c.org/ns/1.0" ana="memo:hasLength" min="" max="" unit="mm"/></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Replace</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>

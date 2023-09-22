@@ -17,8 +17,7 @@
                 </publisher>
                 <publisher>
                     <ref target="https://informationsmodellierung.uni-graz.at"/>
-                    <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling
-                        (ZIM), University of Graz</orgName>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
                 </publisher>
                 <authority>
                     <ref target="https://uni-tuebingen.de"/>
@@ -26,19 +25,15 @@
                 </authority>
                 <authority>
                     <ref target="https://informationsmodellierung.uni-graz.at"/>
-                    <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling
-                        (ZIM), University of Graz</orgName>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
                 </authority>
                 <distributor>
                     <ref target="https://gams.uni-graz.at"/>
                     <orgName> GAMS - Geisteswissenschaftliches Asset Management System </orgName>
                 </distributor>
                 <availability>
-                    <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative
-                        Commons BY 4.0</licence>
-                    <licence n="facsimile"
-                        target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
-                        BY-NC-SA 4.0 </licence>
+                    <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
+                    <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 </licence>
                 </availability>
                 <pubPlace> Graz/Tübingen/Wuppertal</pubPlace>
                 <date when="2023">2023</date>
@@ -50,8 +45,8 @@
                 <msDesc>
                     <msIdentifier>
                         <settlement>
-                            <placeName ana="dcterms:location">Aufbewahrungsort</placeName>
-                            <country ana="dcterms:location">Land</country>
+                            <placeName ana="dcterms:location"></placeName>
+                            <country ana="dcterms:location"></country>
                         </settlement>
                         <repository ana="ead:repository"/>
                         <idno ana="dcterms:identifier" type="signature"/>
@@ -62,28 +57,26 @@
                             <!-- Mehrere Möglich -->
                             <incipit/>
                             <author xml:lang="en">Peter of Poitiers</author>
-                            <title ana="rdfs:label" type="uniform" xml:lang="la">Compendium
-                                Historiae</title>
+                            <title ana="rdfs:label" type="uniform" xml:lang="la">Compendium Historiae</title>
                             <!-- Alternativ -->
                             <textLang ana="dcterms:language" mainLang=""/>
-                            <note type="citation">Zitat</note>
+                            <note type="citation"/>
                             <!-- Alternative -->
-                            <note type="internal">Interne Anmerkungen</note>
+                            <note type="internal"/>
                             <!--Alternativ -->
-                            <note type="Extension">
+                            <note status="" type="Extension">
                                 <p/>
                             </note>
                         </msItem>
                         <msItem ana="chigc:Item" corresp="#xy" type="co-transmission">
                             <locus/>
-                            <title ana="rdfs:label">Graphical Co-Transmissions found</title>
+                            <title ana="rdfs:label"/>
                             <note/>
                         </msItem>
                         <msItem ana="chigc:Item" corresp="#xy" type="transmission-context">
                             <!-- Co-Transmission fixed aber nicht necessary -->
                             <locus/>
-                            <title ana="rdfs:label">Transmission Context (other important works in
-                                the manuscript)</title>
+                            <title ana="rdfs:label"/>
                             <note/>
                         </msItem>
                     </msContents>
@@ -103,98 +96,93 @@
                             <layoutDesc>
                                 <layout>
                                     <!-- mehrere Möglich, add button -->
-                                    <p n="">Pagebreak at Folio <dim type="folio">Folio</dim>
+                                    <p>Pagebreak at <seg type="node"/>
+                                        <dim type="folio"/>
                                     </p>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
-                        <decoDesc>                          
-                            <decoNote type="graph" corresp="#compendium-historiae" ana="chigc:Graph"> 
+                        <decoDesc>
+                            <decoNote ana="chigc:Graph" corresp="#compendium-historiae" type="graph">
                                 <list>
                                     <item ana="chigc:graphOrientation" type="orientation">
-                                        <p>Orientation: <seg></seg></p>
-                                        <note></note>
+                                        <p>Orientation: <seg/></p>
+                                        <note/>
                                     </item>
                                     <item ana="chigc:LineaChristiLocalisation" type="linea-christi">
-                                        <p type="presence">Linea Christi present: <seg/></p>
-                                        <p type="orientation"><seg/></p>             
-                                        <note></note>
+                                        <p type="presence">Linea Christi present</p>
+                                        <p type="orientation"><seg/></p>
+                                        <note/>
                                     </item>
                                     <item ana="chigc:ColorCoding" type="color-coding">
-                                        <p>Color-Coding: <seg/></p>                      
-                                        <note></note>
+                                        <p>Color-Coding: <seg/></p>
+                                        <note/>
                                     </item>
                                     <item ana="chigc:MedaillonsRendition" type="medaillon-rendition">
-                                        <p type="circle-only">Circle Only: <seg/></p>
-                                        <p type="circle-double">Cirlce Double: <seg/></p>
-                                        <p type="circles-otherShapes">Circle AND other Shapes: <seg/></p>
-                                        <p type="otherShapes-only">Other Shapes only: <seg/></p>
-                                        <p type="medaillon-color">Medaillon color: <seg/></p>
-                                        <p type="six-ages-emphasized">Six Ages Emphasized: <seg/></p>
-                                        <p type="adam-eve">Adam and Eve Medaillons: <seg/></p>
-                                        <note></note>
+                                        <p type="circle-only">Circle Only</p>
+                                        <p type="circle-double">Cirlce Double</p>
+                                        <p type="circles-otherShapes">Circle AND other Shapes</p>
+                                        <p type="otherShapes-only">Other Shapes only</p>
+                                        <p type="medaillon-color">Medaillon color</p>
+                                        <p type="six-ages-emphasized">Six Ages Emphasized</p>
+                                        <p type="adam-eve">Adam and Eve Medaillons</p>
+                                        <note/>
                                     </item>
                                     <item ana="chigc:graphInscriptions" type="inscriptions">
-                                        <p></p>
-                                        <note></note>
+                                        <p/>
+                                        <note/>
                                     </item>
-                                </list>       
-                            </decoNote>     
-                            <!-- Pictures in Medaillons and outside --> 
+                                </list>
+                            </decoNote>
+                            <!-- Pictures in Medaillons and outside -->
                             <!-- <xsl:if test="contains($row/t:cell[23], 'Y')">-->
-                            <decoNote type="illustratedMedaillons" corresp="#compendium-historiae" ana="chigc:IllustratedMedaillons"> 
+                            <decoNote ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedMedaillons">
                                 <list>
-                                    <item xml:id="" corresp="" sameAs="" type="all-pictured">
-                                        <p >All Medaillons are illustrated: <seg status=""/></p>
-                                        <note></note>
+                                    <item type="all-pictured">
+                                        <p>All Medaillons are illustrated</p>
+                                        <note/>
                                     </item>
-                                    <item xml:id="" corresp="" sameAs="" type="six-ages-pictured">
-                                        <p >Six Ages Pictured: <seg status=""/></p>
-                                        <note></note>
+                                    <item corresp="" sameAs="" type="six-ages-pictured" xml:id="">
+                                        <p>Six Ages Pictured</p>
+                                        <note/>
                                     </item>
-                                    <item type="jesus-pictured">                
-                                        <p type="jesus-natus" corresp="" sameAs="">Jesus Natus: <seg/></p>
-                                        <p type="jesus-puer" corresp="" sameAs="">Jesus Puer: <seg/></p>
-                                        <p type="jesus-passus" corresp="" sameAs="">Jesus Passus: <seg/></p>
-                                        <p type="jesus-resurgens" corresp="" sameAs="">Jesus Resurgens: <seg/></p>
-                                        <p type="jesus-other" corresp="" sameAs="">Other [e.g., Pater]: <seg/></p>
-                                        <note></note>
+                                    <item type="jesus-pictured">
+                                        <p corresp="" sameAs="" type="jesus-natus">Jesus Natus</p>
+                                        <p corresp="" sameAs="" type="jesus-puer">Jesus Puer</p>
+                                        <p corresp="" sameAs="" type="jesus-passus">Jesus Passus</p>
+                                        <p corresp="" sameAs="" type="jesus-resurgens">Jesus Resurgens</p>
+                                        <p corresp="" sameAs="" type="jesus-other">Other [e.g., Pater]</p>
+                                        <note/>
                                     </item>
-                                    <item corresp="" sameAs="" type="extras">
-                                        <p type="cain-abel" corresp="" sameAs="">Cain and Abel: <seg/></p>
-                                        <p type="moses-Aaron" corresp="" sameAs="">Moses and Aaron: <seg/></p>
-                                        <p type="nebuchadnezzar" corresp="" sameAs="">Nebuchadnezzar: <seg/></p>
-                                        <p type="alexander" corresp="" sameAs="">Alexander: <seg/></p>
-                                        <p type="tower-babel" corresp="" sameAs="">Tower of Babel: <seg/></p>
-                                        <p type="city-babel" corresp="" sameAs="">City of Babel: <seg/></p>
-                                        <note></note>
+                                    <item type="extras">
+                                        <p corresp="" sameAs="" type="cain-abel">Cain and Abel</p>
+                                        <p corresp="" sameAs="" type="moses-Aaron">Moses and Aaron</p>
+                                        <p corresp="" sameAs="" type="nebuchadnezzar">Nebuchadnezzar</p>
+                                        <p corresp="" sameAs="" type="alexander">Alexander</p>
+                                        <p corresp="" sameAs="" type="tower-babel">Tower of Babel</p>
+                                        <p corresp="" sameAs="" type="city-babel">City of Babel</p>
+                                        <note/>
                                     </item>
-                                    <item  type="other-medaillons">
-                                        <p type="" corresp="" sameAs="" xml:id="">                 
-                                        </p>
-                                        <note></note>
-                                    </item>                                    
-                                </list>
-                            </decoNote>
-                            <decoNote type="illustrations"  ana="chigc:Pictures">
-                                <list>
-                                    <item ana="chigc:Picture" corresp="#" sameAs="">
-                                        <p></p>
-                                        <note></note>
+                                    <item type="other-medaillons">
+                                        <p corresp="" sameAs="" type="" xml:id=""> </p><p corresp="" sameAs="" type="" xml:id=""> </p>
+                                        <note/>
                                     </item>
                                 </list>
                             </decoNote>
-                            <decoNote corresp="#compendium-historiae" type="diagrams" ana="chigc:Diagrams">
+                            <decoNote ana="chigc:Pictures" type="illustrations">
+                                <list><item ana="chigc:Picture" corresp="#" sameAs="">
+                                        <p/>
+                                        <note/>
+                                    </item>
+                                </list>
+                            </decoNote>
+                            <decoNote ana="chigc:Diagrams" corresp="#compendium-historiae" type="diagrams">
                                 <!-- mehrere Möglich, add button -->
-                                <list><item corresp="#" sameAs="">
-                                    <label ana="rdfs:label"/>
-                                    <locus/>
-                                    <note/>                                   
-                                </item>
+                                <list>
                                     <item corresp="#" sameAs="">
                                         <label ana="rdfs:label"/>
                                         <locus/>
-                                        <note/>                                   
+                                        <note/>
                                     </item>
                                 </list>
                             </decoNote>
@@ -202,12 +190,11 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <date ana="crm:E52_Time-Span" type="exact" when="Index Date">Date
-                                (literature)</date>
+                            <date ana="crm:E52_Time-Span" type="exact" when="Index Date">Date (literature)</date>
                             <!-- mehrere Möglich, add button  -->
+                            <date when=""/>
                         </origin>
                         <provenance>
-                            <p/>
                             <p/>
                             <p/>
                         </provenance>
@@ -223,25 +210,23 @@
                             </note>
                         </adminInfo>
                         <surrogates>
-                            <p corresp="" type="metadata" ana="chigc:description"/>
-                            <p ana="chigc:ImageAvailability" type="ImageAvailability" corresp=""
-                                >Images seen/available?</p>
-                            <p type="IIIF" resp=""/>
+                            <p ana="chigc:description" corresp="" type="metadata"/>
+                            <p ana="chigc:ImageAvailability" corresp="" type="ImageAvailability">Images seen/available?</p>
+                            <p resp="" type="IIIF"/>
                         </surrogates>
                     </additional>
                 </msDesc>
                 <listBibl>
                     <bibl/>
                     <bibl/>
-                    <note>Externe Anmerkungen</note>
+                    <note></note>
                 </listBibl>
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="STATUS">
             <!-- Verpflichtend für die Qualitycontrol -->
-            <change type="manuscriptRecord" when="2023-09-21"><p>Manuscript was recorded by
-                    <persName/>.</p>
-            </change>        
+            <change type="manuscriptRecord" when=""><p>Manuscript was recorded by <persName/>.</p>
+            </change>
         </revisionDesc>
     </teiHeader>
     <text>
