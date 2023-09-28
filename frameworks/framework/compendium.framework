@@ -80,11 +80,11 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;p xmlns="http://www.tei-c.org/ns/1.0">${caret}&lt;/p></String>
+																<String>&lt;p xmlns="http://www.tei-c.org/ns/1.0">&lt;/p></String>
 															</entry>
 															<entry>
 																<String>goToNextEditablePosition</String>
-																<String>true</String>
+																<String>false</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -212,7 +212,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>//origin</String>
+																<String>//msItem/docDate</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -274,7 +274,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>//origin</String>
+																<String>//msItem/docDate</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -652,7 +652,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String></String>
+														<String>not(//idno[@type='sigla'])</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -1133,7 +1133,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;msItem xmlns="http://www.tei-c.org/ns/1.0" corresp="#xy" type="co-transmission" ana="chigc:Item">
+																<String>&lt;msItem xmlns="http://www.tei-c.org/ns/1.0" corresp="#" n="co-transmission" ana="chigc:Item">
                      &lt;locus/>
                      &lt;title ana="rdfs:label">&lt;/title>
                     &lt;note/>
@@ -1141,7 +1141,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>if (//msItem[@type='co-transmission']) then //msItem[@type='co-transmission'][last()] else //msItem[@xml:id='compendium-historiae']
+																<String>if (//msItem[@n='co-transmission']) then //msItem[@n='co-transmission'][last()] else //msItem[@xml:id='compendium-historiae']
 
 </String>
 															</entry>
@@ -1193,7 +1193,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;msItem xmlns="http://www.tei-c.org/ns/1.0" corresp="#xy" type="transmission-context" ana="chigc:Item">
+																<String>&lt;msItem xmlns="http://www.tei-c.org/ns/1.0" corresp="#xy" n="transmission-context" ana="chigc:Item">
                      &lt;locus/>
                      &lt;title ana="rdfs:label">&lt;/title>
                     &lt;note/>
@@ -1201,7 +1201,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>if (//msItem[@type='transmission-context']) then //msItem[@type='transmission-context'][last()] else //msItem[@xml:id='compendium-historiae']
+																<String>if (//msItem[@n='transmission-context']) then //msItem[@n='transmission-context'][last()] else //msItem[@xml:id='compendium-historiae']
 
 </String>
 															</entry>
@@ -2219,6 +2219,65 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>elaborate_item</String>
+										</field>
+										<field name="name">
+											<String>Upgrade Item</String>
+										</field>
+										<field name="description">
+											<String>Upgrades the Transmission Context Item and adds additional fields for further information.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/up-arrow.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/up-arrow.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not({$caret}/docDate)</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String> &lt;author xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">&lt;/author>                          
+                            &lt;!-- Alternativ -->
+                            &lt;docDate  xmlns="http://www.tei-c.org/ns/1.0"  ana="chigc:date">
+                                &lt;date notAfter="" notBefore=""/>
+                            &lt;/docDate>
+                            &lt;textLang  xmlns="http://www.tei-c.org/ns/1.0" ana="dcterms:language" mainLang=""/></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//msItem[@n="transmission-context"]/title</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
