@@ -82,14 +82,12 @@
                         <msItem ana="chigc:Item" corresp="#" n="co-transmission">
                             <locus/>
                             <title ana="rdfs:label"/>
-                            <note>
-                            </note>
+                            <note> </note>
                         </msItem>
                         <msItem ana="chigc:Item" corresp="#" n="transmission-context">
-                            <!-- Co-Transmission fixed aber nicht necessary -->
                             <locus/>
                             <title ana="rdfs:label"/>
-                            <!-- Alternativ -->                           
+                            <!-- Alternativ -->
                             <note/>
                         </msItem>
                     </msContents>
@@ -97,9 +95,9 @@
                         <objectDesc ana="chigc:manifestationType" form="codex">
                             <supportDesc ana="dcterms:medium" material="material">
                                 <extent ana="memo:sizeMeasurement">
-                                    <height ana="memo:hasLength" quantity="" unit="mm"/>
+                                    <height ana="memo:hasLength" unit="mm"/>
                                     <!-- mehrere Möglich, add button -->
-                                    <width ana="memo:hasWitdh" quantity="" unit="mm"/>
+                                    <width ana="memo:hasWitdh" unit="mm"/>
                                     <!-- mehrere Möglich, add button -->
                                 </extent>
                                 <condition ana="chigc:condition" n="">
@@ -115,7 +113,7 @@
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
-                        <decoDesc corresp="">
+                        <decoDesc>
                             <decoNote ana="chigc:Graph" corresp="#compendium-historiae" type="graph">
                                 <list>
                                     <item ana="chigc:graphOrientation" n="orientation">
@@ -125,9 +123,9 @@
                                     <item ana="chigc:LineaChristiLocalisation" n="linea-christi">
                                         <list>
                                             <item n="presence">Linea Christi present</item>
-                                            <item n="orientation"><seg/></item>
-                                            <note/>
+                                            <item n="orientation"><seg/></item>                                           
                                         </list>
+                                        <note/>
                                     </item>
                                     <item ana="chigc:ColorCoding" n="color-coding">
                                         <p>Color-Coding: <seg/></p>
@@ -181,8 +179,9 @@
                                         <note/>
                                     </item>
                                     <item n="other-medaillons">
-                                        <list><item corresp="" n="" sameAs=""> </item>
-                                            <item corresp="" n="" sameAs=""> </item></list>
+                                        <list><item corresp="" sameAs=""> </item>
+                                            <item corresp="" sameAs=""> </item>
+                                        </list>
                                         <note/>
                                     </item>
                                 </list>

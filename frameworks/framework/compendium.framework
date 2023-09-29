@@ -112,68 +112,6 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>add_figure_miniature</String>
-										</field>
-										<field name="name">
-											<String>add_figure_miniature</String>
-										</field>
-										<field name="description">
-											<String>add figure (miniature)</String>
-										</field>
-										<field name="largeIconPath">
-											<String>${framework}/icons/plus.png</String>
-										</field>
-										<field name="smallIconPath">
-											<String>${framework}/icons/plus.png</String>
-										</field>
-										<field name="accessKey">
-											<String></String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String></String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;figure xmlns="http://www.tei-c.org/ns/1.0" corresp="" ana="chigc:Miniature">&lt;label>${caret}&lt;/label>&lt;/figure></String>
-															</entry>
-															<entry>
-																<String>goToNextEditablePosition</String>
-																<String>true</String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>ancestor-or-self::decoNote</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>Inside as last child</String>
-															</entry>
-															<entry>
-																<String>schemaAware</String>
-																<String>false</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-										<field name="enabledInReadOnlyContext">
-											<Boolean>false</Boolean>
-										</field>
-									</action>
-									<action>
-										<field name="id">
 											<String>add_date_when</String>
 										</field>
 										<field name="name">
@@ -275,130 +213,6 @@
 															<entry>
 																<String>insertLocation</String>
 																<String>//msItem/docDate</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>Inside as last child</String>
-															</entry>
-															<entry>
-																<String>schemaAware</String>
-																<String>false</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-										<field name="enabledInReadOnlyContext">
-											<Boolean>false</Boolean>
-										</field>
-									</action>
-									<action>
-										<field name="id">
-											<String>add_figure_graph</String>
-										</field>
-										<field name="name">
-											<String>add_figure_graph</String>
-										</field>
-										<field name="description">
-											<String>add figure (graph)</String>
-										</field>
-										<field name="largeIconPath">
-											<String>${framework}/icons/plus.png</String>
-										</field>
-										<field name="smallIconPath">
-											<String>${framework}/icons/plus.png</String>
-										</field>
-										<field name="accessKey">
-											<String></String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String></String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;figure xmlns="http://www.tei-c.org/ns/1.0" corresp="" ana="chigc:graph">&lt;label>${caret}&lt;/label>&lt;/figure></String>
-															</entry>
-															<entry>
-																<String>goToNextEditablePosition</String>
-																<String>true</String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>ancestor-or-self::decoNote</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>Inside as last child</String>
-															</entry>
-															<entry>
-																<String>schemaAware</String>
-																<String>false</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-										<field name="enabledInReadOnlyContext">
-											<Boolean>false</Boolean>
-										</field>
-									</action>
-									<action>
-										<field name="id">
-											<String>add_figure_diagram</String>
-										</field>
-										<field name="name">
-											<String>add_figure_diagram</String>
-										</field>
-										<field name="description">
-											<String>add figure (diagram)</String>
-										</field>
-										<field name="largeIconPath">
-											<String>${framework}/icons/plus.png</String>
-										</field>
-										<field name="smallIconPath">
-											<String>${framework}/icons/plus.png</String>
-										</field>
-										<field name="accessKey">
-											<String></String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String></String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;figure xmlns="http://www.tei-c.org/ns/1.0" corresp="" ana="chigc:diagram">&lt;label>${caret}&lt;/label>&lt;/figure></String>
-															</entry>
-															<entry>
-																<String>goToNextEditablePosition</String>
-																<String>true</String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>ancestor-or-self::decoNote</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -1294,8 +1108,8 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;height unit="mm" ana="memo:hasLength" quantity="">&lt;/height>
-&lt;width unit="mm" ana="memo:hasWitdh" quantity="">&lt;/width>
+																<String>&lt;height unit="mm" ana="memo:hasLength" xmlns="http://www.tei-c.org/ns/1.0">&lt;/height>
+&lt;width unit="mm" ana="memo:hasWitdh" xmlns="http://www.tei-c.org/ns/1.0">&lt;/width>
      </String>
 															</entry>
 															<entry>
@@ -1757,11 +1571,11 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;p xmlns="http://www.tei-c.org/ns/1.0" corresp="" sameAs="" type="" xml:id=""> &lt;/p></String>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="" sameAs="" > &lt;/item></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>//item[@type="other-medaillons"]/p[last()]</String>
+																<String>//item[@n="other-medaillons"]/list/item[last()]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -2253,7 +2067,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>not({$caret}/docDate)</String>
+														<String>not(ancestor-or-self::*/docDate)</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -2268,7 +2082,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>//msItem[@n="transmission-context"]/title</String>
+																<String>self::msItem[@n='transmission-context']/title</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -2278,6 +2092,52 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>delete_docDate</String>
+										</field>
+										<field name="name">
+											<String>Delete Element</String>
+										</field>
+										<field name="description">
+											<String>Deletes the Field</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/delete.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::*/docDate</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
