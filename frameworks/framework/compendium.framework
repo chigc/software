@@ -715,7 +715,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;explicit xmlns="http://www.tei-c.org/ns/1.0">&lt;/explicit></String>
+																<String>&lt;explicit xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:explicit">&lt;/explicit></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1109,7 +1109,7 @@
 															<entry>
 																<String>fragment</String>
 																<String>&lt;height unit="mm" ana="memo:hasLength" xmlns="http://www.tei-c.org/ns/1.0">&lt;/height>
-&lt;width unit="mm" ana="memo:hasWitdh" xmlns="http://www.tei-c.org/ns/1.0">&lt;/width>
+&lt;width unit="mm" ana="memo:hasWidth" xmlns="http://www.tei-c.org/ns/1.0">&lt;/width>
      </String>
 															</entry>
 															<entry>
@@ -2138,6 +2138,60 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_bib</String>
+										</field>
+										<field name="name">
+											<String>Add Bibliographical Entry</String>
+										</field>
+										<field name="description">
+											<String>Adds a Field for a bibliographical entry</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0">&lt;/bibl></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//listBibl/bibl[last()]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>

@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main"/>
+                <title type="main" ana="rdfs:label"/>
                 <author ref="https://viaf.org/viaf/17579848/">Peter of Poitiers</author>
             </titleStmt>
             <publicationStmt>
@@ -97,11 +97,11 @@
                                 <extent ana="memo:sizeMeasurement">
                                     <height ana="memo:hasLength" unit="mm"/>
                                     <!-- mehrere Möglich, add button -->
-                                    <width ana="memo:hasWitdh" unit="mm"/>
+                                    <width ana="memo:hasWidth" unit="mm"/>
                                     <!-- mehrere Möglich, add button -->
                                 </extent>
                                 <condition ana="chigc:condition" n="">
-                                    <p>Note about Condition</p>
+                                    <p></p>
                                 </condition>
                             </supportDesc>
                             <layoutDesc>
@@ -123,7 +123,9 @@
                                     <item ana="chigc:LineaChristiLocalisation" n="linea-christi">
                                         <list>
                                             <item n="presence">Linea Christi present</item>
-                                            <item n="orientation"><seg/></item>                                           
+                                            <item n="orientation">
+                                                <seg/>
+                                            </item>
                                         </list>
                                         <note/>
                                     </item>
@@ -162,33 +164,31 @@
                                         <note/>
                                     </item>
                                     <item n="jesus-pictured">
-                                        <list><item corresp="" n="jesus-natus" sameAs="">Jesus Natus</item>
+                                        <list>
+                                            <item corresp="" n="jesus-natus" sameAs="">Jesus Natus</item>
                                             <item corresp="" n="jesus-puer" sameAs="">Jesus Puer</item>
                                             <item corresp="" n="jesus-passus" sameAs="">Jesus Passus</item>
                                             <item corresp="" n="jesus-resurgens" sameAs="">Jesus Resurgens</item>
-                                            <item corresp="" n="jesus-other" sameAs="">Other [e.g., Pater]</item></list>
+                                            <item corresp="" n="jesus-other" sameAs="">Other [e.g., Pater]</item>
+                                        </list>
                                         <note/>
                                     </item>
                                     <item n="extras">
-                                        <list><item corresp="" n="cain-abel" sameAs="">Cain and Abel</item>
+                                        <list>
+                                            <item corresp="" n="cain-abel" sameAs="">Cain and Abel</item>
                                             <item corresp="" n="moses-Aaron" sameAs="">Moses and Aaron</item>
                                             <item corresp="" n="nebuchadnezzar" sameAs="">Nebuchadnezzar</item>
                                             <item corresp="" n="alexander" sameAs="">Alexander</item>
                                             <item corresp="" n="tower-babel" sameAs="">Tower of Babel</item>
-                                            <item corresp="" n="city-babel" sameAs="">City of Babel</item></list>
-                                        <note/>
-                                    </item>
-                                    <item n="other-medaillons">
-                                        <list><item corresp="" sameAs=""> </item>
-                                            <item corresp="" sameAs=""> </item>
+                                            <item corresp="" n="city-babel" sameAs="">City of Babel</item>
                                         </list>
                                         <note/>
                                     </item>
-                                </list>
-                            </decoNote>
-                            <decoNote ana="chigc:Pictures" type="illustrations">
-                                <list><item ana="chigc:Picture" corresp="#" sameAs="">
-                                        <p/>
+                                    <item n="other-medaillons">
+                                        <list>
+                                            <item corresp="" sameAs=""> </item>
+                                            <item corresp="" sameAs=""> </item>
+                                        </list>
                                         <note/>
                                     </item>
                                 </list>
@@ -197,7 +197,7 @@
                                 <!-- mehrere Möglich, add button -->
                                 <list>
                                     <item corresp="#" sameAs="">
-                                        <label ana="rdfs:label"/>
+                                        <label/>
                                         <locus/>
                                         <note/>
                                     </item>
@@ -206,11 +206,6 @@
                         </decoDesc>
                     </physDesc>
                     <history>
-                        <origin>
-                            <date ana="chigc:date" corresp="#compendium-historiae" type="exact" when="Index Date">Date (literature)</date>
-                            <!-- mehrere Möglich, add button  -->
-                            <date when=""/>
-                        </origin>
                         <provenance>
                             <p/>
                             <p/>

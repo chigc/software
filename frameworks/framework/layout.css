@@ -183,19 +183,17 @@ additional:before {
 physDesc:after {
     display:block;
     content: 
-    oxy_label(text, 'History/Provenance', styles, 'font-weight:bold; font-size:large;')
-    oxy_label(text, '         Add Date-Range')
-    oxy_editor(type, button, actionID, add_date_range, transparent, true, color, #FFFFFF)
-    oxy_label(text, '         Add Exact Date')
-    oxy_editor(type, button, actionID, add_date_when, transparent, true, color, #FFFFFF)
+    oxy_label(text, 'Provenance', styles, 'font-weight:bold; font-size:large;')
     oxy_label(text, '         Add Provenance')oxy_editor(type, button, actionID, add_provenance, transparent, true, color, #FFFFFF)
 }
 
 listBibl:before {
-    padding-bottom: 10px;
-    font-weight: bold;
-    font-size: 14pt;
-    content: 'Bibliography'
+    display: block;
+    content: 
+    oxy_label(text, 'Bibliography', styles,  'padding-bottom: 10px; font-weight: bold; font-size: 14pt;')
+    oxy_label(text, '     Add bibliographical entry' )
+    oxy_editor(type,button, actionID, add_bib, transparent, true, color, #FFFFFF)
+    
 
 }
 revisionDesc:before {
@@ -203,7 +201,8 @@ revisionDesc:before {
     content: 
     oxy_label(text, 'Status', styles, 'font-weight:bold; font-size:large; display:block;')
     oxy_label(text, '                          Manuscript was seen live  ', styles, 'display:block')
-    oxy_editor(type, button, actionID, seen_live, transparent, true, color, #FF0000)oxy_editor(type, button, actionID, not_seen_live, transparent, true, color, #FF0000)
+    oxy_editor(type, button, actionID, seen_live, transparent, true, color, #FF0000)
+    oxy_editor(type, button, actionID, not_seen_live, transparent, true, color, #FF0000)
 }
 
 
@@ -404,16 +403,6 @@ history > provenance > p:first-of-type:before {
 history > provenance > p:not(first-of-type):before {
     font-size: small;
     content: 'Provenance              '
-}
-origin > date[when]:before {
-    display: inline-block;
-    width: 20%;
-    content: "Date (exact):"
-}
-origin > date[notBefore]:before {
-    display: inline-block;
-    width: 20%;
-    content: "Date (range):"
 }
 
 /* ########################################### Additional ############################################# */
@@ -726,12 +715,13 @@ supportDesc width {
 
 supportDesc > condition {
     content: 
-    oxy_editor(type, combo, edit, '@type', editable, false, values, ',fragmentory,complete,incomplete,unclear'width, 10%, fontInherit, true)
+    oxy_editor(type, combo, edit, '@type', editable, false, values, ',fragmentory,complete,incomplete,unclear', width, 10%, fontInherit, true)
 }
 
 supportDesc > condition > p {
     content: 
-    oxy_editor(type, text, edit, '#text', editable, true, width, 70%, fontInherit, true)
+    oxy_label(text, 'Notes on Condition:    ')
+    oxy_textArea( edit, '#text')
 }
 
 layoutDesc > layout > p {
@@ -796,6 +786,8 @@ item[n = 'linea-christi'] > list > item[n = 'orientation'] > seg {
 }
 item[n = 'inscriptions'] {
    content: oxy_label(text, 'Inscriptions ', styles, 'font-weight:bold;')
+   oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+   
 }
 
 item[n = 'inscriptions'] > p {
@@ -821,10 +813,7 @@ item[n=medaillon-rendition] > list > item {
     display:block;
     font-style:italic;
     margin-left:14em;
-    content:
-    oxy_label(text, 'ID: ')
-    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future')
-    oxy_label(text, '   ')
+    content: 
     oxy_xpath('text()')
 
 }
@@ -852,6 +841,7 @@ item[n='jesus-pictured']:before {
 }
 item[n='extras']:before {
     content: oxy_label(text, 'Occurences of:  ', styles, 'font-weight:bold;')
+    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 item[n='other-medaillons']:before {
     content: 
@@ -960,7 +950,7 @@ decoNote[type='diagrams'] > list > item {
     margin-left: 20%;
     content: 
     oxy_label(text, 'ID:  ')
-    oxy_editor(type, combo, edit, '@corresp', editable, false, values, '#d-ark,#d-ark-a, #d-ark-b, #d-ark-c, #d-ark-d, #d-ark-e, #d-ark-f, #d-encampments, #d-encampments-a,#d-encampments-b,#d-encampments-c, #d-encampments-d, #d-jerusalem,#d-jerusalem-a,#d-jerusalem-b,#d-jerusalem-c,#d-jerusalem-d,#d-jerusalem-e, #d-jerusalem-f,#d-jerusalem-g,#d-jerusalem-h, #d-kingdoms, #d-sons_of_noah, #d-T-O, #d-tribes,#d-tribes-a,#d-tribes-b,#d-tribes-c,#d-tribes-d,#d-tribes-e,#d-tribes-f,#d-apostles,#d-apostles-a,#d-apostles-b,#d-apostles-c,#d-apostles-d,#d-apostles-e,#d-apostles-f,#d-apostles-g,#d-apostles-h,#d-apostles-i, #d-apostles-j'width, 20%, fontInherit, true)
+    oxy_editor(type, combo, edit, '@corresp', editable, false, values, '#ark,#ark-a, #ark-b, #ark-c, #ark-d, #ark-e, #ark-f, #encampments, #encampments-a,#encampments-b,#encampments-c, #encampments-d, #jerusalem,#jerusalem-a,#jerusalem-b,#jerusalem-c,#jerusalem-d,#jerusalem-e, #jerusalem-f,#jerusalem-g,#jerusalem-h, #kingdoms, #sons_of_noah, #T-O, #tribes,#tribes-a,#tribes-b,#tribes-c,#tribes-d,#tribes-e,#tribes-f,#apostles,#apostles-a,#apostles-b,#apostles-c,#apostles-d,#apostles-e,#apostles-f,#apostles-g,#apostles-h,#apostles-i, #apostles-j', width, 20%, fontInherit, true)
 }
 decoNote label {
     content: 
@@ -968,17 +958,17 @@ decoNote label {
     oxy_editor(type, text, edit, "#text", width, 30%, fontInherit, true)
 }
 
-decoNote[type='diagrams'] locus {
+decoNote[type='diagrams'] > list > item > locus {
     display:block;
     content:
     oxy_label(text, '                                                  Folio:    ')
     oxy_editor(type,text,edit,'#text', width, 5%,fontInherit,true)
 }
 
-decoNote[type='diagrams'] note {
+decoNote[type='diagrams'] > list > item > note {
     content:
-    oxy_label(text, '                           Notes:  ')
-    oxy_editor(type,text,edit,'#text', width, 70%,fontInherit,true)
+    oxy_label(text, 'Notes:   ')
+    oxy_textArea(edit,'#text')
 }
 
 decoNote[type="illustrations"] > list > item > p {
@@ -1042,14 +1032,14 @@ adminInfo > note > note {
     oxy_editor(type, text, edit, '#text', width, 70%, fontInherit, true)oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 
-additional > surrogates > p[type = 'metadata'] {
+additional > surrogates > list > item[n = 'metadata'] {
     margin-left: 10em;
     display: block;
     content: 
     oxy_label(text, 'Metadata (URL):  ', styles, 'font-size:small;')
     oxy_editor(type, text, edit, '@corresp', width, 70%, fontInherit, true)
 }
-surrogates > p[type = 'IIIF'] {
+surrogates > list > item[n = 'IIIF'] {
     margin-left: 10em;
     display: block;
     content: 
@@ -1057,7 +1047,7 @@ surrogates > p[type = 'IIIF'] {
     oxy_editor(type, text, edit, '@resp', width, 70%, fontInherit, true)
 }
 
-surrogates > p[type = 'ImageAvailability'] {
+surrogates > list > item[n = 'ImageAvailability'] {
     margin-left: 10em;
     content: 
     oxy_label(text, 'Image Availability:  ', styles, 'font-size:small; display:block;')
@@ -1068,26 +1058,23 @@ surrogates > p[type = 'ImageAvailability'] {
 
 /* ############################################# BIBLIOGRAPHY        ################################################################## */
 
+/*listBibl:before {
+    content: 
+        oxy_browser(
+            href, "https://www.zotero.org/groups/5038011/chigc/collections/PS99796B", 
+            height, 600px,
+            width, 100%);
+}
+*/
 listBibl > bibl {
     display: block;
-    content: 
-    oxy_editor(type, text, edit, '#text', width, 100%, fontInherit, true)
-}
-listBibl > note {
-    display: block;
-    margin-top: 1em;
-    content: 
-    oxy_label(text, 'Note (external): ')
-    oxy_editor(type, text, edit, '#text', width, 70%, fontInherit, true)
-}
-/* p-like */
-/*msItem > note:not([status]) > p {
-    padding: 5px;
-    margin-left: 19.6%;
-    content: 
-    oxy_editor(type, text, edit, '#text', width, 90%, fontInherit, true)
+    margin-top: 15px;
+    content:
+    oxy_label(text, 'Bibliographical Entry:         ')
+    oxy_textArea(edit, '#text')
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-}*/
+
+}
 
 /*############################# RevisionDesc FLAGS ####################################*/
 change {
@@ -1122,9 +1109,3 @@ change[type = 'NOmanuscriptLiveView']:after {
 }
 
 
-/*
-[sameAs] {
-    content:
-    oxy_editor(type,combo, edit, '@sameAs',values, 'IDs,from,superstructure', width, 10%)
-}
-*/
