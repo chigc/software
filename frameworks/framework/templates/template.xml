@@ -196,7 +196,7 @@
                             <decoNote ana="chigc:Diagrams" corresp="#compendium-historiae" type="diagrams">
                                 <!-- mehrere Möglich, add button -->
                                 <list>
-                                    <item corresp="#" sameAs="">
+                                    <item corresp="" sameAs="">
                                         <label/>
                                         <locus/>
                                         <note/>
@@ -244,5 +244,8 @@
         <body>
             <p>Transcription</p>
         </body>
+        <back>
+            <include href="../lists/Co-Transmission_List.xml" xpointer="element(cotransmission_list)"/>
+        </back>
     </text>
 </TEI>

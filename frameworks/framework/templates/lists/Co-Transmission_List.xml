@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="en">Compendium historiae - Diagram list</title>
+            <author>Bleier, Roman</author>
+            <author>Goerrs, Eleanor</author>
+            <author>Krottmaier, Sina</author>
+            <author>Sonnberger, Jakob</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <ref target="https://uni-tuebingen.de"/>
+               <orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName>
+            </publisher>
+            <publisher>
+               <ref target="https://www.uni-wuppertal.de"/>
+               <orgName ref="https://d-nb.info/gnd/64944-2">University of Wuppertal</orgName>
+            </publisher>
+            <publisher>
+               <ref target="https://informationsmodellierung.uni-graz.at"/>
+               <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
+            </publisher>
+            <authority>
+               <ref target="https://uni-tuebingen.de"/>
+               <orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName>
+            </authority>
+            <authority>
+               <ref target="https://informationsmodellierung.uni-graz.at"/>
+               <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
+            </authority>
+            <distributor>
+               <ref target="https://gams.uni-graz.at"/>
+               <orgName>GAMS - Geisteswissenschaftliches Asset Management System </orgName>
+            </distributor>
+            <availability>
+               <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
+               <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</licence>
+            </availability>
+            <pubPlace> Graz/Tübingen/Wuppertal</pubPlace>
+            <date when="2023">2023</date>
+            <idno ana="dcterms:identifier" type="PID">o:chigc.listdiagrams</idno>
+            <ref target="context:chigc" type="context"/>
+            <ref target="context:chigc.list" type="context"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Born digital. </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <list xml:id="cotransmission-list">
+           <item xml:id="co-cosmological-diagram">
+              <label>Cosmological Diagram(s)</label>
+              <p>Any circular diagram showing the earthly and/or celestial spheres</p>
+           </item>
+            <item xml:id="co-five-ages">
+               <label>Five Ages of Man</label>
+               <p></p>
+            </item>
+            <item xml:id="co-liberal-arts">
+               <label>Liberal Arts</label>
+               <p></p>
+            </item>
+            <item xml:id="co-mary-genealogy">
+               <label>Mary Genealogy</label>
+               <p></p>
+            </item>
+            <item xml:id="co-microcosm-macrocosm">
+               <label>Microcosm-Macrocosm</label>
+               <p></p>
+            </item>
+            <item xml:id="co-philosophy">
+               <label>Philsophy</label>
+               <p></p>
+            </item>
+            <item xml:id="co-sciences">
+               <label>Sciences</label>
+               <p></p>
+            </item>
+            <item xml:id="co-scripture">
+               <label>Scripture Diagram</label>
+               <p>Usually a tree diagram, showing books of Old and/or New Testament</p>
+            </item>
+            <item xml:id="co-candelabrum">
+               <label>Seven-branched Candelabrum</label>
+               <p></p>
+            </item>
+            <item xml:id="co-shield-faith">
+               <label>Shield of Faith</label>
+               <p>Triangular diagram showing the Trinity</p>
+            </item>
+            <item xml:id="co-seraph">
+               <label>Six-winged Seraph</label>
+               <p></p>
+            </item>
+            <item xml:id="co-sons-noah">
+               <label>Sons of Noah</label>
+               <p></p>
+            </item>
+            <item xml:id="co-tablet-law">
+               <label>Tablet of the Law</label>
+               <p></p>
+            </item>
+            <item xml:id="co-ten-commandments">
+               <label>Ten Commandmends</label>
+               <p></p>
+            </item> 
+            <item xml:id="co-to-map">
+               <label>T-O Map</label>
+               <p>World map divided by a T showing three regions</p>
+            </item>
+            <item xml:id="co-twoer-wisdom">
+               <label>Tower of Wisdom</label>
+               <p>Virtues in the shape of a tower</p>
+            </item>
+            <item xml:id="co-tree-affinity">
+               <label>Tree of Affinity</label>
+               <p></p>
+            </item>
+            <item xml:id="co-tree-cosanguinity">
+               <label>Tree of Cosanguinity</label>
+               <p></p>
+            </item>
+            <item xml:id="co-tree-life">
+               <label>Tree of Life (Bonaventure)</label>
+               <p>Christ crucified on a Tree diagrammming sufferings of christ, attributed to Bonaventure</p>
+            </item>
+            <item xml:id="co-tree-vices">
+               <label>Tree of Vices</label>
+               <p></p>
+            </item><item xml:id="co-tree-virtues">
+               <label>Tree of Virtues</label>
+               <p></p>
+            </item>
+            <item xml:id="co-twelve-articles">
+               <label>Twelve Articles of Faith</label>
+               <p></p>
+            </item>
+            <item xml:id="co-wheels-seven">
+               <label>Wheels of Seven</label>
+               <p>Also known as Septenarium pictum</p>
+            </item>
+            <item xml:id="co-windrose">
+               <label>Windrose</label>
+               <p></p>
+            </item>
+           <item xml:id="co-world-map">
+               <label>World Map</label>
+              <p>Other world maps</p>
+            </item>
+           <item xml:id="co-zodiac">
+               <label>Zodiac</label>
+               <p></p>
+            </item>            
+         </list>
+      </body>
+   </text>
+</TEI>

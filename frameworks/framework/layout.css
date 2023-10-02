@@ -101,7 +101,10 @@ msItem[n = co-transmission]:before {
     oxy_label(text, 'Co-Transmission (Graphical Transmissions)',  styles, "font-weight: bold; font-size: large")
     oxy_concat(' (ID: ')
     oxy_editor(type, combo, edit, "@corresp", values, '#xy,will,be,added,when,lists,are,done', width, 20%, fontInherit, true)')'
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000);
+    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+    
+    /*  oxy_xpath("string-join(doc('./lists/Co-Transmission_List.xml')//item/@xml:id, ',')") */
+    
 }
 
 msItem[n = transmission-context]:before {
