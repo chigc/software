@@ -55,10 +55,10 @@
    <text>
       <body>
          <list xml:id="cotransmission-list">
-           <item xml:id="co-cosmological-diagram">
-              <label>Cosmological Diagram(s)</label>
-              <p>Any circular diagram showing the earthly and/or celestial spheres</p>
-           </item>
+            <item xml:id="co-cosmological-diagram">
+               <label>Cosmological Diagram(s)</label>
+               <p>Any circular diagram showing the earthly and/or celestial spheres</p>
+            </item>
             <item xml:id="co-five-ages">
                <label>Five Ages of Man</label>
                <p></p>
@@ -115,7 +115,7 @@
                <label>T-O Map</label>
                <p>World map divided by a T showing three regions</p>
             </item>
-            <item xml:id="co-twoer-wisdom">
+            <item xml:id="co-tower-wisdom">
                <label>Tower of Wisdom</label>
                <p>Virtues in the shape of a tower</p>
             </item>
@@ -130,6 +130,13 @@
             <item xml:id="co-tree-life">
                <label>Tree of Life (Bonaventure)</label>
                <p>Christ crucified on a Tree diagrammming sufferings of christ, attributed to Bonaventure</p>
+            </item>
+            <item xml:id="co-virtue">
+               <label>Virtue Diagram (with God)</label>
+               <p></p>
+            </item><item xml:id="co-vice">
+               <label>Vices Diagram (with Devil)</label>
+               <p></p>
             </item>
             <item xml:id="co-tree-vices">
                <label>Tree of Vices</label>
@@ -150,11 +157,11 @@
                <label>Windrose</label>
                <p></p>
             </item>
-           <item xml:id="co-world-map">
+            <item xml:id="co-world-map">
                <label>World Map</label>
-              <p>Other world maps</p>
+               <p>Other world maps</p>
             </item>
-           <item xml:id="co-zodiac">
+            <item xml:id="co-zodiac">
                <label>Zodiac</label>
                <p></p>
             </item>            

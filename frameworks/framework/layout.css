@@ -100,11 +100,8 @@ msItem[n = co-transmission]:before {
     content: 
     oxy_label(text, 'Co-Transmission (Graphical Transmissions)',  styles, "font-weight: bold; font-size: large")
     oxy_concat(' (ID: ')
-    oxy_editor(type, combo, edit, "@corresp", values, '#xy,will,be,added,when,lists,are,done', width, 20%, fontInherit, true)')'
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-    
-    /*  oxy_xpath("string-join(doc('./lists/Co-Transmission_List.xml')//item/@xml:id, ',')") */
-    
+    oxy_editor(type, combo, edit, "@corresp", values, oxy_xpath("string-join(doc('./../lists/Co-Transmission_List.xml')//item/@xml:id, ',')"), width, 20%, fontInherit, true)')'
+    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)     
 }
 
 msItem[n = transmission-context]:before {
@@ -351,11 +348,17 @@ msItem > note[type = 'significant-passages']:before {
     content: 'Contains the text passages:'
 }
 
+note[type = 'significant-passages'] > list:empty {
+    content:
+        oxy_label(text, 'Show Textpassages')
+}
+
 
 msItem[n= co-transmission] > note:before {
     display: inline-block;
     content: 'Notes:                                         '
 }
+
 
 
 msItem[n= transmission-context] > note:before {
@@ -953,7 +956,10 @@ decoNote[type='diagrams'] > list > item {
     margin-left: 20%;
     content: 
     oxy_label(text, 'ID:  ')
-    oxy_editor(type, combo, edit, '@corresp', editable, false, values, '#ark,#ark-a, #ark-b, #ark-c, #ark-d, #ark-e, #ark-f, #encampments, #encampments-a,#encampments-b,#encampments-c, #encampments-d, #jerusalem,#jerusalem-a,#jerusalem-b,#jerusalem-c,#jerusalem-d,#jerusalem-e, #jerusalem-f,#jerusalem-g,#jerusalem-h, #kingdoms, #sons_of_noah, #T-O, #tribes,#tribes-a,#tribes-b,#tribes-c,#tribes-d,#tribes-e,#tribes-f,#apostles,#apostles-a,#apostles-b,#apostles-c,#apostles-d,#apostles-e,#apostles-f,#apostles-g,#apostles-h,#apostles-i, #apostles-j', width, 20%, fontInherit, true)
+    oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Diagrams_List.xml')//item[@xml:id]/concat('#',@xml:id), ',')"), width, 20%, fontInherit, true)
+    
+        
+/*    '#ark,#ark-a, #ark-b, #ark-c, #ark-d, #ark-e, #ark-f, #encampments, #encampments-a,#encampments-b,#encampments-c, #encampments-d, #jerusalem,#jerusalem-a,#jerusalem-b,#jerusalem-c,#jerusalem-d,#jerusalem-e, #jerusalem-f,#jerusalem-g,#jerusalem-h, #kingdoms, #sons_of_noah, #T-O, #tribes,#tribes-a,#tribes-b,#tribes-c,#tribes-d,#tribes-e,#tribes-f,#apostles,#apostles-a,#apostles-b,#apostles-c,#apostles-d,#apostles-e,#apostles-f,#apostles-g,#apostles-h,#apostles-i, #apostles-j'*/
 }
 decoNote label {
     content: 

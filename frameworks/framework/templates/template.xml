@@ -79,15 +79,14 @@
                                 </list>
                             </note>
                         </msItem>
-                        <msItem ana="chigc:Item" corresp="#" n="co-transmission">
+                        <msItem ana="chigc:Item" corresp="" n="co-transmission">
                             <locus/>
-                            <title ana="rdfs:label"/>
+                            <title/>
                             <note> </note>
                         </msItem>
                         <msItem ana="chigc:Item" corresp="#" n="transmission-context">
                             <locus/>
-                            <title ana="rdfs:label"/>
-                            <!-- Alternativ -->
+                            <title/>
                             <note/>
                         </msItem>
                     </msContents>
