@@ -1,0 +1,131 @@
+@namespace oxy "http://www.oxygenxml.com/extensions/author";
+@namespace xi url('http://www.w3.org/2001/XInclude');
+@media oxygen AND (min-width : 25cm) {
+
+/* ---------------------------------------------------------- PAGE ----------------------------------------------------------*/
+    oxy|document {
+        background-color: grey;
+    }
+    TEI {
+        border: 1px solid grey;
+        background-color: #f4ede1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.25in;
+        margin-bottom: 0.25in;
+        width: 27cm;
+        min-height: 10cm;
+    }
+    /* Padding inside the page. */
+    TEI {
+        padding-top: 2em;
+        padding-right: 1em;
+        padding-left: 2em;
+        padding-bottom: 5em;
+    }
+}
+/* ---------------------------------------------------------- DETAILS ----------------------------------------------------------*/
+TEI {
+    background-color: white;
+    -oxy-display-tags: none !important;
+    color: black;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-size: 11pt;
+}
+* {
+    -oxy-display-tags: none;
+}
+oxy|comment {
+    display: none !important;
+}
+/* --------- HIDE -----------*/
+publicationStmt,
+titleStmt > title,
+titleStmt > author, 
+label,
+sourceDesc,
+publisher,
+authority,
+distributor,
+availability,
+pubPlace,
+label,
+publicationStmt > date,
+publicationStmt > ref
+
+{
+    display: none;
+
+}
+/*######################################################### MAIN ###################################################*/
+/* ---------------------------------------------------------- BLOCK / BOXED ----------------------------------------------------------*/
+
+body,
+item
+{
+    display: block;
+    border-bottom: solid grey 0.1px;
+
+}
+
+
+
+/* ---------------------------------------------------------- LABELS ----------------------------------------------------------*/
+titleStmt:before {
+    font-weight: bold;
+    font-size: 20pt;
+    margin-left: 6em;
+    text-align: center;
+    content: 
+    oxy_xpath('//titleStmt/title/text()')
+    }
+
+
+label:not(empty) {
+    display:block;
+    margin-top: 15px;
+    margin-left: 6em;
+    content: 
+    oxy_label(text, 'Name:  ')
+    
+}
+
+
+label:empty {
+    display:block;
+    margin-left: 6em;
+    content: 
+    oxy_label(text, 'Name:  ')
+    oxy_editor(type,text,edit,'#text', width, 40%, fontInherit, true)
+}
+
+p:not(emtpy) {
+    display:block;
+    margin-top: 5px;
+    margin-left: 6em;
+    content:
+    oxy_label(text, 'Description:    ')    
+}
+
+p:empty {
+        display:block;
+    margin-top: 5px;
+    margin-left: 6em;
+    content:
+    oxy_label(text, 'Description:    ')   
+    oxy_textArea(edit, '#text')
+}
+
+/*  CONTENT */
+
+item {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    content:
+    oxy_label(text,'List Entry                                        ID:   ', styles, "font-weight: bold;")
+
+    oxy_editor(type,text,edit,'@xml:id', editable, false, fontInherit, true, styles, "display:block;")
+}
+
+
+    

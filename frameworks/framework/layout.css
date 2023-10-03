@@ -39,7 +39,6 @@ oxy|comment {
     display: none !important;
 }
 /* --------- HIDE -----------*/
-
 publisher,
 authority,
 distributor,
@@ -100,7 +99,7 @@ msItem[n = co-transmission]:before {
     content: 
     oxy_label(text, 'Co-Transmission (Graphical Transmissions)',  styles, "font-weight: bold; font-size: large")
     oxy_concat(' (ID: ')
-    oxy_editor(type, combo, edit, "@corresp", values, oxy_xpath("string-join(doc('./../lists/Co-Transmission_List.xml')//item/@xml:id, ',')"), width, 20%, fontInherit, true)')'
+    oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Co-Transmission_List.xml')//item/@xml:id, ',')"), width, 20%, fontInherit, true)')'
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)     
 }
 
@@ -111,7 +110,7 @@ msItem[n = transmission-context]:before {
     content: 
     oxy_label(text, 'Transmission context (Other Manuscripts)', styles, "font-weight: bold; font-size: large")
     oxy_concat(' (ID: ')
-    oxy_editor(type, combo,edit, "@corresp", values, '#xy,will,be,added,when,lists,are,done'width, 20%, fontInherit, true)')'
+    oxy_editor(type, combo,edit, "@corresp", editable,false, values, oxy_xpath("string-join(doc('./../lists/Transmission-Context_List.xml')//item/@xml:id, ',')"), width, 20%, fontInherit, true)')'
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
     oxy_label(text, '                             Elaborate Transmission-Context', styles, "font-weight: normal; font-size: small; font-style: italic")
     oxy_editor(type, button, actionID, elaborate_item, transparent, true, color, #FF0000)
