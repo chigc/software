@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="en">Compendium historiae - Diagram list</title>
+            <author>Bleier, Roman</author>
+            <author>Goerrs, Eleanor</author>
+            <author>Krottmaier, Sina</author>
+            <author>Sonnberger, Jakob</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <ref target="https://uni-tuebingen.de"/>
+               <orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName>
+            </publisher>
+            <publisher>
+               <ref target="https://www.uni-wuppertal.de"/>
+               <orgName ref="https://d-nb.info/gnd/64944-2">University of Wuppertal</orgName>
+            </publisher>
+            <publisher>
+               <ref target="https://informationsmodellierung.uni-graz.at"/>
+               <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
+            </publisher>
+            <authority>
+               <ref target="https://uni-tuebingen.de"/>
+               <orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName>
+            </authority>
+            <authority>
+               <ref target="https://informationsmodellierung.uni-graz.at"/>
+               <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
+            </authority>
+            <distributor>
+               <ref target="https://gams.uni-graz.at"/>
+               <orgName>GAMS - Geisteswissenschaftliches Asset Management System </orgName>
+            </distributor>
+            <availability>
+               <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
+               <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</licence>
+            </availability>
+            <pubPlace> Graz/Tübingen/Wuppertal</pubPlace>
+            <date when="2023">2023</date>
+            <idno ana="dcterms:identifier" type="PID">o:chigc.listtransmissioncontext</idno>
+            <ref target="context:chigc" type="context"/>
+            <ref target="context:chigc.list" type="context"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Born digital. </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <list xml:id="transmissioncontext_list">
+            <item xml:id="X"><label>15 Vorzeichen des Jüngsten Gerichts</label><p/></item>
+            <item xml:id="tc-allegorarium"><label>Allegoriarum Libri IX</label><p/></item>
+            <item xml:id="tc-annales-hildesheim"><label>Annales Hildesheimenses</label><p/></item>
+            <item xml:id="tc-aquinas-summa"><label>Aquinas Summa theologiae</label><p/></item>
+            <item xml:id="tc-aurora"><label>Aurora</label><p/></item>
+            <item xml:id="tc-biblia"><label>Biblia</label><p/></item>
+            <item xml:id="tc-biblia-pauperum"><label>Biblia Pauperum</label><p/></item>
+            <item xml:id="tc-biblia-vulgata"><label>Biblia Vulgata</label><p/></item>
+            <item xml:id="tc-etymologiae"><label>Etymologiae</label><p/></item>
+            <item xml:id="tc-flavius-josephus"><label>Flavius Josephus</label><p/></item>
+            <item xml:id="tc-gregorii-magni"><label>Gregorii Magni homiliae XI super evangelia</label><p/></item>
+            <item xml:id="tc-gregory"><label>Gregory</label><p/></item>
+            <item xml:id="tc-guillelmus-autissiodorensis"><label>Guillelmus Autissiodorensis: Summa super quattuor libros Sententiarum</label><p/></item>
+            <item xml:id="tc-hilary-poitiers"><label>Hilary of Poitiers</label><p/></item>
+            <item xml:id="tc-history-ecclesiastica"><label>Historia ecclesiastica</label><p/></item>
+            <item xml:id="tc-history-ecclesiastica-I"><label>Historia ecclesiastica I. mit Randnotizen</label><p/></item>
+            <item xml:id="tc-history-scholastica"><label>Historia Scholastica</label><p/></item>
+            <item xml:id="tc-history-scholastica-interpol"><label>Historia scholastica (interpolated)</label><p/></item>
+            <item xml:id="X1"><label>Historia Scholastica (wird dafür im Katalog gehalten)</label><p/></item>
+            <item xml:id="tc-hugo-sankt-viktor"><label>Hugo von Sankt Victor</label><p/></item>
+            <item xml:id="X2"><label> Hugo von Sankt Viktor (super cantica canticorum)</label><p/></item>
+            <item xml:id="tc-hystoria-actuum"><label>Hystoria actuum apostolorum</label><p/></item>
+            <item xml:id="tc-isodore"><label>Isidore</label><p/></item>
+            <item xml:id="tc-legenda-aurea"><label>Legenda aurea</label><p/></item>
+            <item xml:id="tc-liber-floridus"><label>Liber Floridus</label><p/></item>
+            <item xml:id="tc-liber-scholasticae"><label>Liber scholasticae historiae</label><p/></item>
+            <item xml:id="tc-martyrologium-usuardi"><label>Martyrologium Usuardi</label><p/></item>
+            <item xml:id="tc-martyrologium-usuardi-I"><label>Martyrologium Usuardi (vor 1142)</label><p/></item>
+            <item xml:id="tc-moralia"><label>Moralia</label><p/></item>
+            <item xml:id="tc-peter-riga"><label>Peter Riga</label><p/></item>
+            <item xml:id="tc-postillae"><label>Postillae</label><p/></item>
+            <item xml:id="tc-pseudo-dionysius"><label>Pseudo-Dionysius</label><p/></item>
+            <item xml:id="tc-speculum-humanae"><label>Speculum humanae salvationis</label><p/></item>
+            <item xml:id="tc-speculum-theologiae"><label>Speculum theologiae</label><p/></item>
+         </list>
+      </body>
+   </text>
+</TEI>

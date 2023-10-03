@@ -43,7 +43,7 @@
             </availability>
             <pubPlace> Graz/Tübingen/Wuppertal</pubPlace>
             <date when="2023">2023</date>
-            <idno ana="dcterms:identifier" type="PID">o:chigc.listdiagrams</idno>
+            <idno ana="dcterms:identifier" type="PID">o:chigc.listcotransmissions</idno>
             <ref target="context:chigc" type="context"/>
             <ref target="context:chigc.list" type="context"/>
          </publicationStmt>
