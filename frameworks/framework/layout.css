@@ -133,45 +133,70 @@ oxy_label(text, 'Decorations', styles, 'font-weight:bold;font-size:x-large;margi
 decoNote[type = 'graph']:before {
     font-weight: bold;
     font-size: 14pt;
-    content: 'Decoration of the Graph    '
-}
-
-decoNote[type = 'graph']:before {
-    font-weight: bold;
-    font-size: 14pt;
     margin-bottom: 2em;
-    content: oxy_concat('Decoration (Graph)')
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-    oxy_label(text, '        Add Info on Graph Decoration', styles, "font-size:small")
+    content: oxy_concat('Decoration of the Graph    ')
+    oxy_label(text, '                        Add Info on Graph Decoration', styles, "font-size:small")
     oxy_editor(type,button,actionID, add_graph-info,transparent, true, color, #FF0000)
 }
 
+decoNote[type = 'graph'] > list:before {
+    display:block;
+    margin-top:1em;
+    margin-bottom: 1em;
+    margin-left: -2em;
+    content:
+    oxy_label(text, '        Delete Information on Graph  ', styles, "font-size:small; color:red;")
+    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+    
+}
 decoNote[type = 'diagrams']:before {
     font-weight: bold;
     font-size: 14pt;
     margin-bottom: 10px;
     content: oxy_concat('Decoration (Diagrams)')
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
     oxy_label(text, '  Add Diagram', styles, "font-size:small")
     oxy_editor(type,button,actionID, add_diagram,transparent, true, color, #FF0000)
 }
 
-decoNote[type = 'illustratedMedaillons']:before {
+
+decoNote[type = 'illustratedmedallions']:before {
     font-weight: bold;
     font-size: 14pt;
-    content: oxy_concat('Decoration (illustrated Medaillons)')
+    content: oxy_concat('Decoration (Illustrated Medallions)')
+    oxy_label(text, '  Add Info on Illustrated Medallions', styles, "font-size:small")
+    oxy_editor(type,button,actionID, add_medallion-info,transparent, true, color, #FF0000)
+}
+
+
+decoNote[type = 'illustratedmedallions'] > list:before {
+    display:block;
+    margin-top:1em;
+    margin-bottom: 1em;
+    margin-left: -2em;
+    content:
+    oxy_label(text, '        Delete Information on Illustrated Medallions ', styles, "font-size:small; color:red;")
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-    oxy_label(text, '  Add Info on Illustrated Medaillons', styles, "font-size:small")
-    oxy_editor(type,button,actionID, add_medaillon-info,transparent, true, color, #FF0000)
+    
 }
 
 decoNote[type = 'illustrations']:before {
     font-weight: bold;
     font-size: 14pt;
     content: oxy_concat('Decoration (Pictures outside of Graph)')
-    oxy_editor(type, button, actionID, delete_element,transparent, true, color, #FF0000)
-    oxy_label(text, '  Add Picture', styles, "font-size:small")
+    oxy_label(text, '  Add Information on Pictures', styles, "font-size:small")
     oxy_editor(type,button,actionID, add_picture-info,transparent, true, color, #FF0000)
+}
+
+
+decoNote[type = 'illustrations'] > list:before {
+    display:block;
+    margin-top:1em;
+    margin-bottom: 1em;
+    margin-left: -2em;
+    content:
+    oxy_label(text, '        Delete Information on illustrations  ', styles, "font-size:small; color:red;")
+    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+    
 }
 additional:before {
     display: block;
@@ -350,6 +375,7 @@ msItem > note[type = 'significant-passages']:before {
 note[type = 'significant-passages'] > list:empty {
     content:
         oxy_label(text, 'Show Textpassages')
+        oxy_editor(type, button, actionID, add_textpassages, transparent, true, color, #FF0000)
 }
 
 
@@ -626,12 +652,12 @@ msItem > note[type = 'significant-passages'] > list > item {
     margin-left:14em;
     content: 
     oxy_label(text, 'ID: ')
-    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future')
+    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', fontInherit,true, width, 15%)
     oxy_label(text, '   ')
     oxy_xpath("text()")
 
 }
-msItem > note[type = 'significant-passages'] > list > item:after {
+/*msItem > note[type = 'significant-passages'] > list > item:after {
     display:block;
     margin-right: 35em;
     padding: 0;
@@ -641,7 +667,7 @@ msItem > note[type = 'significant-passages'] > list > item:after {
     content: 
     oxy_label(text, '         No   ')
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-}
+}*/
 
 /*  ############################   Co-Transmissions and Transmission-Context ########################################### */
 
@@ -775,13 +801,10 @@ item[n = 'orientation'] > p > seg {
     oxy_label(text, '        ')
     oxy_editor(type, combo, edit, '#text', editable, false, values, 'vertical, horizontal', width, 10%, fontInherit, true)
 }
-item[n = 'linea-christi'] {
-    content: oxy_label(text, 'Linea Christi present', styles, 'font-weight:bold;')
-    oxy_label(text, '         No  ')
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000) 
-}
+
 item[n = 'linea-christi'] > list > item[n="presence"] {
-    visibility: hidden;
+    font-weight:bold;
+    content: 'Linea Christi present:         '
 }
 item[n = 'linea-christi'] > list > item[n = 'orientation'] > seg {
     
@@ -790,39 +813,195 @@ item[n = 'linea-christi'] > list > item[n = 'orientation'] > seg {
     oxy_editor(type, combo, edit, '#text', editable, false, values, 'centered, left, right', width, 10%, fontInherit, true)
 }
 item[n = 'inscriptions'] {
-   content: oxy_label(text, 'Inscriptions ', styles, 'font-weight:bold;')
-   oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-   
+   display:block;
+   content: oxy_label(text, 'Inscriptions ', styles, 'font-weight:bold;')   
 }
 
-item[n = 'inscriptions'] > p {
-    content: 'Inscriptions:     '
-    oxy_editor(type, text, edit, '#text', width, 70%, fontInherit, true)
-}
-
-item[n = 'color-coding'] {
-    content: oxy_label(text, 'Color Coding ', styles, 'font-weight:bold;')
-}
-item[n = 'medaillon-rendition'] {
-    content: oxy_label(text, 'Medaillons ', styles, 'font-weight:bold;')
-}
-p[type = 'medaillon-color'] > seg {
+item[n = 'inscriptions'] > list > item[n="female-male"] {
+    display:block;
+    margin-left: 15em;
     content: 
-    oxy_editor(type, text, edit, '#text', width, 30%, fontInherit, true)
+    oxy_xpath('text()')   
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, ' font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 10%, fontInherit, true)
+    oxy_label(text, '   ')
 }
-p > seg {
+ item[n='other-inscription']  {
+     display:block;
+     margin-left: 15em;
+     content:
+     oxy_xpath('text()')
+ }
+ 
+  item[n='other-inscription'] > seg {
+
+     content:
+     oxy_combobox(edit, '#text', editable, false, values, 'red, blue, green', fontInherit, true, width, 10%)
+ }
+item[n = 'color-coding'] {
+    content: oxy_label(text, 'Color Coding across page breaks', styles, 'font-weight:bold;')
+}
+
+item[n = 'letter-coding'] {
+    content: oxy_label(text, 'Letter Coding (to show how lines continue across page-breaks)', styles, 'font-weight:bold;')
+}
+
+
+/*item[n = 'color-coding'] > p > seg {
+    content: 
+    oxy_label(text, '  ')
+    oxy_combobox(edit, '#text',editable, false, values, 'yes, no', fontInherit, true, width, 10%)
+}*/
+
+
+item[n = 'medallion-rendition'] > list > item[n='medallion-shape'] {
+    font-style:normal;
+    font-weight:bold;
+    margin-left: 0.1em;
     content:
-    oxy_editor(type, combo, edit, '#text', editable, false, values, 'yes, no', width, 5%, fontInherit, true)
+    oxy_label(text, 'Medallion Shape:   ', styles, 'font-weight:bold;')
+    oxy_combobox(edit, '#text', editable,false, values, 'Circle Only, Circle Double, Circle and Other Shape, Only other Shape', fontInherit, false, width, 15%)
+    }
+
+item[n='medallion-color']:before {
+    font-style:normal;
+    font-weight:bold;
+    margin-left: -14em;
+    content: 'Medallion Presentation:           '
 }
-item[n=medaillon-rendition] > list > item {
+item[n = 'medallion-color'] >  seg {
+    content: 
+    oxy_combobox(edit, '#text', values, 'red,black,mixed (red and black), other', width, 15%, fontInherit, true)
+}
+
+item[n='adam-eve'] > seg {
+    content:
+    oxy_label(text, '   ')
+    oxy_combobox(edit, '#text', editable, false, values, 'One Medallion, Two Medallions' , width, 10%, fontInherit, true)
+    oxy_label(text, '   ')
+}
+
+item[n='mary-apostles'] > seg {
+    content:
+    oxy_label(text, '   ')
+    oxy_combobox(edit, '#text', editable, false, values, "Type A (2 groups of six - Christ middle), Type B (2 groups of six - Christ above), Type C (in a row - mary and joseph centered), Type D (in a row - mary and joseph left), Type E (in a row separate from Mary), Type F (in circle), Type G (around crucifixation scene), Type H (in triangle), Type I (divided), Other", width,20%, fontInherit, true)
+    oxy_label(text, '   ')
+}
+note > list > item[rend]:after {
+    display:block;
+    margin-right: 20em;
+    padding: 0;
+    text-align: right;
+    font-style:normal;
+    content:
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold; font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 10%, fontInherit, true)
+    oxy_label(text, '   ')
+}
+
+item[n="color-coding"]:after {
+    display:block;
+    margin-right: 48em;
+    padding: 0;
+    text-align: right;
+    font-style:normal;
+    content:
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, ' font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 10%, fontInherit, true)
+    oxy_label(text, '   ')
+}
+
+item[n="letter-coding"]:after {
+    display:block;
+    margin-right: 33em;
+    padding: 0;
+    text-align: right;
+    font-style:normal;
+    content:
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, ' font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 10%, fontInherit, true)
+    oxy_label(text, '   ')
+}
+ item[n='linea-christi'] > list > item[rend]:after {
+    display:block;
+    margin-right: 52em;
+    padding: 0;
+    text-align: right;
+    font-style:normal;
+    content:
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 15%)
+    oxy_label(text, '   ')
+}
+
+
+ item[n='six-ages-emphasized'][rend]:after {
+    display:block;
+    margin-right: 36em;
+    padding: 0;
+    text-align: right;
+    font-style:normal;
+    content:
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold;font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 20%)
+    oxy_label(text, '   ')
+}
+
+ item:not([n='inscriptions']) > list > item[rend]:after {
+    display:block;
+    margin-right: 36em;
+    padding: 0;
+    text-align: right;
+    font-style:normal;
+    content:
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold; font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 10%, fontInherit, true)
+    oxy_label(text, '   ')
+}
+
+item[n='jesus-pictured'] > list > item[rend]:after {
+    display:block;
+    margin-right: 32em;
+    padding: 0;
+    text-align: right;
+    font-style:normal;
+    content:
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold;font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 15%)
+    oxy_label(text, '   ')
+}
+
+item[n='extras'] > list > item[rend]:after {
+    display:block;
+    margin-right: 32em;
+    padding: 0;
+    text-align: right;
+    font-style:normal;
+    content:
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold;font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 15%)
+    oxy_label(text, '   ')
+}
+item[n=medallion-rendition] > list > item {
     display:block;
     font-style:italic;
     margin-left:14em;
     content: 
     oxy_xpath('text()')
+    oxy_label(text, '   ')
+   
 
 }
-item[n=medaillon-rendition] > list > item:after {
+/*item[n=medallion-rendition] > list > item:after {
     display:block;
     margin-right: 35em;
     padding: 0;
@@ -832,11 +1011,11 @@ item[n=medaillon-rendition] > list > item:after {
     content: 
     oxy_label(text, '         No   ')
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-}
-/* Medaillons */
+}*/
+/* medallions */
 
 item[n='all-pictured']:before {
-    content: oxy_label(text, 'All Medaillons illustrated:  ', styles, 'font-weight:bold;')
+    content: oxy_label(text, 'All medallions illustrated:  ', styles, 'font-weight:bold;')
 }
 item[n='six-ages-pictured']:before {
     content: oxy_label(text, 'Six Ages:  ', styles, 'font-weight:bold;')
@@ -846,19 +1025,22 @@ item[n='jesus-pictured']:before {
 }
 item[n='extras']:before {
     content: oxy_label(text, 'Occurences of:  ', styles, 'font-weight:bold;')
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
-item[n='other-medaillons']:before {
+item[n='other-medallions']:before {
     content: 
-    oxy_label(text, 'Other illustrated Medaillons:  ', styles, 'font-weight:bold;')
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-    oxy_label(text, ' No                                  ')    
+    oxy_label(text, 'Other illustrated Medallions:  ', styles, 'font-weight:bold;')
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold;font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 10%)
+    oxy_label(text, '   ')
 }
 
 item[n='all-pictured'] {
     content:
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-    oxy_label(text, ' No ')    
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold;font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 10%)
+    oxy_label(text, '   ')   
 }
 
 item[n='all-pictured'] > p {
@@ -867,15 +1049,17 @@ item[n='all-pictured'] > p {
 
 item[n='six-ages-pictured'] {
     content:
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-    oxy_label(text, ' No ')    
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold;font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 10%)
+    oxy_label(text, '   ')  
 }
 
 item[n='six-ages-pictured'] > p {
 visibility:hidden;
 }
 
-item[n='jesus-pictured'] > list > item:after {
+/*item[n='jesus-pictured'] > list > item:after {
     display:block;
     margin-right: 35em;
     padding: 0;
@@ -885,7 +1069,7 @@ item[n='jesus-pictured'] > list > item:after {
     content: 
     oxy_label(text, '         No   ')
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)  
-}
+}*/
 
 item[n='jesus-pictured'] > list > item {
     display:block;
@@ -893,7 +1077,7 @@ item[n='jesus-pictured'] > list > item {
     margin-left:14em;
     content:
     oxy_label(text, 'ID: ')
-    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future')
+    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', fontInherit, true, width, 15%)
     oxy_label(text, '   ')
     oxy_xpath('text()')
 }
@@ -901,15 +1085,16 @@ item[n='jesus-pictured'] > list > item {
 item[n='jesus-pictured'] {
     padding-bottom: 10px;
     content:
-    oxy_label(text, '   ')   
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-    oxy_label(text, ' No ')    
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold;font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 10%)
+    oxy_label(text, '   ')    
 }
 
 item[n='jesus-pictured'] > list:before {
     margin-top: 15px;}
 
-item[n='extras']  > list > item:after {
+/*item[n='extras']  > list > item:after {
     display:block;
     margin-right: 35em;
     padding: 0;
@@ -919,7 +1104,7 @@ item[n='extras']  > list > item:after {
     content: 
     oxy_label(text, '         No   ')
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)  
-}
+}*/
 
 item[n='extras']  > list > item {
     display:block;
@@ -927,26 +1112,40 @@ item[n='extras']  > list > item {
     margin-left:14em;
     content:
     oxy_label(text, 'ID: ')
-    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future')
+    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', fontInherit, true, width, 15%)
     oxy_label(text, '   ')
-    oxy_xpath('text()')
+    oxy_xpath('text()')    
 }
 
-item[n='other-medaillons'] {
+item[n='other-medallions'] {
     display:block;
-    content: oxy_label(text, 'Add Medaillon:  ', styles, 'font-size:small;')
-    oxy_editor(type, button, actionID, add_medaillon)
+    content: oxy_label(text, 'Add Medallion:  ', styles, 'font-size:small;')
+    oxy_editor(type, button, actionID, add_medallion)
 }
 
-item[n='other-medaillons'] > list > item  {
+item[n='other-medallions'] > list > item  {
     margin-top: 20px;
     display:block;
     content:
-    oxy_label(text, 'Medaillon: ')
+    oxy_label(text, 'Medallion: ')
     oxy_label(text, '           ID: ')
-    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future')
-    oxy_label(text, '   ')
-    oxy_editor(type,text, edit, '#text', width, 70%, fontInherit, true)
+    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', width, 15%)
+    
+}
+
+item[n='other-medallions'] > list > item:after  {
+    content:
+    oxy_label(text, '   Delete Medallion:   ', styles, 'color:red')
+    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000);
+    
+    
+}
+item[n='other-medallions'] > list > item > label {
+    margin-left:5.5em;
+    display:block;
+    content:
+    oxy_label(text, 'Label:   '   )
+    oxy_editor(type,text,edit, '#text', width, 30%, fontInherit, true)
 }
 
 /*  Diagrams */
@@ -957,9 +1156,15 @@ decoNote[type='diagrams'] > list > item {
     oxy_label(text, 'ID:  ')
     oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Diagrams_List.xml')//item[@xml:id]/concat('#',@xml:id), ',')"), width, 20%, fontInherit, true)
     
-        
-/*    '#ark,#ark-a, #ark-b, #ark-c, #ark-d, #ark-e, #ark-f, #encampments, #encampments-a,#encampments-b,#encampments-c, #encampments-d, #jerusalem,#jerusalem-a,#jerusalem-b,#jerusalem-c,#jerusalem-d,#jerusalem-e, #jerusalem-f,#jerusalem-g,#jerusalem-h, #kingdoms, #sons_of_noah, #T-O, #tribes,#tribes-a,#tribes-b,#tribes-c,#tribes-d,#tribes-e,#tribes-f,#apostles,#apostles-a,#apostles-b,#apostles-c,#apostles-d,#apostles-e,#apostles-f,#apostles-g,#apostles-h,#apostles-i, #apostles-j'*/
 }
+
+decoNote[type='diagrams'] > list > item:after {
+    content:
+    oxy_label(text, '   Delete Diagram:   ', styles, 'color:red')
+    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000);
+}
+
+
 decoNote label {
     content: 
     oxy_label(text, '  Label:   ')
@@ -979,10 +1184,67 @@ decoNote[type='diagrams'] > list > item > note {
     oxy_textArea(edit,'#text')
 }
 
-decoNote[type="illustrations"] > list > item > p {
+
+item[n='significant-pictures'] > list > item {
+     display:block;
+    font-style:italic;
+    margin-left:14em;
     content:
-    oxy_label(text, 'Name of Picture:  ')
-    oxy_editor(type, text,edit,'#text',fontInherit,true,width,30%)
+    oxy_label(text, 'ID: ')
+    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', fontInherit, true, width, 15%)
+    oxy_label(text, '   ')
+    oxy_xpath('text()')
+}
+
+item[n='other-pictures']:before {
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    content: '  Add Picture   '
+    oxy_editor(type,button,actionID, 'add_picture')
+    
+}
+
+item[n='other-pictures'] > list > item {
+     display:block;
+    font-style:italic;
+    margin-left:15em;
+    content:
+    oxy_label(text, 'ID:        ')
+    oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', fontInherit, true, width, 15%)
+    oxy_label(text, '   ')
+    oxy_xpath('text()')
+    
+}
+
+item[n='other-pictures'] > list > item > note {
+    display:block;
+    font-style:italic;
+    content:
+    oxy_label(text, 'Notes: ')
+    oxy_textArea( edit, '#text', fontInherit, true)
+    
+}
+
+
+item[n='other-pictures'] > list > item > label {
+    content:
+    oxy_label(text, '  Label:   '   )
+    oxy_editor(type,text,edit, '#text', width, 30%, fontInherit, true)
+    
+}
+
+ item[n='significant-pictures'] > list > item[rend]:after {
+    display:block;
+    margin-right: 26em;
+    padding: 0;
+    text-align: right;
+    font-style:normal;
+    content:
+    oxy_label(text, '   ')
+    oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold;font-style:italic;')
+    oxy_combobox(edit, '@rend', editable, false, labels,'yes, no' , values, 'present, not-present', width, 15%)
+    oxy_label(text, '   ')
 }
 /* ##################################### DATE/PROVENANCE ##############################################*/
 

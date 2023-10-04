@@ -1164,8 +1164,9 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String> &lt;p n="" xmlns="http://www.tei-c.org/ns/1.0" >Pagebreak at Folio &lt;dim type="folio">Folio&lt;/dim>
-                           &lt;/p></String>
+																<String> &lt;p n="" xmlns="http://www.tei-c.org/ns/1.0" >Pagebreak at &lt;seg type="node"/>
+                                        &lt;dim type="folio"/>
+                                    &lt;/p></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1541,7 +1542,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 									</action>
 									<action>
 										<field name="id">
-											<String>add_medaillon</String>
+											<String>add_medallion</String>
 										</field>
 										<field name="name">
 											<String>Add Medaillon</String>
@@ -1571,11 +1572,12 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="" sameAs="" > &lt;/item></String>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="" sameAs="" >&lt;label>&lt;/label>
+                                                &lt;note>&lt;/note>&lt;/item></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>//item[@n="other-medaillons"]/list/item[last()]</String>
+																<String>//item[@n="other-medallions"]/list/item[last()]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -1627,32 +1629,41 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 																<String>fragment</String>
 																<String>&lt;decoNote xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:Graph" corresp="#compendium-historiae" type="graph">
                                 &lt;list>
-                                    &lt;item ana="chigc:graphOrientation" type="orientation">
+                                    &lt;item ana="chigc:graphOrientation" n="orientation">
                                         &lt;p>Orientation: &lt;seg/>&lt;/p>
                                         &lt;note/>
                                     &lt;/item>
-                                    &lt;item ana="chigc:LineaChristiLocalisation" type="linea-christi">
-                                        &lt;p type="presence">Linea Christi present&lt;/p>
-                                        &lt;p type="orientation">&lt;seg/>&lt;/p>
+                                    &lt;item ana="chigc:LineaChristiLocalisation" n="linea-christi">
+                                        &lt;list>
+                                            &lt;item n="presence" rend="">Linea Christi present&lt;/item>
+                                            &lt;item n="orientation">
+                                                &lt;seg/>
+                                            &lt;/item>
+                                        &lt;/list>
                                         &lt;note/>
                                     &lt;/item>
-                                    &lt;item ana="chigc:ColorCoding" type="color-coding">
-                                        &lt;p>Color-Coding: &lt;seg/>&lt;/p>
+                                    &lt;item ana="chigc:ColorCoding" n="color-coding" rend="">
+                                        Color-Coding
+                                        
+                                    &lt;/item>
+                                    &lt;item ana="chigc:LetterCoding" n="letter-coding" rend="">
+                                        Letter Coding                                  
+                                    &lt;/item>
+                                    &lt;item ana="chigc:MedaillonsRendition" n="medallion-rendition">
+                                        &lt;list>
+                                            &lt;item n="medallion-shape"/>
+                                            &lt;item n="medallion-color">Medallion color: &lt;seg/>&lt;/item>
+                                            &lt;item n="six-ages-emphasized" rend="">Six Ages Emphasized&lt;/item>
+                                            &lt;item n="adam-eve">Adam and Eve Medallions: &lt;seg/>&lt;/item>
+                                            &lt;item n="mary-apostles">Arrangement of Mary and Apostles: &lt;seg/>&lt;/item>
+                                        &lt;/list>
                                         &lt;note/>
                                     &lt;/item>
-                                    &lt;item ana="chigc:MedaillonsRendition" type="medaillon-rendition">
-                                        &lt;p type="circle-only">Circle Only&lt;/p>
-                                        &lt;p type="circle-double">Cirlce Double&lt;/p>
-                                        &lt;p type="circles-otherShapes">Circle AND other Shapes&lt;/p>
-                                        &lt;p type="otherShapes-only">Other Shapes only&lt;/p>
-                                        &lt;p type="medaillon-color">Medaillon color&lt;/p>
-                                        &lt;p type="six-ages-emphasized">Six Ages Emphasized&lt;/p>
-                                        &lt;p type="adam-eve">Adam and Eve Medaillons&lt;/p>
-                                        &lt;note/>
-                                    &lt;/item>
-                                    &lt;item ana="chigc:graphInscriptions" type="inscriptions">
-                                        &lt;p/>
-                                        &lt;note/>
+                                    &lt;item ana="chigc:graphInscriptions" n="inscriptions">
+                                        &lt;list>
+                                            &lt;item n="female-male" rend="present">Red for female, black for male&lt;/item>
+                                            &lt;item n="other-inscription">Color of inscription: &lt;seg/>&lt;/item>
+                                        &lt;/list>
                                     &lt;/item>
                                 &lt;/list>
                             &lt;/decoNote></String>
@@ -1710,7 +1721,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 															<entry>
 																<String>fragment</String>
 																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="#" sameAs="">
-                                        &lt;label ana="rdfs:label"/>
+                                        &lt;label/>
                                         &lt;locus/>
                                         &lt;note/>
                                     &lt;/item></String>
@@ -1765,7 +1776,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 									</action>
 									<action>
 										<field name="id">
-											<String>add_medaillon-info</String>
+											<String>add_medallion-info</String>
 										</field>
 										<field name="name">
 											<String>Add Medaillon Info</String>
@@ -1789,49 +1800,75 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>not(//item[@type='all-pictured'])</String>
+														<String>not(//item[@n='all-pictured'])</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String> &lt;decoNote xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedMedaillons">
-                                &lt;list>
-                                    &lt;item type="all-pictured">
+																<String> &lt;decoNote xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedmedallions">
+                                 &lt;list>
+                                    &lt;item n="all-pictured" rend="">
                                         &lt;p>All Medaillons are illustrated&lt;/p>
                                         &lt;note/>
                                     &lt;/item>
-                                    &lt;item corresp="" sameAs="" type="six-ages-pictured" xml:id="">
+                                    &lt;item corresp="" n="six-ages-pictured" rend="" sameAs="">
                                         &lt;p>Six Ages Pictured&lt;/p>
                                         &lt;note/>
                                     &lt;/item>
-                                    &lt;item type="jesus-pictured">
-                                        &lt;p corresp="" sameAs="" type="jesus-natus">Jesus Natus&lt;/p>
-                                        &lt;p corresp="" sameAs="" type="jesus-puer">Jesus Puer&lt;/p>
-                                        &lt;p corresp="" sameAs="" type="jesus-passus">Jesus Passus&lt;/p>
-                                        &lt;p corresp="" sameAs="" type="jesus-resurgens">Jesus Resurgens&lt;/p>
-                                        &lt;p corresp="" sameAs="" type="jesus-other">Other [e.g., Pater]&lt;/p>
+                                    &lt;item n="jesus-pictured" rend="present">
+                                        &lt;list>
+                                            &lt;item corresp="be" n="jesus-natus" rend="" sameAs="">Jesus Natus&lt;/item>
+                                            &lt;item corresp="" n="jesus-puer" rend="" sameAs="">Jesus Puer&lt;/item>
+                                            &lt;item corresp="" n="jesus-passus" rend="" sameAs="">Jesus Passus&lt;/item>
+                                            &lt;item corresp="" n="jesus-resurgens" rend="" sameAs="">Jesus Resurgens&lt;/item>
+                                            &lt;item corresp="" n="jesus-other" rend="" sameAs="">Other [e.g., Pater]&lt;/item>
+                                        &lt;/list>
                                         &lt;note/>
                                     &lt;/item>
-                                    &lt;item type="extras">
-                                        &lt;p corresp="" sameAs="" type="cain-abel">Cain and Abel&lt;/p>
-                                        &lt;p corresp="" sameAs="" type="moses-Aaron">Moses and Aaron&lt;/p>
-                                        &lt;p corresp="" sameAs="" type="nebuchadnezzar">Nebuchadnezzar&lt;/p>
-                                        &lt;p corresp="" sameAs="" type="alexander">Alexander&lt;/p>
-                                        &lt;p corresp="" sameAs="" type="tower-babel">Tower of Babel&lt;/p>
-                                        &lt;p corresp="" sameAs="" type="city-babel">City of Babel&lt;/p>
+                                    &lt;item n="extras">
+                                        &lt;list>
+                                            &lt;item corresp="" n="moses-Aaron" rend="" sameAs="">Moses and Aaron&lt;/item>
+                                            &lt;item corresp="" n="nebuchadnezzar" rend="" sameAs="">Nebuchadnezzar&lt;/item>
+                                            &lt;item corresp="" n="alexander" rend="" sameAs="">Alexander&lt;/item>
+                                        &lt;/list>
                                         &lt;note/>
                                     &lt;/item>
-                                    &lt;item type="other-medaillons">
-                                        &lt;p corresp="" sameAs="" type="" xml:id=""> &lt;/p>
-                                        &lt;note/>
+                                    &lt;item n="other-medallions" rend="">
+                                        &lt;list>
+                                            &lt;item corresp="" sameAs="">
+                                                &lt;label/>
+                                                &lt;note/>
+                                            &lt;/item>
+                                            &lt;item corresp="" sameAs="">
+                                                &lt;label/>
+                                                &lt;note/>
+                                            &lt;/item>
+                                        &lt;/list>
+                                    &lt;/item>
+                                &lt;/list>
+                            &lt;/decoNote>
+                            &lt;decoNote ana="chigc:Pictures" type="illustrations">
+                                &lt;list>&lt;item corresp="#" n="significant-pictures" sameAs="">
+                                        &lt;list>
+                                            &lt;item corresp="" n="cross" rend="" sameAs="">Cross (above Adam and Eve)&lt;/item>
+                                            &lt;item corresp="" n="cain-abel" rend="" sameAs="">Cain and Abel&lt;/item>
+                                            &lt;item corresp="" n="tower-babel" rend="" sameAs="">Tower of Babel&lt;/item>
+                                            &lt;item corresp="" n="city-babel" rend="" sameAs="">City of Babel&lt;/item>
+                                            &lt;item corresp="" n="rainbow" rend="" sameAs="">Rainbow&lt;/item>
+                                            &lt;item corresp="" n="god" rend="" sameAs="">God the Father&lt;/item>
+                                            &lt;item corresp="" n="creation" rend="" sameAs="">Scenes of Creation&lt;/item>
+                                        &lt;/list>
+                                    &lt;/item>
+                                    &lt;item n="other-pictures">
+                                        &lt;list> &lt;/list>
                                     &lt;/item>
                                 &lt;/list>
                             &lt;/decoNote></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>//decoNote[@type='illustratedMedaillons']</String>
+																<String>//decoNote[@type='illustratedmedallions']</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -1875,15 +1912,26 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>not(//decoNote[@type='illustrations']/list/item)</String>
+														<String>not(//decoNote[@type='illustrations']/list/item[@n='significant-pictures'])</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:Picture" corresp="#" sameAs="">
-                                        &lt;p/>
-                                        &lt;note/>
+																<String>&lt;item n="significant-pictures" corresp="#" sameAs="" xmlns="http://www.tei-c.org/ns/1.0" >
+                                    &lt;list>
+                                        &lt;item corresp="" n="cross" rend="" sameAs="">Cross (above Adam and Eve)&lt;/item>
+                                        &lt;item corresp="" n="cain-abel" rend="" sameAs="">Cain and Abel&lt;/item>
+                                        &lt;item corresp="" n="tower-babel" rend="" sameAs="">Tower of Babel&lt;/item>
+                                        &lt;item corresp="" n="city-babel" rend="" sameAs="">City of Babel&lt;/item>
+                                        &lt;item corresp="" n="rainbow" rend="" sameAs="">Rainbow&lt;/item>
+                                        &lt;item corresp="" n="god" rend="" sameAs="">God the Father&lt;/item>
+                                        &lt;item corresp="" n="creation" rend="" sameAs="">Scenes of Creation&lt;/item>                                       
+                                    &lt;/list>
+                                &lt;/item>
+&lt;item n="other-pictures" xmlns="http://www.tei-c.org/ns/1.0" >
+                                        &lt;list>
+                                        &lt;/list>
                                     &lt;/item></String>
 															</entry>
 															<entry>
@@ -2187,6 +2235,125 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 															<entry>
 																<String>insertPosition</String>
 																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_textpassages</String>
+										</field>
+										<field name="name">
+											<String>Adds Textpassages</String>
+										</field>
+										<field name="description">
+											<String>Adds significant text-passages section</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(//item[@n="prima-etas"])</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;note type="significant-passages" xmlns="http://www.tei-c.org/ns/1.0">
+                                &lt;list>
+                                    &lt;item n="prima-etas" rend=""> Prima etas fuit (usually next to Noah)&lt;/item>
+                                    &lt;item n="beata-virgo" rend=""> Beata virgo maria&lt;/item>
+                                    &lt;item n="conceptus-est" rend="">Conceptus est dominus&lt;/item>
+                                    &lt;item n="primam-annam" rend="">Primam annam accepit ioachim&lt;/item>
+                                    &lt;item n="tiberius-cesar" rend="">Tiberius cesar successit augustus &lt;/item>
+                                &lt;/list>
+                            &lt;/note></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//note[@type='significant-passages']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Replace</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_picture</String>
+										</field>
+										<field name="name">
+											<String>Add Picture</String>
+										</field>
+										<field name="description">
+											<String>Adds a field to note another picture outside of the graph</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;item  xmlns="http://www.tei-c.org/ns/1.0" corresp="" sameAs="">
+                                                &lt;label/>
+                                                &lt;note/>
+                                            &lt;/item></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//item[@n='other-pictures']/list</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>

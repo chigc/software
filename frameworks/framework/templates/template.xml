@@ -71,11 +71,11 @@
                             </note>
                             <note type="significant-passages">
                                 <list>
-                                    <item n="prima-etas"> Prima etas fuit (usually next to Noah)</item>
-                                    <item n="beata-virgo"> Beata virgo maria</item>
-                                    <item n="conceptus-est">Conceptus est dominus</item>
-                                    <item n="primam-annam">Primam annam accepit ioachim</item>
-                                    <item n="tiberius-cesar">Tiberius cesar successit augustus </item>
+                                    <item n="prima-etas" rend=""> Prima etas fuit (usually next to Noah)</item>
+                                    <item n="beata-virgo" rend=""> Beata virgo maria</item>
+                                    <item n="conceptus-est" rend="">Conceptus est dominus</item>
+                                    <item n="primam-annam" rend="">Primam annam accepit ioachim</item>
+                                    <item n="tiberius-cesar" rend="">Tiberius cesar successit augustus </item>
                                 </list>
                             </note>
                         </msItem>
@@ -100,7 +100,7 @@
                                     <!-- mehrere Möglich, add button -->
                                 </extent>
                                 <condition ana="chigc:condition" n="">
-                                    <p></p>
+                                    <p/>
                                 </condition>
                             </supportDesc>
                             <layoutDesc>
@@ -121,74 +121,96 @@
                                     </item>
                                     <item ana="chigc:LineaChristiLocalisation" n="linea-christi">
                                         <list>
-                                            <item n="presence">Linea Christi present</item>
+                                            <item n="presence" rend="">Linea Christi present</item>
                                             <item n="orientation">
                                                 <seg/>
                                             </item>
                                         </list>
                                         <note/>
                                     </item>
-                                    <item ana="chigc:ColorCoding" n="color-coding">
-                                        <p>Color-Coding: <seg/></p>
-                                        <note/>
+                                    <item ana="chigc:ColorCoding" n="color-coding" rend="">
+                                        Color-Coding
+                                        
                                     </item>
-                                    <item ana="chigc:MedaillonsRendition" n="medaillon-rendition">
+                                    <item ana="chigc:LetterCoding" n="letter-coding" rend="">
+                                        Letter Coding                                  
+                                    </item>
+                                    <item ana="chigc:MedaillonsRendition" n="medallion-rendition">
                                         <list>
-                                            <item n="circle-only">Circle Only</item>
-                                            <item n="circle-double">Cirlce Double</item>
-                                            <item n="circles-otherShapes">Circle AND other Shapes</item>
-                                            <item n="otherShapes-only">Other Shapes only</item>
-                                            <item n="medaillon-color">Medaillon color</item>
-                                            <item n="six-ages-emphasized">Six Ages Emphasized</item>
-                                            <item n="adam-eve">Adam and Eve Medaillons</item>
+                                            <item n="medallion-shape"/>
+                                            <item n="medallion-color">Medallion color: <seg/></item>
+                                            <item n="six-ages-emphasized" rend="">Six Ages Emphasized</item>
+                                            <item n="adam-eve">Adam and Eve Medallions: <seg/></item>
+                                            <item n="mary-apostles">Arrangement of Mary and Apostles: <seg/></item>
                                         </list>
                                         <note/>
                                     </item>
                                     <item ana="chigc:graphInscriptions" n="inscriptions">
-                                        <p/>
-                                        <note/>
+                                        <list>
+                                            <item n="female-male" rend="present">Red for female, black for male</item>
+                                            <item n="other-inscription">Color of inscription: <seg/></item>
+                                        </list>
                                     </item>
                                 </list>
                             </decoNote>
                             <!-- Pictures in Medaillons and outside -->
                             <!-- <xsl:if test="contains($row/t:cell[23], 'Y')">-->
-                            <decoNote ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedMedaillons">
+                            <decoNote ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedmedallions">
                                 <list>
-                                    <item n="all-pictured">
+                                    <item n="all-pictured" rend="">
                                         <p>All Medaillons are illustrated</p>
                                         <note/>
                                     </item>
-                                    <item corresp="" n="six-ages-pictured" sameAs="">
+                                    <item corresp="" n="six-ages-pictured" rend="" sameAs="">
                                         <p>Six Ages Pictured</p>
                                         <note/>
                                     </item>
-                                    <item n="jesus-pictured">
+                                    <item n="jesus-pictured" rend="present">
                                         <list>
-                                            <item corresp="" n="jesus-natus" sameAs="">Jesus Natus</item>
-                                            <item corresp="" n="jesus-puer" sameAs="">Jesus Puer</item>
-                                            <item corresp="" n="jesus-passus" sameAs="">Jesus Passus</item>
-                                            <item corresp="" n="jesus-resurgens" sameAs="">Jesus Resurgens</item>
-                                            <item corresp="" n="jesus-other" sameAs="">Other [e.g., Pater]</item>
+                                            <item corresp="be" n="jesus-natus" rend="" sameAs="">Jesus Natus</item>
+                                            <item corresp="" n="jesus-puer" rend="" sameAs="">Jesus Puer</item>
+                                            <item corresp="" n="jesus-passus" rend="" sameAs="">Jesus Passus</item>
+                                            <item corresp="" n="jesus-resurgens" rend="" sameAs="">Jesus Resurgens</item>
+                                            <item corresp="" n="jesus-other" rend="" sameAs="">Other [e.g., Pater]</item>
                                         </list>
                                         <note/>
                                     </item>
                                     <item n="extras">
                                         <list>
-                                            <item corresp="" n="cain-abel" sameAs="">Cain and Abel</item>
-                                            <item corresp="" n="moses-Aaron" sameAs="">Moses and Aaron</item>
-                                            <item corresp="" n="nebuchadnezzar" sameAs="">Nebuchadnezzar</item>
-                                            <item corresp="" n="alexander" sameAs="">Alexander</item>
-                                            <item corresp="" n="tower-babel" sameAs="">Tower of Babel</item>
-                                            <item corresp="" n="city-babel" sameAs="">City of Babel</item>
+                                            <item corresp="" n="moses-Aaron" rend="" sameAs="">Moses and Aaron</item>
+                                            <item corresp="" n="nebuchadnezzar" rend="" sameAs="">Nebuchadnezzar</item>
+                                            <item corresp="" n="alexander" rend="" sameAs="">Alexander</item>
                                         </list>
                                         <note/>
                                     </item>
-                                    <item n="other-medaillons">
+                                    <item n="other-medallions" rend="">
                                         <list>
-                                            <item corresp="" sameAs=""> </item>
-                                            <item corresp="" sameAs=""> </item>
+                                            <item corresp="" sameAs="">
+                                                <label/>
+                                                <note/>
+                                            </item>
+                                            <item corresp="" sameAs="">
+                                                <label/>
+                                                <note/>
+                                            </item>
                                         </list>
-                                        <note/>
+                                    </item>
+                                </list>
+                            </decoNote>
+                            <decoNote ana="chigc:Pictures" type="illustrations">
+                                <list><item corresp="#" n="significant-pictures" sameAs="">
+                                        <list>
+                                            <item corresp="" n="cross" rend="" sameAs="">Cross (above Adam and Eve)</item>
+                                            <item corresp="" n="cain-abel" rend="" sameAs="">Cain and Abel</item>
+                                            <item corresp="" n="tower-babel" rend="" sameAs="">Tower of Babel</item>
+                                            <item corresp="" n="city-babel" rend="" sameAs="">City of Babel</item>
+                                            <item corresp="" n="rainbow" rend="" sameAs="">Rainbow</item>
+                                            <item corresp="" n="god" rend="" sameAs="">God the Father</item>
+                                            <item corresp="" n="creation" rend="" sameAs="">Scenes of Creation</item>
+                                        </list>
+                                    </item>
+                                    <item n="other-pictures">
+                                        <list> </list>
                                     </item>
                                 </list>
                             </decoNote>
@@ -200,8 +222,18 @@
                                         <locus/>
                                         <note/>
                                     </item>
+                                    <item corresp="#" sameAs="">
+                                        <label/>
+                                        <locus/>
+                                        <note/>
+                                    </item>
+                                    <item corresp="#" sameAs="">
+                                        <label/>
+                                        <locus/>
+                                        <note/>
+                                    </item>
                                 </list>
-                            </decoNote>
+                            </decoNote>                           
                         </decoDesc>
                     </physDesc>
                     <history>
