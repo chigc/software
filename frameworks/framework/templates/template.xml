@@ -84,11 +84,13 @@
                             <title/>
                             <note> </note>
                         </msItem>
-                        <msItem ana="chigc:Item" corresp="#" n="transmission-context">
-                            <locus/>
-                            <title/>
-                            <note/>
-                        </msItem>
+                        <msItem ana="chigc:Item" corresp="#" n="transmission-context"><locus/><title/>
+                            <author xml:lang="en"/>
+                            <!-- Alternativ -->
+                            <docDate ana="chigc:date">
+                                <date notAfter="" notBefore=""/>
+                            </docDate>
+                            <textLang ana="dcterms:language" mainLang=""/><note/></msItem>
                     </msContents>
                     <physDesc>
                         <objectDesc ana="chigc:manifestationType" form="codex">
@@ -222,16 +224,6 @@
                                         <locus/>
                                         <note/>
                                     </item>
-                                    <item corresp="#" sameAs="">
-                                        <label/>
-                                        <locus/>
-                                        <note/>
-                                    </item>
-                                    <item corresp="#" sameAs="">
-                                        <label/>
-                                        <locus/>
-                                        <note/>
-                                    </item>
                                 </list>
                             </decoNote>                           
                         </decoDesc>
@@ -274,9 +266,6 @@
     <text>
         <body>
             <p>Transcription</p>
-        </body>
-        <back>
-            <include href="../lists/Co-Transmission_List.xml" xpointer="element(cotransmission_list)"/>
-        </back>
+        </body>        
     </text>
 </TEI>
