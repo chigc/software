@@ -30,7 +30,7 @@ TEI {
     -oxy-display-tags: none !important;
     color: black;
     font-family: 'Roboto', 'Helvetica', sans-serif;
-    font-size: 12pt;
+    font-size: 11pt;
 }
 * {
     -oxy-display-tags: none;
@@ -61,7 +61,7 @@ publicationStmt > ref
 /* ---------------------------------------------------------- BLOCK / BOXED ----------------------------------------------------------*/
 
 
-item
+body > list > item
 {
     display: block;
     border: solid grey 0.1px;
@@ -86,7 +86,7 @@ label:not(empty) {
     margin-top: 15px;
     margin-left: 15em;
     content: 
-    oxy_label(text, 'Name:  ')
+    oxy_label(text, 'Name:  ', styles, "font-weight:bold;")  
     
 }
 
@@ -95,26 +95,30 @@ label:empty {
     display:block;
     margin-left: 15em;
     content: 
-    oxy_label(text, 'Name:  ')
+    oxy_label(text, 'Name:  ', styles, "font-weight:bold;")  
     oxy_editor(type,text,edit,'#text', width, 40%, fontInherit, true)
 }
 
-p:not(emtpy) {
+label:after    {
+    margin-top:15px;
+    display:block;
+    content:
+    oxy_label(text, 'Description:    ', styles, "font-weight:bold;")  
+} 
+
+p:not(emtpy) {   
+    display:block;
+    margin-top: 5px;
+    margin-left: 15em;
+    margin-bottom: 5px;  
+}
+
+p:empty {
     display:block;
     margin-top: 5px;
     margin-left: 15em;
     margin-bottom: 5px;
     content:
-    oxy_label(text, 'Description:    ')    
-}
-
-p:empty {
-        display:block;
-    margin-top: 5px;
-    margin-left: 15em;
-    margin-bottom: 5px;
-    content:
-    oxy_label(text, 'Description:    ')   
     oxy_textArea(edit, '#text')
 }
 
@@ -125,11 +129,11 @@ item[*|id] {
     margin-top: 20px;
     margin-bottom: 20px;
     content:
-    oxy_label(text,'  List Entry                                        ID:   ', styles, "font-weight: bold;")
+    oxy_label(text,'  List Entry                                      ID:   ', styles, "font-weight: bold;")
     oxy_xpath('./@xml:id')
 }
 
-item {
+body > list > item {
     display:block;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -139,7 +143,7 @@ item {
     oxy_label(text, '       ID Convention: ', styles,  'font-size:small;') oxy_label(text, 'co-itemname in lowercase', styles, 'font-style:italic; font-size:small;')
 }
 
-item:after {
+ body > list > item:after {
     color:red;
     font-style:italic;
     font-weight:bold;
@@ -147,7 +151,7 @@ item:after {
     oxy_editor(type,button,actionID, delete_item,transparent, true, color, #FF0000)
 }
 
-list:after {
+body > list:after {
     display:block;
     text-align:center;
     font-size: 14pt;
@@ -155,5 +159,32 @@ list:after {
     content:' Add new Entry'
     oxy_editor(type,button,actionID, add_item,transparent, true, color, #FF0000)
 }
+
+
+p > list {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+p > list > item {
+
+    display: block;
+    content: 
+    oxy_label(text,'-   ')
+    
+}
+
+p:not(empty):after {
+   display:block;
+text-align:right;
+content: 
+oxy_label(text,'Delete/Change Description content', styles, 'font-size:small; font-style:italic; color:red')
+oxy_editor(type,button,actionID,change_content, transparent,true,color, #FF0000)
+oxy_label(text, '      ')
+oxy_label(text,'Add Paragraph', styles, 'font-size:small; font-style:italic')
+oxy_editor(type,button,actionID,add_p, transparent,true,color, #FF0000)
+ 
+}
+
 
     

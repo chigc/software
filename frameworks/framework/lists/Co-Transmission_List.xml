@@ -99,10 +99,6 @@
                <label>Six-winged Seraph</label>
                <p></p>
             </item>
-            <item xml:id="co-sons-noah">
-               <label>Sons of Noah</label>
-               <p></p>
-            </item>
             <item xml:id="co-tablet-law">
                <label>Tablet of the Law</label>
                <p></p>
@@ -110,11 +106,7 @@
             <item xml:id="co-ten-commandments">
                <label>Ten Commandmends</label>
                <p></p>
-            </item> 
-            <item xml:id="co-to-map">
-               <label>T-O Map</label>
-               <p>World map divided by a T showing three regions</p>
-            </item>
+            </item>            
             <item xml:id="co-tower-wisdom">
                <label>Tower of Wisdom</label>
                <p>Virtues in the shape of a tower</p>

@@ -2,7 +2,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" rendition="chigc_lists">
+<TEI rendition="chigc_lists" xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -57,7 +57,8 @@
          <list xml:id="diagrams-list">
             <item xml:id="ark">
                <!-- Arch -->
-               <label>Cross-section(s) of the ark</label>              
+               <label>Cross-section(s) of the ark</label>
+               <p/>
             </item>
             <item xml:id="ark-a">
                <label>
@@ -78,7 +79,8 @@
                      <item>Wild animals (<term>immitum animalium</term>)</item>
                      <item>Provisions (<term>apothecaria</term>)</item>
                      <item>Waste/Hold (<term>sentina/stercoraria</term>)</item>
-                  </list></p>
+                  </list>
+               </p>   
             </item>
             <item xml:id="ark-c">
                <label>
@@ -108,13 +110,13 @@
             <item xml:id="encampments">
                <!-- Encampments - in der Erfassungstabelle L -->
                <label>42 Encampments</label>
-               <p>Lists the 42 encampments of the Israelites in 3 different years</p>
-               <list>
-                  <item>First arch: the encampments in the first year: 12</item>
-                  <item>Second arch: the encampments in the second year: 21</item>
-                  <item>Third arch: the encampments in the fortieth year: 9</item>
-               </list>
-               <p>According to the flight of the Israelites described in Exodus, Numbers and Deuteronomy,
+               <p>Lists the 42 encampments of the Israelites in 3 different years
+                  <list>
+                     <item>First arch: the encampments in the first year: 12</item>
+                     <item>Second arch: the encampments in the second year: 21</item>
+                     <item>Third arch: the encampments in the fortieth year: 9</item>
+                  </list>             
+              According to the flight of the Israelites described in Exodus, Numbers and Deuteronomy,
                   The journey to <placeName>Sinai</placeName> lasted for one year; departure from <placeName>Sinai</placeName> occurred at the beginning of the
                   second year; thus the names of the places of encampment are listed under the first arch; the
                   names of the places in the following 38 years under the second arch; the names of the places in
@@ -186,11 +188,11 @@
                   Is formed of 3 concentric circles to denote three rings of walls. There are 6 arches denoting the
                   six gates. 3 interior spaces are inscribed:
                  <list type="living-quarters">
-                     <item> habitatio regis et sacerdotum [living quarter of the king and priests]</item>
+                     <item>habitatio regis et sacerdotum [living quarter of the king and priests]</item>
                      <item>habitatio nobilium civitati et prophetarum [living quarter nobles of the city and prophets]</item>
                      <item>habitatio vulgi [living quarter of the common people</item>
-                  </list></p>
-               <p>6 gates are inscribed (clockwise from the top)
+                  </list>
+               6 gates are inscribed (clockwise from the top)
                   <list type="gates">
                      <item>porta sterquilinii (dung gate)</item>
                      <item>porta vetus vel iudiciaria (old gate or judgment gate)</item>
@@ -229,16 +231,16 @@
             </item>
             <item xml:id="jerusalem-g">
                <label>Type G</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="jerusalem-h">
-               <label>Other diagram of Jerusalem</label>
+               <label>Other diagram of Jerusalem</label>              
             </item>
             <item xml:id="kingdoms">
                <label>Kingdoms</label>
                <p>A circle containing four circles oriented to the cardinal directions.
                <list>
-                     <item> Oriens: Regnum assyriorum (top)</item>
+                     <item>Oriens: Regnum assyriorum (top)</item>
                      <item>Meridies: Regnum egyptiorum (right)</item>
                      <item>Occidens: Regnum sycioniorum (bottom)</item>
                      <item>Aquilo: Regnum scytarum (left)</item>
@@ -247,57 +249,60 @@
             </item>
             <item xml:id="sons_of_noah">
                <label>Sons of Noah</label>
-               <p>         
-               </p>
+               <p/>
             </item>
             <item xml:id="T-O">
                <label>T-O Map</label>
-               <p>         
-               </p>
+               <p/>
             </item>
             <item xml:id="apostles">
                <label>Christ &amp; Apostels</label>
+               <p/>
             </item>
-               <item xml:id="apostles-a">
-                  <label>Variant A</label>
-                  <p>Apostles in 2 groups of six</p>
-               </item>
-               <item xml:id="apostles-b">
-                  <label>Variant B</label>
-                  <p>Apostles in 2 groups of six + Tiberius</p>
-               </item>
-               <item xml:id="apostles-c">
-                  <label>Variant C</label>
-                  <p>Apostles in a row (Mary diagram to the left of Linea Christi)</p>
-               </item>
-               <item xml:id="apostles-d">
-                  <label>Variant D</label>
-                  <p>Apostels in a row (circled)</p>
-               </item>
-               <item xml:id="apostles-e">
-                  <label>Variant E</label>
-                  <p>Apostles in a circle</p>
-               </item>
-               <item xml:id="apostles-f">
-                  <label>Variant F</label>
-                  <p>Apostles divided (sons of Mary's, evangelists, others)</p>
-               </item>
+            <item xml:id="apostles-a">
+               <label>Variant A</label>
+               <p>Apostles in 2 groups of six</p>
+            </item>
+            <item xml:id="apostles-b">
+               <label>Variant B</label>
+               <p>Apostles in 2 groups of six + Tiberius</p>
+            </item>
+            <item xml:id="apostles-c">
+               <label>Variant C</label>
+               <p>Apostles in a row (Mary diagram to the left of Linea Christi)</p>
+            </item>
+            <item xml:id="apostles-d">
+               <label>Variant D</label>
+               <p>Apostels in a row (circled)</p>
+            </item>
+            <item xml:id="apostles-e">
+               <label>Variant E</label>
+               <p>Apostles in a circle</p>
+            </item>
+            <item xml:id="apostles-f">
+               <label>Variant F</label>
+               <p>Apostles divided (sons of Mary's, evangelists, others)</p>
+            </item>
             <item xml:id="apostles-g">
                <label>Variant G</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="apostles-h">
                <label>Variant H</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="apostles-i">
                <label>Variant I</label>
-               <p></p>
+               <p/>
             </item>
-               <item xml:id="apostles-j">
-                  <label>Variant J</label>
-                  <p>Other</p>
-               </item>
+            <item xml:id="apostles-j">
+               <label>Variant J</label>
+               <p>Other</p>
+            </item>
+            <item>
+               <label/>
+               <p/>
+            </item>
          </list>
       </body>
    </text>
