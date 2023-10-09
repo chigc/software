@@ -259,7 +259,7 @@
         </fileDesc>
         <revisionDesc status="STATUS">
             <!-- Verpflichtend für die Qualitycontrol -->
-            <change type="manuscriptRecord" when=""><p>Manuscript was recorded by <persName/>.</p>
+            <change n="manuscriptRecord" when=""><p>Manuscript was recorded by <persName/>.</p>
             </change>
         </revisionDesc>
     </teiHeader>
