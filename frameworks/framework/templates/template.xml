@@ -48,7 +48,7 @@
                             <placeName ana="dcterms:location"/>
                             <country ana="dcterms:location"/>
                         </settlement>
-                        <repository ana="ead:repository"/>
+                        <repository ana="chigc:hostedBy" xml:id=""/>
                         <idno ana="dcterms:identifier" type="signature"/>
                     </msIdentifier>
                     <msContents>

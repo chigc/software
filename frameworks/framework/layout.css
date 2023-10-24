@@ -99,7 +99,7 @@ msItem[n = co-transmission] {
     content: 
     oxy_label(text, 'Graphical Co-Transmission', styles, "font-weight: bold; font-size: large")
  oxy_concat(' (ID: ')
- oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Co-Transmission_List.xml')//item/@xml:id, ',')"), width, 20%, fontInherit, true) ')'
+ oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Co-Transmission_List.xml')//item/concat( '#',@xml:id), ',')"), width, 20%, fontInherit, true) ')'
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 
@@ -110,7 +110,7 @@ msItem[n = transmission-context] {
     content: 
     oxy_label(text, 'Textual Co-Transmission', styles, "font-weight: bold; font-size: large")
  oxy_concat(' (ID: ')
- oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Transmission-Context_List.xml')//item/@xml:id, ',')"), width, 20%, fontInherit, true) ')'
+ oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Transmission-Context_List.xml')//item/concat('#',@xml:id), ',')"), width, 20%, fontInherit, true) ')'
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
  oxy_label(text, '                             Elaborate Textual Co-Transmission', styles, "font-weight: normal; font-size: small; font-style: italic")
  oxy_editor(type, button, actionID, elaborate_item, transparent, true, color, #FF0000)
@@ -376,7 +376,7 @@ msItem > note[type = 'significant-passages']:before {
     content: 'Contains the text passages:'
 }
 
-note[type = 'significant-passages'] > list:empty {
+note[type = 'significant-passages'] > list > item:empty {
     content: 
     oxy_label(text, 'Show Textpassages')
  oxy_editor(type, button, actionID, add_textpassages, transparent, true, color, #FF0000)
@@ -493,6 +493,7 @@ msIdentifier > settlement > country {
 }
 msIdentifier > repository {
     content: 
+    oxy_editor(type, combo, edit, '@xml:id', editable, false, values, oxy_xpath("string-join(doc('./../lists/Archivliste/Archives_List.xml')//org[@xml:id]/concat('#',@xml:id), ',')"), width, 20%, fontInherit, true)
     oxy_editor(type, text, edit, "#text", width, 70%, fontInherit, true)
 }
 msIdentifier > idno {
@@ -1172,7 +1173,7 @@ decoNote[type = 'diagrams'] > list > item {
     margin-left: 20%;
     content: 
     oxy_label(text, 'ID:  ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Diagrams_List.xml')//item[@xml:id]/concat('#',@xml:id), ',')"), width, 20%, fontInherit, true)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='diagrams']/item/@xml:id, ',')"), width, 20%, fontInherit, true)
 
 }
 

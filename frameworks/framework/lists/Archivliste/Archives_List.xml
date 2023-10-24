@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="en">Compendium historiae - archive list</title>
+            <author>Bleier, Roman</author>
+            <author>Krottmaier, Sina</author>
+            <author>Sonnberger, Jakob</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <ref target="https://uni-tuebingen.de"/>
+               <orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName>
+            </publisher>
+            <publisher>
+               <ref target="https://www.uni-wuppertal.de"/>
+               <orgName ref="https://d-nb.info/gnd/64944-2">University of Wuppertal</orgName>
+            </publisher>
+            <publisher>
+               <ref target="https://informationsmodellierung.uni-graz.at"/>
+               <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
+            </publisher>
+            <authority>
+               <ref target="https://uni-tuebingen.de"/>
+               <orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName>
+            </authority>
+            <authority>
+               <ref target="https://informationsmodellierung.uni-graz.at"/>
+               <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
+            </authority>
+            <distributor>
+               <ref target="https://gams.uni-graz.at"/>
+               <orgName>GAMS - Geisteswissenschaftliches Asset Management System </orgName>
+            </distributor>
+            <availability>
+               <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
+               <licence n="facsimile"
+                        target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</licence>
+            </availability>
+            <pubPlace> Graz/Tübingen/Wuppertal</pubPlace>
+            <date when="2023">2023</date>
+            <idno ana="dcterms:identifier" type="PID">o:chigc.listarchives</idno>
+            <ref target="context:chigc" type="context"/>
+            <ref target="context:chigc.list" type="context"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Born digital. </p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <geoDecl xml:id="WGS" datum="WGS84">World Geodetic System</geoDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listOrg>
+            <org xml:id="akb">
+               <orgName>Aargauer Kantonsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Aarau</placeName>
+                     <idno type="geoNames">2661881</idno>
+                     <geo decls="#WGS">47.39254 8.04422</geo>
+                  </settlement>
+                  <country key="CH">Switzerland</country>
+               </place>
+            </org>
+            <org xml:id="anl">
+               <orgName>National Library of Wales</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Aberystwyth</placeName>
+                     <idno type="geoNames">2657782</idno>
+                     <geo decls="#WGS">52.41548 -4.08292</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="abs">
+               <orgName>Benediktinerstift</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Admont</placeName>
+                     <idno type="geoNames">2782979</idno>
+                     <geo decls="#WGS">47.57537 14.46075</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="ale">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Alençon</placeName>
+                     <idno type="geoNames">3038230</idno>
+                     <geo decls="#WGS">48.43476 0.09311</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="ami">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Amiens</placeName>
+                     <idno type="geoNames">3037854</idno>
+                     <geo decls="#WGS">49.9 2.3</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="acn">
+               <orgName>Chiesa Nuova</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Assisi</placeName>
+                     <idno type="geoNames">3182722</idno>
+                     <geo decls="#WGS">43.06671 12.62109</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="asa">
+               <orgName>Stadtarchiv</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Augsburg</placeName>
+                     <idno type="geoNames">2954172</idno>
+                     <geo decls="#WGS">48.37154 10.89851</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="ass">
+               <orgName>Staats- und Stadtbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Augsburg</placeName>
+                     <idno type="geoNames">2954172</idno>
+                     <geo decls="#WGS">48.37154 10.89851</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="aux">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Auxerre</placeName>
+                     <idno type="geoNames">3035843</idno>
+                     <geo decls="#WGS">47.7996 3.57033</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="avr">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Avranches</placeName>
+                     <idno type="geoNames">3035639</idno>
+                     <geo decls="#WGS">48.68436 -1.35686</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="bwa">
+               <orgName>Walters Art Museum</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Baltimore</placeName>
+                     <idno type="geoNames">4347778</idno>
+                     <geo decls="#WGS">39.29038 -76.61219</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="bun">
+               <orgName>Biblioteca de la Universitat de Barcelona</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Barcelona</placeName>
+                     <idno type="geoNames">3128760</idno>
+                     <geo decls="#WGS">41.38879 2.15899</geo>
+                  </settlement>
+                  <country key="ES">Spain</country>
+               </place>
+            </org>
+            <org xml:id="bub">
+               <orgName>Universitätsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Basel</placeName>
+                     <idno type="geoNames">2661604</idno>
+                     <geo decls="#WGS">47.55839 7.57327</geo>
+                  </settlement>
+                  <country key="CH">Switzerland</country>
+               </place>
+            </org>
+            <org xml:id="bsb">
+               <orgName>Staatsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Berlin</placeName>
+                     <idno type="geoNames">2950159</idno>
+                     <geo decls="#WGS">52.52437 13.41053</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="bsm">
+               <orgName>Staatliche Museen</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Berlin</placeName>
+                     <idno type="geoNames">2950159</idno>
+                     <geo decls="#WGS">52.52437 13.41053</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="bas">
+               <orgName>Archivio storico della Provincia di Cristo Re dei Frati Minori dell'Emilia Romagna</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Bologna</placeName>
+                     <idno type="geoNames">3181928</idno>
+                     <geo decls="#WGS">44.49381 11.33875</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="bbu">
+               <orgName>Biblioteca Universitaria</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Bologna</placeName>
+                     <idno type="geoNames">3181928</idno>
+                     <geo decls="#WGS">44.49381 11.33875</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="bkk">
+               <orgName>Kapitulskà Kriznica</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Bratislava</placeName>
+                     <idno type="geoNames">3060972</idno>
+                     <geo decls="#WGS">48.14816 17.10674</geo>
+                  </settlement>
+                  <country key="SK">Slovakia</country>
+               </place>
+            </org>
+            <org xml:id="bra">
+               <orgName>Stadtbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Braunschweig</placeName>
+                     <idno type="geoNames">2945024</idno>
+                     <geo decls="#WGS">52.26594 10.52673</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="bsu">
+               <orgName>Staats- und Universitätsbibliothek Bremen</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Bremen</placeName>
+                     <idno type="geoNames">2944388</idno>
+                     <geo decls="#WGS">53.07582 8.80717</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="bbc">
+               <orgName>Biblioteca Civica Queriniana di Brescia</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Brescia</placeName>
+                     <idno type="geoNames">3181554</idno>
+                     <geo decls="#WGS">45.53558 10.21472</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="bbr">
+               <orgName>Bibliothèque Royale de Belgique</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Brüssel</placeName>
+                     <idno type="geoNames">2800866</idno>
+                     <geo decls="#WGS">50.85045 4.34878</geo>
+                  </settlement>
+                  <country key="BE">Belgium</country>
+               </place>
+            </org>
+            <org xml:id="bnm">
+               <orgName>National Museum</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Budapest</placeName>
+                     <idno type="geoNames">3054643</idno>
+                     <geo decls="#WGS">47.49835 19.04045</geo>
+                  </settlement>
+                  <country key="HU">Hungary</country>
+               </place>
+            </org>
+            <org xml:id="cam">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cambrai</placeName>
+                     <idno type="geoNames">3029030</idno>
+                     <geo decls="#WGS">50.17596 3.23472</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="ccc">
+               <orgName>Corpus Christi College</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cambridge</placeName>
+                     <idno type="geoNames">2653941</idno>
+                     <geo decls="#WGS">52.2 0.11667</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="cch">
+               <orgName>Christ's College</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cambridge</placeName>
+                     <idno type="geoNames">2653942</idno>
+                     <geo decls="#WGS">52.2 0.11667</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="cec">
+               <orgName>Emmanuel College</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cambridge</placeName>
+                     <idno type="geoNames">2653943</idno>
+                     <geo decls="#WGS">52.2 0.11667</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="cfm">
+               <orgName>Fitzwilliam Museum</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cambridge</placeName>
+                     <idno type="geoNames">2653944</idno>
+                     <geo decls="#WGS">52.2 0.11667</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="cgc">
+               <orgName>Gonville and Caius College</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cambridge</placeName>
+                     <idno type="geoNames">2653945</idno>
+                     <geo decls="#WGS">52.2 0.11667</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="ctc">
+               <orgName>Trinity College</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cambridge</placeName>
+                     <idno type="geoNames">2653945</idno>
+                     <geo decls="#WGS">52.2 0.11667</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="cul">
+               <orgName>University Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cambridge</placeName>
+                     <idno type="geoNames">2653945</idno>
+                     <geo decls="#WGS">52.2 0.11667</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="chl">
+               <orgName>Harvard University, Houghton Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cambridge</placeName>
+                     <idno type="geoNames">4931972</idno>
+                     <geo decls="#WGS">42.3751 -71.10561</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="cnl">
+               <orgName>Newberry Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Chicago</placeName>
+                     <idno type="geoNames">4887398</idno>
+                     <geo decls="#WGS">41.85003 -87.65005</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="vba">
+               <orgName>Biblioteca Apostolica Vaticana</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Città del Vaticano</placeName>
+                     <idno type="geoNames">6691831</idno>
+                     <geo decls="#WGS">41.90268 12.45414</geo>
+                  </settlement>
+                  <country key="VA">Vatican</country>
+               </place>
+            </org>
+            <org xml:id="cma">
+               <orgName>Museum of Art</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cleveland</placeName>
+                     <idno type="geoNames">5150529</idno>
+                     <geo decls="#WGS">41.4995 -81.69541</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="cmb">
+               <orgName>Fondation Martin Bodmer</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Cologny</placeName>
+                     <idno type="geoNames">6691492</idno>
+                     <geo decls="#WGS">46.21672 6.18041</geo>
+                  </settlement>
+                  <country key="CH">Switzerland</country>
+               </place>
+            </org>
+            <org xml:id="dul">
+               <orgName>Universitäts- und Landesbibliothek Darmstadt</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Darmstadt</placeName>
+                     <idno type="geoNames">2938913</idno>
+                     <geo decls="#WGS">49.87167 8.65027</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="drm">
+               <orgName>Rijksmuseum Meermanno-Westreenianum</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Den Haag</placeName>
+                     <idno type="geoNames">2747373</idno>
+                     <geo decls="#WGS">52.07667 4.29861</geo>
+                  </settlement>
+                  <country key="NL">Netherlands</country>
+               </place>
+            </org>
+            <org xml:id="drm2">
+               <orgName>Koninklijke Bibliotheek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Den Haag</placeName>
+                     <idno type="geoNames">2747373</idno>
+                     <geo decls="#WGS">52.07667 4.29861</geo>
+                  </settlement>
+                  <country key="NL">Netherlands</country>
+               </place>
+            </org>
+            <org xml:id="dbm">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Dijon</placeName>
+                     <idno type="geoNames">3021372</idno>
+                     <geo decls="#WGS">47.31667 5.01667</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="dtc">
+               <orgName>Trinity College</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Dublin</placeName>
+                     <idno type="geoNames">2964574</idno>
+                     <geo decls="#WGS">53.33306 -6.24889</geo>
+                  </settlement>
+                  <country key="IE">Ireland</country>
+               </place>
+            </org>
+            <org xml:id="dcl">
+               <orgName>Cathedral Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Durham</placeName>
+                     <idno type="geoNames">2650628</idno>
+                     <geo decls="#WGS">54.77676 -1.57566</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="enl">
+               <orgName>National Library of Scotland Adv.</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Edinburgh</placeName>
+                     <idno type="geoNames">2650225</idno>
+                     <geo decls="#WGS">55.95206 -3.19648</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="eul">
+               <orgName>University Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Edinburgh</placeName>
+                     <idno type="geoNames">2650225</idno>
+                     <geo decls="#WGS">55.95206 -3.19648</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="eub">
+               <orgName>Universitätsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Eichstätt</placeName>
+                     <idno type="geoNames">2932069</idno>
+                     <geo decls="#WGS">48.88854 11.19675</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="etb">
+               <orgName>Turmbibliothek der Andreaskirche</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Eisleben</placeName>
+                     <idno type="geoNames">7284571</idno>
+                     <geo decls="#WGS">51.52754 11.54835</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="euf">
+               <orgName>Universitäts- und Forschungsbibliothek Erfurt/Gotha</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Erfurt</placeName>
+                     <idno type="geoNames">2929670</idno>
+                     <geo decls="#WGS">50.9787 11.03283</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="ecl">
+               <orgName>College Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Eton</placeName>
+                     <idno type="geoNames">2649873</idno>
+                     <geo decls="#WGS">51.48833 -0.60905</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="fbm">
+               <orgName>Biblioteca Medicea Laurenziana</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Firenze</placeName>
+                     <idno type="geoNames">3176959</idno>
+                     <geo decls="#WGS">43.77925 11.24626</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="fbr">
+               <orgName>Biblioteca Riccardiana</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Firenze</placeName>
+                     <idno type="geoNames">3176959</idno>
+                     <geo decls="#WGS">43.77925 11.24626</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="fsu">
+               <orgName>Stadt- und Universalbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Frankfurt am Main</placeName>
+                     <idno type="geoNames">2925533</idno>
+                     <geo decls="#WGS">50.11552 8.68417</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="feb">
+               <orgName>Erzbischöfliche Bibliothek Freiburg</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Freiburg im Breisgau</placeName>
+                     <idno type="geoNames">2925177</idno>
+                     <geo decls="#WGS">47.9959 7.85222</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="fub">
+               <orgName>Universitätsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Freiburg im Breisgau</placeName>
+                     <idno type="geoNames">2925177</idno>
+                     <geo decls="#WGS">47.9959 7.85222</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="gmb">
+               <orgName>Marienbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Gdansk</placeName>
+                     <idno type="geoNames">3099434</idno>
+                     <geo decls="#WGS">54.35227 18.64912</geo>
+                  </settlement>
+                  <country key="PL">Poland</country>
+               </place>
+            </org>
+            <org xml:id="gac">
+               <orgName>Arxiu Capitular</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Girona</placeName>
+                     <idno type="geoNames">3121456</idno>
+                     <geo decls="#WGS">41.98311 2.82493</geo>
+                  </settlement>
+                  <country key="ES">Spain</country>
+               </place>
+            </org>
+            <org xml:id="gfl">
+               <orgName>Forschungs- und Landesbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Gotha</placeName>
+                     <idno type="geoNames">2918752</idno>
+                     <geo decls="#WGS">50.94823 10.70193</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="gub">
+               <orgName>Universitätsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Graz</placeName>
+                     <idno type="geoNames">2778067</idno>
+                     <geo decls="#WGS">47.06667 15.45</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="gbm">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Grenoble</placeName>
+                     <idno type="geoNames">3014728</idno>
+                     <geo decls="#WGS">45.17869 5.71479</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="gub2">
+               <orgName>Universität</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Göttingen</placeName>
+                     <idno type="geoNames">2918632</idno>
+                     <geo decls="#WGS">51.53443 9.93228</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="hul">
+               <orgName>Universität- und Landesbibliothek Sachsen-Anhalt</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Halle</placeName>
+                     <idno type="geoNames">2911522</idno>
+                     <geo decls="#WGS">51.48158 11.97947</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="hsu">
+               <orgName>Staats- und Universitätsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Hamburg</placeName>
+                     <idno type="geoNames">2911298</idno>
+                     <geo decls="#WGS">53.55073 9.99302</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="hsb">
+               <orgName>Stadtbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Hannover</placeName>
+                     <idno type="geoNames">2910831</idno>
+                     <geo decls="#WGS">52.37052 9.73322</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="hub">
+               <orgName>Universitätsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Heidelberg</placeName>
+                     <idno type="geoNames">2907911</idno>
+                     <geo decls="#WGS">49.40768 8.69079</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="iut">
+               <orgName>Universitäts- und Landesbibliothek Tirol</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Innsbruck</placeName>
+                     <idno type="geoNames">2775220</idno>
+                     <geo decls="#WGS">47.26266 11.39454</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="kbb">
+               <orgName>Bischöfliche Bibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Klagenfurt</placeName>
+                     <idno type="geoNames">2774326</idno>
+                     <geo decls="#WGS">46.62472 14.30528</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="kac">
+               <orgName>Augustiner Chorherrenstift</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Klosterneuburg</placeName>
+                     <idno type="geoNames">2773913</idno>
+                     <geo decls="#WGS">48.30521 16.32522</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="kbs">
+               <orgName>Benediktinerstift</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Kremsmünster</placeName>
+                     <idno type="geoNames">2773538</idno>
+                     <geo decls="#WGS">48.0529 14.12919</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="kha">
+               <orgName>Historisches Archiv der Stadt Köln</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Köln</placeName>
+                     <idno type="geoNames">2886242</idno>
+                     <geo decls="#WGS">50.93333 6.95</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="lks">
+               <orgName>University of Kansas, Kenneth Spencer Research Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Lawrence</placeName>
+                     <idno type="geoNames">4274277</idno>
+                     <geo decls="#WGS">38.97167 -95.23525</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="lun">
+               <orgName>Universiteitsbibliotheek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Leiden</placeName>
+                     <idno type="geoNames">2751773</idno>
+                     <geo decls="#WGS">52.15833 4.49306</geo>
+                  </settlement>
+                  <country key="NL">Netherlands</country>
+               </place>
+            </org>
+            <org xml:id="lub">
+               <orgName>Universitätsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Leipzig</placeName>
+                     <idno type="geoNames">2879139</idno>
+                     <geo decls="#WGS">51.33962 12.37129</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="lzs">
+               <orgName>Zisterzienserstift</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Lilienfeld</placeName>
+                     <idno type="geoNames">2772470</idno>
+                     <geo decls="#WGS">48.01312 15.59664</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="lol">
+               <orgName>Oberösterreichische Landesbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Linz</placeName>
+                     <idno type="geoNames">2772400</idno>
+                     <geo decls="#WGS">48.30639 14.28611</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="lnm">
+               <orgName>National Museum and Galleries on Merseyside</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Liverpool</placeName>
+                     <idno type="geoNames">2644210</idno>
+                     <geo decls="#WGS">53.41058 -2.97794</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="lbl">
+               <orgName>British Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>London</placeName>
+                     <idno type="geoNames">2643743</idno>
+                     <geo decls="#WGS">51.50853 -0.12574</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="llp">
+               <orgName>Lambeth Palace</orgName>
+               <place>
+                  <settlement>
+                     <placeName>London</placeName>
+                     <idno type="geoNames">2643743</idno>
+                     <geo decls="#WGS">51.50853 -0.12574</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="lbm">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Lyon</placeName>
+                     <idno type="geoNames">2996944</idno>
+                     <geo decls="#WGS">45.74846 4.84671</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="lrb">
+               <orgName>Ratsbücherei</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Lüneburg</placeName>
+                     <idno type="geoNames">2875115</idno>
+                     <geo decls="#WGS">53.2509 10.41409</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="mjr">
+               <orgName>John Rylands Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Manchester</placeName>
+                     <idno type="geoNames">2643123</idno>
+                     <geo decls="#WGS">53.48095 -2.23743</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="mbm">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Marseille</placeName>
+                     <idno type="geoNames">2995469</idno>
+                     <geo decls="#WGS">43.29695 5.38107</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="mbs">
+               <orgName>Benediktinerstift</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Melk</placeName>
+                     <idno type="geoNames">2771682</idno>
+                     <geo decls="#WGS">48.22737 15.33186</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="mrm">
+               <orgName>Regionální muzeum v Mikulově</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Mikulov</placeName>
+                     <idno type="geoNames">3070720</idno>
+                     <geo decls="#WGS">48.80556 16.6378</geo>
+                  </settlement>
+                  <country key="CZ">Czech Republic</country>
+               </place>
+            </org>
+            <org xml:id="mbt">
+               <orgName>Biblioteca Trivulziana</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Milano</placeName>
+                     <idno type="geoNames">3173435</idno>
+                     <geo decls="#WGS">45.46427 9.18951</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="mbe">
+               <orgName>Biblioteca Estense Universitaria, Estense</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Modena</placeName>
+                     <idno type="geoNames">3173331</idno>
+                     <geo decls="#WGS">44.64783 10.92539</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="mbs2">
+               <orgName>Bayerische Staatsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>München</placeName>
+                     <idno type="geoNames">2867714</idno>
+                     <geo decls="#WGS">48.13743 11.57549</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="mlm">
+               <orgName>Ludwig-Maximilians-Universität, Universitätsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>München</placeName>
+                     <idno type="geoNames">2867714</idno>
+                     <geo decls="#WGS">48.13743 11.57549</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="nbm">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Nancy</placeName>
+                     <idno type="geoNames">2990999</idno>
+                     <geo decls="#WGS">48.68439 6.18496</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="nbn">
+               <orgName>Biblioteca Nazionale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Napoli</placeName>
+                     <idno type="geoNames">3172394</idno>
+                     <geo decls="#WGS">40.85216 14.26811</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="nbl">
+               <orgName>Yale University, Beinecke Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>New Haven</placeName>
+                     <idno type="geoNames">4839366</idno>
+                     <geo decls="#WGS">41.30815 -72.92816</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="nmm">
+               <orgName>Metropolitan Museum of Art, The Cloisters Collection</orgName>
+               <place>
+                  <settlement>
+                     <placeName>New York</placeName>
+                     <idno type="geoNames">5128581</idno>
+                     <geo decls="#WGS">40.71427 -74.00597</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="npm">
+               <orgName>Pierpont Morgan Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>New York</placeName>
+                     <idno type="geoNames">5128581</idno>
+                     <geo decls="#WGS">40.71427 -74.00597</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="nsb">
+               <orgName>Stadtbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Nürnberg</placeName>
+                     <idno type="geoNames">2861650</idno>
+                     <geo decls="#WGS">49.45421 11.07752</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="oko">
+               <orgName>Kloster Ottobeuren</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Ottobeuren</placeName>
+                     <idno type="geoNames">2855937</idno>
+                     <geo decls="#WGS">47.9413 10.29971</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="obl">
+               <orgName>Bodleian Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Oxford</placeName>
+                     <idno type="geoNames">2640729</idno>
+                     <geo decls="#WGS">51.75222 -1.25596</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="occ">
+               <orgName>Corpus Christi College</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Oxford</placeName>
+                     <idno type="geoNames">2640729</idno>
+                     <geo decls="#WGS">51.75222 -1.25596</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="osj">
+               <orgName>St. John's College Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Oxford</placeName>
+                     <idno type="geoNames">2640729</idno>
+                     <geo decls="#WGS">51.75222 -1.25596</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="pab">
+               <orgName>Biblioteca centrale della Regione siciliana Alberto Bombace, BCRS</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Palermo</placeName>
+                     <idno type="geoNames">2523920</idno>
+                     <geo decls="#WGS">38.1166 13.3636</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="pba">
+               <orgName>Bibliothèque de l'Arsenal</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Paris</placeName>
+                     <idno type="geoNames">2988507</idno>
+                     <geo decls="#WGS">48.85341 2.3488</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="pbm">
+               <orgName>Bibliothèque Mazarine</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Paris</placeName>
+                     <idno type="geoNames">2988507</idno>
+                     <geo decls="#WGS">48.85341 2.3488</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="pbn">
+               <orgName>Bibliothèque nationale de France</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Paris</placeName>
+                     <idno type="geoNames">2988507</idno>
+                     <geo decls="#WGS">48.85341 2.3488</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="pbs">
+               <orgName>Bibliothèque Sainte-Geneviève</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Paris</placeName>
+                     <idno type="geoNames">2988507</idno>
+                     <geo decls="#WGS">48.85341 2.3488</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="pen">
+               <orgName>Ecole nationale superieure des Beaux-Arts</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Paris</placeName>
+                     <idno type="geoNames">2988507</idno>
+                     <geo decls="#WGS">48.85341 2.3488</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="pfl">
+               <orgName>Free Library, Rare Book Department</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Philadelphia</placeName>
+                     <idno type="geoNames">4560349</idno>
+                     <geo decls="#WGS">39.95238 -75.16362</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="pkc">
+               <orgName>University of Pennsylvania, Kislak Center for Special Collections</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Philadelphia</placeName>
+                     <idno type="geoNames">4560349</idno>
+                     <geo decls="#WGS">39.95238 -75.16362</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="pds">
+               <orgName>Soprintendenza per i Beni Ambientali, Architettonici e Storici [Cahn]</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Pisa</placeName>
+                     <idno type="geoNames">3170647</idno>
+                     <geo decls="#WGS">43.70853 10.4036</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="pgs">
+               <orgName>Gräflich Schönbornsche Schlossbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Pommersfelden</placeName>
+                     <idno type="geoNames">2852757</idno>
+                     <geo decls="#WGS">49.76667 10.81667</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="pnk">
+               <orgName>Národní Knihova</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Praha</placeName>
+                     <idno type="geoNames">3067696</idno>
+                     <geo decls="#WGS">50.08804 14.42076</geo>
+                  </settlement>
+                  <country key="CZ">Czech Republic</country>
+               </place>
+            </org>
+            <org xml:id="pul">
+               <orgName>Princeton University Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Princeton</placeName>
+                     <idno type="geoNames">5102922</idno>
+                     <geo decls="#WGS">40.34872 -74.65905</geo>
+                  </settlement>
+                  <country key="US">USA</country>
+               </place>
+            </org>
+            <org xml:id="rsa">
+               <orgName>Stadtarchiv</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Retz</placeName>
+                     <idno type="geoNames">2767521</idno>
+                     <geo decls="#WGS">48.75712 15.95485</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="rbn">
+               <orgName>Biblioteca Nazionale Centrale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Roma</placeName>
+                     <idno type="geoNames">3169070</idno>
+                     <geo decls="#WGS">41.89193 12.51133</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="rbs">
+               <orgName>Biblioteca Casanatense</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Roma</placeName>
+                     <idno type="geoNames">3169070</idno>
+                     <geo decls="#WGS">41.89193 12.51133</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="scl">
+               <orgName>Cathedral Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Salisbury</placeName>
+                     <idno type="geoNames">2638664</idno>
+                     <geo decls="#WGS">51.06931 -1.79569</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="sep">
+               <orgName>Erzabtei St. Peter, Benediktinerstift, Bibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Salzburg</placeName>
+                     <idno type="geoNames">2766824</idno>
+                     <geo decls="#WGS">47.79941 13.04399</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="sla">
+               <orgName>Landesarchiv</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Salzburg</placeName>
+                     <idno type="geoNames">2766824</idno>
+                     <geo decls="#WGS">47.79941 13.04399</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="sub">
+               <orgName>Universitätsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Salzburg</placeName>
+                     <idno type="geoNames">2766824</idno>
+                     <geo decls="#WGS">47.79941 13.04399</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="sps">
+               <orgName>Prämonstratenserstift</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Schlägl</placeName>
+                     <idno type="geoNames">2765941</idno>
+                     <geo decls="#WGS">48.63665 13.9656</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="skv">
+               <orgName>Kantonsbibliothek Vadiana</orgName>
+               <place>
+                  <settlement>
+                     <placeName>St. Gallen</placeName>
+                     <idno type="geoNames">2658822</idno>
+                     <geo decls="#WGS">47.42391 9.37477</geo>
+                  </settlement>
+                  <country key="CH">Switzerland</country>
+               </place>
+            </org>
+            <org xml:id="ssb">
+               <orgName>Stiftsbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>St. Gallen</placeName>
+                     <idno type="geoNames">2658822</idno>
+                     <geo decls="#WGS">47.42391 9.37477</geo>
+                  </settlement>
+                  <country key="CH">Switzerland</country>
+               </place>
+            </org>
+            <org xml:id="sdb">
+               <orgName>Domkyrkobiblioteket</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Strängnas</placeName>
+                     <idno type="geoNames">2671392</idno>
+                     <geo decls="#WGS">59.37741 17.03119</geo>
+                  </settlement>
+                  <country key="SE">Sweden</country>
+               </place>
+            </org>
+            <org xml:id="swl">
+               <orgName>Württembergische Landesbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Stuttgart</placeName>
+                     <idno type="geoNames">2825297</idno>
+                     <geo decls="#WGS">48.78232 9.17702</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="tna">
+               <orgName>Norbertijnenabdij Archief</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Tongerlo</placeName>
+                     <idno type="geoNames">2785385</idno>
+                     <geo decls="#WGS">51.10622 4.91638</geo>
+                  </settlement>
+                  <country key="BE">Belgium</country>
+               </place>
+            </org>
+            <org xml:id="tbu">
+               <orgName>Biblioteka Uniwersytecksa</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Torun</placeName>
+                     <idno type="geoNames">3083271</idno>
+                     <geo decls="#WGS">53.01375 18.59814</geo>
+                  </settlement>
+                  <country key="PL">Poland</country>
+               </place>
+            </org>
+            <org xml:id="tbv">
+               <orgName>Bibliothèque de Ville</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Tournai</placeName>
+                     <idno type="geoNames">2785341</idno>
+                     <geo decls="#WGS">50.60715 3.38932</geo>
+                  </settlement>
+                  <country key="BE">Belgium</country>
+               </place>
+            </org>
+            <org xml:id="tbm">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Tours</placeName>
+                     <idno type="geoNames">2972191</idno>
+                     <geo decls="#WGS">47.39484 0.70398</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="tad">
+               <orgName>Archivio diocesano tridentino, Biblioteca capitolare</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Trento</placeName>
+                     <idno type="geoNames">3165243</idno>
+                     <geo decls="#WGS">46.06787 11.12108</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="uub">
+               <orgName>Universitetsbiblioteket</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Uppsala</placeName>
+                     <idno type="geoNames">2666199</idno>
+                     <geo decls="#WGS">59.85882 17.63889</geo>
+                  </settlement>
+                  <country key="SE">Sweden</country>
+               </place>
+            </org>
+            <org xml:id="uun">
+               <orgName>Universiteitsbibliotheek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Utrecht</placeName>
+                     <idno type="geoNames">2745912</idno>
+                     <geo decls="#WGS">52.09083 5.12222</geo>
+                  </settlement>
+                  <country key="NL">Netherlands</country>
+               </place>
+            </org>
+            <org xml:id="vbm">
+               <orgName>Bibliothèque Municipale</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Valenciennes</placeName>
+                     <idno type="geoNames">2971041</idno>
+                     <geo decls="#WGS">50.35909 3.52506</geo>
+                  </settlement>
+                  <country key="FR">France</country>
+               </place>
+            </org>
+            <org xml:id="vbc">
+               <orgName>Biblioteca Capitolare, fondo pergamente</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Vercelli</placeName>
+                     <idno type="geoNames">3164565</idno>
+                     <geo decls="#WGS">45.32163 8.41989</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="vbc2">
+               <orgName>Biblioteca Civica Bertoliana</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Vicenza</placeName>
+                     <idno type="geoNames">3164419</idno>
+                     <geo decls="#WGS">45.54672 11.5475</geo>
+                  </settlement>
+                  <country key="IT">Italy</country>
+               </place>
+            </org>
+            <org xml:id="wha">
+               <orgName>Herzogin Anna Amalia Bibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Weimar</placeName>
+                     <idno type="geoNames">2812482</idno>
+                     <geo decls="#WGS">50.9803 11.32903</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="wdk">
+               <orgName>Dominikanerkonvent</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Wien</placeName>
+                     <idno type="geoNames">2761369</idno>
+                     <geo decls="#WGS">48.20849 16.37208</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="won">
+               <orgName>Österreichische Nationalbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Wien</placeName>
+                     <idno type="geoNames">2761369</idno>
+                     <geo decls="#WGS">48.20849 16.37208</geo>
+                  </settlement>
+                  <country key="AT">Austria</country>
+               </place>
+            </org>
+            <org xml:id="wha2">
+               <orgName>Herzog August Bibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Wolfenbüttel</placeName>
+                     <idno type="geoNames">2806914</idno>
+                     <geo decls="#WGS">52.16442 10.54095</geo>
+                  </settlement>
+                  <country key="DE">Germany</country>
+               </place>
+            </org>
+            <org xml:id="wcl">
+               <orgName>Cathedral Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Worcester</placeName>
+                     <idno type="geoNames">2633563</idno>
+                     <geo decls="#WGS">52.18935 -2.22001</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="wbu">
+               <orgName>Biblioteka Uniwersytecksa</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Wroclaw</placeName>
+                     <idno type="geoNames">3081368</idno>
+                     <geo decls="#WGS">51.1 17.03333</geo>
+                  </settlement>
+                  <country key="PL">Poland</country>
+               </place>
+            </org>
+            <org xml:id="yml">
+               <orgName>Minster Library</orgName>
+               <place>
+                  <settlement>
+                     <placeName>York</placeName>
+                     <idno type="geoNames">2633352</idno>
+                     <geo decls="#WGS">53.95763 -1.08271</geo>
+                  </settlement>
+                  <country key="GB">Great Britain</country>
+               </place>
+            </org>
+            <org xml:id="zzb">
+               <orgName>Zentralbibliothek</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Zürich</placeName>
+                     <idno type="geoNames">2657896</idno>
+                     <geo decls="#WGS">47.36667 8.55</geo>
+                  </settlement>
+                  <country key="CH">Switzerland</country>
+               </place>
+            </org>
+            <org xml:id="hhb">
+               <orgName>Huis Bergh</orgName>
+               <place>
+                  <settlement>
+                     <placeName>s´-Heerenberg</placeName>
+                     <idno type="geoNames">2747357</idno>
+                     <geo decls="#WGS">51.8767 6.25877</geo>
+                  </settlement>
+                  <country key="NL">Netherlands</country>
+               </place>
+            </org>
+         </listOrg>
+      </body>
+   </text>
+</TEI>
