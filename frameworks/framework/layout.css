@@ -92,27 +92,27 @@ publicationStmt:before {
     content: "Project PID:                     "
 }
 
-msItem[n = co-transmission]:before {
+msItem[n = co-transmission] {
     display: block;
     margin-top: 20px;
     margin-bottom: 20px;
     content: 
-    oxy_label(text, 'Co-Transmission (Graphical Transmissions)', styles, "font-weight: bold; font-size: large")
+    oxy_label(text, 'Graphical Co-Transmission', styles, "font-weight: bold; font-size: large")
  oxy_concat(' (ID: ')
  oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Co-Transmission_List.xml')//item/@xml:id, ',')"), width, 20%, fontInherit, true) ')'
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 
-msItem[n = transmission-context]:before {
+msItem[n = transmission-context] {
     display: block;
     margin-top: 20px;
     margin-bottom: 20px;
     content: 
-    oxy_label(text, 'Transmission context (Other Manuscripts)', styles, "font-weight: bold; font-size: large")
+    oxy_label(text, 'Textual Co-Transmission', styles, "font-weight: bold; font-size: large")
  oxy_concat(' (ID: ')
  oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Transmission-Context_List.xml')//item/@xml:id, ',')"), width, 20%, fontInherit, true) ')'
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
- oxy_label(text, '                             Elaborate Transmission-Context', styles, "font-weight: normal; font-size: small; font-style: italic")
+ oxy_label(text, '                             Elaborate Textual Co-Transmission', styles, "font-weight: normal; font-size: small; font-style: italic")
  oxy_editor(type, button, actionID, elaborate_item, transparent, true, color, #FF0000)
 }
 
@@ -348,7 +348,11 @@ msItem > textLang[otherLangs]:before {
     width: 20%;
     content: "Other Language:"
 }
-
+msItem > note[type = "extension"]:before {
+    display: inline-block;
+    width: 20%;
+    content: 'Extension:'
+}
 msItem > note[type = "version"]:before {
     display: inline-block;
     width: 20%;
@@ -526,9 +530,9 @@ msItem[*|id]:after {
     padding-top: 3em;
     padding-bottom: 2em;
     content: 
-    oxy_label(text, '                                               Add Co-Transmission Item')
+    oxy_label(text, '                                               Add Graphical Co-Transmission')
  oxy_editor(type, button, actionID, add_coTransmission, transparent, true, color, #FF0000)
- oxy_label(text, '  Add Transmission context Item')
+ oxy_label(text, '  Add Textual Co-Transmission')
  oxy_editor(type, button, actionID, add_transmissionContext, transparent, true, color, #FF0000)
 }
 
@@ -629,9 +633,23 @@ msItem > note[type = 'citation'] {
 }
 msItem[*|id] > note[type = 'version'] {
     content: 
-    oxy_combobox(edit, '@n', editable, false, values, 'yes,no,unknown,original,long,interpolated', labels, 'extended to universal chronicle, not extended to universal chronicle, unknown, original version, long version, interpolated version', width, 20%, fontInherit, true)
+    oxy_combobox(edit, '@n', editable, false, values, 'original,long,interpolated', labels, 'original version, long version, interpolated version', width, 20%, fontInherit, true)
 }
 msItem > note[type = 'version'] > p {
+    font-style: italic;
+    font-size: small;
+    margin-left: 16em;
+    content: 
+    oxy_label(text, 'Notes:  ')
+ oxy_textArea(edit, '#text')
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+}
+
+msItem[*|id] > note[type = 'extension'] {
+    content: 
+    oxy_combobox(edit, '@n', editable, false, values, 'yes,no,unknown', labels, 'extended to universal chronicle, not extended to universal chronicle, unknown', width, 20%, fontInherit, true)
+}
+msItem > note[type = 'extension'] > p {
     font-style: italic;
     font-size: small;
     margin-left: 16em;
@@ -1305,7 +1323,7 @@ change[n = 'contentCheck']:after {
  oxy_editor(type, button, actionID, add_change-readyForPublication, transparent, true, color, #FF0000)
 
 }
-change[n= 'manuscriptLiveView']:after {
+change[n = 'manuscriptLiveView']:after {
     content: 
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }

@@ -66,31 +66,32 @@
                             <!-- Alternative -->
                             <note type="internal"/>
                             <!--Alternativ -->
+                            <note n="" type="extension">
+                                <p/>
+                            </note>
                             <note n="" type="version">
                                 <p/>
                             </note>
                             <note type="significant-passages">
                                 <list>
-                                    <item n="prima-etas" rend=""> Prima etas fuit (usually next to Noah)</item>
-                                    <item n="beata-virgo" rend=""> Beata virgo maria</item>
+                                    <item n="prima-etas" rend="">Prima etas fuit (usually next to Noah)</item>
+                                    <item n="beata-virgo" rend="">Beata virgo maria</item>
                                     <item n="conceptus-est" rend="">Conceptus est dominus</item>
                                     <item n="primam-annam" rend="">Primam annam accepit ioachim</item>
                                     <item n="tiberius-cesar" rend="">Tiberius cesar successit augustus </item>
                                 </list>
                             </note>
                         </msItem>
-                        <msItem ana="chigc:Item" corresp="" n="co-transmission">
+                        <msItem ana="chigc:GraphicalCoTransmission" corresp="#" n="co-transmission">
                             <locus/>
                             <title/>
                             <note> </note>
                         </msItem>
-                        <msItem ana="chigc:Item" corresp="#" n="transmission-context"><locus/><title/>
-                            <author xml:lang="en"/>
-                            <!-- Alternativ -->
-                            <docDate ana="chigc:date">
-                                <date notAfter="" notBefore=""/>
-                            </docDate>
-                            <textLang ana="dcterms:language" mainLang=""/><note/></msItem>
+                        <msItem ana="chigc:TextualCoTransmission" corresp="#" n="transmission-context">
+                            <locus/>
+                            <title/>
+                            <note/>
+                        </msItem>
                     </msContents>
                     <physDesc>
                         <objectDesc ana="chigc:manifestationType" form="codex">

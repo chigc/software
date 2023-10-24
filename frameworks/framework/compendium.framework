@@ -1007,7 +1007,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;msItem xmlns="http://www.tei-c.org/ns/1.0" corresp="#xy" n="transmission-context" ana="chigc:Item">
+																<String>&lt;msItem xmlns="http://www.tei-c.org/ns/1.0" corresp="#xy" n="transmission-context" ana="chigc:TextualCoTransmission">
                      &lt;locus/>
                      &lt;title ana="rdfs:label">&lt;/title>
                     &lt;note/>
@@ -2552,7 +2552,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 						<null/>
 					</field>
 					<field name="priority">
-						<Integer>3</Integer>
+						<Integer>5</Integer>
 					</field>
 					<field name="xmlNodeCustomizerExtension">
 						<null/>
