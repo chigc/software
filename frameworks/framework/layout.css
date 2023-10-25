@@ -666,7 +666,7 @@ msItem > note[type = 'significant-passages'] > list > item {
     margin-left: 14em;
     content: 
     oxy_label(text, 'ID: ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', fontInherit, true, width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='texts']/item/@xml:id, ',')"), fontInherit, true, width, 15%)
  oxy_label(text, '   ')
  oxy_xpath("text()")
 }
@@ -933,6 +933,8 @@ item[n = 'linea-christi'] > list > item[rend]:after {
 }
 
 
+
+
 item[n = 'six-ages-emphasized'][rend]:after {
     display: block;
     margin-right: 36em;
@@ -1001,7 +1003,10 @@ item[n = 'all-pictured']:before {
     content: oxy_label(text, 'All medallions illustrated:  ', styles, 'font-weight:bold;')
 }
 item[n = 'six-ages-pictured']:before {
-    content: oxy_label(text, 'Six Ages:  ', styles, 'font-weight:bold;')
+    content: 
+    
+    
+    oxy_label(text, 'Six Ages:  ', styles, 'font-weight:bold;')
 }
 item[n = 'jesus-pictured']:before {
     content: oxy_label(text, 'Pictures of Jesus:  ', styles, 'font-weight:bold;')
@@ -1044,7 +1049,7 @@ item[n = 'jesus-pictured'] > list > item {
     margin-left: 14em;
     content: 
     oxy_label(text, 'ID: ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', fontInherit, true, width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/@xml:id, ',')"), fontInherit, true, width, 15%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
@@ -1068,7 +1073,7 @@ item[n = 'extras'] > list > item {
     margin-left: 14em;
     content: 
     oxy_label(text, 'ID: ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', fontInherit, true, width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/@xml:id, ',')"), fontInherit, true, width, 15%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
@@ -1085,7 +1090,7 @@ item[n = 'other-medallions'] > list > item {
     content: 
     oxy_label(text, 'Medallion: ')
  oxy_label(text, '           ID: ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/@xml:id, ',')"), width, 15%)
 
 }
 
@@ -1112,7 +1117,7 @@ item[n = 'significant-pictures'] > list > item {
     margin-left: 14em;
     content: 
     oxy_label(text, 'ID: ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', fontInherit, true, width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/@xml:id, ',')"), fontInherit, true, width, 15%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
@@ -1128,22 +1133,28 @@ item[n = 'other-pictures']:before {
 
 item[n = 'other-pictures'] > list > item {
     display: block;
-    font-style: italic;
-    margin-left: 15em;
+    margin-left: 14em;
     content: 
-    oxy_label(text, 'ID:        ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, 'will,be,a,list,in,future', fontInherit, true, width, 15%)
+    oxy_label(text, 'ID:  ')
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/@xml:id, ',')"), fontInherit, true, width, 15%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 
 }
+item[n = 'other-pictures'] > list > item:after {
+    margin-left: 44em;
+    content: 
+    oxy_label(text, 'Delete Picture: ',  styles, 'color:red;')
+    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000);
+
+}
 
 item[n = 'other-pictures'] > list > item > note {
-    display: block;
+    display:block;
     font-style: italic;
     content: 
     oxy_label(text, 'Notes: ')
- oxy_textArea(edit, '#text', fontInherit, true)
+   oxy_textArea(edit, '#text', fontInherit, true)
 
 }
 
@@ -1151,7 +1162,7 @@ item[n = 'other-pictures'] > list > item > note {
 item[n = 'other-pictures'] > list > item > label {
     content: 
     oxy_label(text, '  Label:   ')
- oxy_editor(type, text, edit, '#text', width, 30%, fontInherit, true)
+    oxy_editor(type, text, edit, '#text', width, 30%, fontInherit, true)
 
 }
 item[n = 'significant-pictures'] > list > item[rend]:after {
@@ -1173,7 +1184,7 @@ decoNote[type = 'diagrams'] > list > item {
     margin-left: 20%;
     content: 
     oxy_label(text, 'ID:  ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='diagrams']/item/@xml:id, ',')"), width, 20%, fontInherit, true)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='diagrams']/item/concat( '#',@xml:id), ',')"), width, 20%, fontInherit, true)
 
 }
 

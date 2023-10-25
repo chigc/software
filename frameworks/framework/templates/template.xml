@@ -82,7 +82,7 @@
                                 </list>
                             </note>
                         </msItem>
-                        <msItem ana="chigc:GraphicalCoTransmission" corresp="#" n="co-transmission">
+                        <msItem ana="chigc:GraphicalCoTransmission" corresp="" n="co-transmission">
                             <locus/>
                             <title/>
                             <note> </note>
@@ -131,13 +131,8 @@
                                         </list>
                                         <note/>
                                     </item>
-                                    <item ana="chigc:ColorCoding" n="color-coding" rend="">
-                                        Color-Coding
-                                        
-                                    </item>
-                                    <item ana="chigc:LetterCoding" n="letter-coding" rend="">
-                                        Letter Coding                                  
-                                    </item>
+                                    <item ana="chigc:ColorCoding" n="color-coding" rend=""> Color-Coding </item>
+                                    <item ana="chigc:LetterCoding" n="letter-coding" rend=""> Letter Coding </item>
                                     <item ana="chigc:MedaillonsRendition" n="medallion-rendition">
                                         <list>
                                             <item n="medallion-shape"/>
@@ -164,69 +159,65 @@
                                         <p>All Medaillons are illustrated</p>
                                         <note/>
                                     </item>
-                                    <item corresp="" n="six-ages-pictured" rend="" sameAs="">
+                                    <item corresp="" n="six-ages-pictured" rend="">
                                         <p>Six Ages Pictured</p>
                                         <note/>
                                     </item>
-                                    <item n="jesus-pictured" rend="present">
+                                    <item n="jesus-pictured" rend="">
                                         <list>
-                                            <item corresp="be" n="jesus-natus" rend="" sameAs="">Jesus Natus</item>
-                                            <item corresp="" n="jesus-puer" rend="" sameAs="">Jesus Puer</item>
-                                            <item corresp="" n="jesus-passus" rend="" sameAs="">Jesus Passus</item>
-                                            <item corresp="" n="jesus-resurgens" rend="" sameAs="">Jesus Resurgens</item>
-                                            <item corresp="" n="jesus-other" rend="" sameAs="">Other [e.g., Pater]</item>
+                                            <item corresp="" n="jesus-natus" rend="">Jesus Natus</item>
+                                            <item corresp="" n="jesus-puer" rend="">Jesus Puer</item>
+                                            <item corresp="" n="jesus-passus" rend="">Jesus Passus</item>
+                                            <item corresp="" n="jesus-resurgens" rend="">Jesus Resurgens</item>
+                                            <item corresp="" n="jesus-other" rend="">Other [e.g., Pater]</item>
                                         </list>
                                         <note/>
                                     </item>
                                     <item n="extras">
                                         <list>
-                                            <item corresp="" n="moses-Aaron" rend="" sameAs="">Moses and Aaron</item>
-                                            <item corresp="" n="nebuchadnezzar" rend="" sameAs="">Nebuchadnezzar</item>
-                                            <item corresp="" n="alexander" rend="" sameAs="">Alexander</item>
+                                            <item corresp="" n="moses-Aaron" rend="">Moses and Aaron</item>
+                                            <item corresp="" n="nebuchadnezzar" rend="">Nebuchadnezzar</item>
+                                            <item corresp="" n="alexander" rend="">Alexander</item>
                                         </list>
                                         <note/>
                                     </item>
                                     <item n="other-medallions" rend="">
-                                        <list>
-                                            <item corresp="" sameAs="">
-                                                <label/>
-                                                <note/>
-                                            </item>
-                                            <item corresp="" sameAs="">
-                                                <label/>
-                                                <note/>
-                                            </item>
-                                        </list>
+                                        <list> </list>
                                     </item>
                                 </list>
                             </decoNote>
-                            <decoNote ana="chigc:Pictures" type="illustrations">
-                                <list><item corresp="#" n="significant-pictures" sameAs="">
+                            <decoNote ana="chigc:Pictures" corresp="#compendium-historiae" type="illustrations">
+                                <list><item n="significant-pictures">
                                         <list>
-                                            <item corresp="" n="cross" rend="" sameAs="">Cross (above Adam and Eve)</item>
-                                            <item corresp="" n="cain-abel" rend="" sameAs="">Cain and Abel</item>
-                                            <item corresp="" n="tower-babel" rend="" sameAs="">Tower of Babel</item>
-                                            <item corresp="" n="city-babel" rend="" sameAs="">City of Babel</item>
-                                            <item corresp="" n="rainbow" rend="" sameAs="">Rainbow</item>
-                                            <item corresp="" n="god" rend="" sameAs="">God the Father</item>
-                                            <item corresp="" n="creation" rend="" sameAs="">Scenes of Creation</item>
+                                            <item corresp="" n="cross" rend="">Cross (above Adam and Eve)</item>
+                                            <item corresp="" n="cain-abel" rend="">Cain and Abel</item>
+                                            <item corresp="" n="tower-babel" rend="">Tower of Babel</item>
+                                            <item corresp="" n="city-babel" rend="">City of Babel</item>
+                                            <item corresp="" n="rainbow" rend="">Rainbow</item>
+                                            <item corresp="" n="god" rend="">God the Father</item>
+                                            <item corresp="" n="creation" rend="">Scenes of Creation</item>
                                         </list>
                                     </item>
                                     <item n="other-pictures">
-                                        <list> </list>
+                                        <list>
+                                            <item corresp="">
+                                                <label/>
+                                                <note/>
+                                            </item>
+                                        </list>
                                     </item>
                                 </list>
                             </decoNote>
                             <decoNote ana="chigc:Diagrams" corresp="#compendium-historiae" type="diagrams">
                                 <!-- mehrere Möglich, add button -->
                                 <list>
-                                    <item corresp="" sameAs="">
+                                    <item corresp="">
                                         <label/>
                                         <locus/>
                                         <note/>
                                     </item>
                                 </list>
-                            </decoNote>                           
+                            </decoNote>
                         </decoDesc>
                     </physDesc>
                     <history>

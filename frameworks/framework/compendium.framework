@@ -1720,7 +1720,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="#" sameAs="">
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="#" >
                                         &lt;label/>
                                         &lt;locus/>
                                         &lt;note/>
@@ -1812,59 +1812,39 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
                                         &lt;p>All Medaillons are illustrated&lt;/p>
                                         &lt;note/>
                                     &lt;/item>
-                                    &lt;item corresp="" n="six-ages-pictured" rend="" sameAs="">
+                                    &lt;item corresp="" n="six-ages-pictured" rend="">
                                         &lt;p>Six Ages Pictured&lt;/p>
                                         &lt;note/>
                                     &lt;/item>
-                                    &lt;item n="jesus-pictured" rend="present">
+                                    &lt;item n="jesus-pictured" rend="">
                                         &lt;list>
-                                            &lt;item corresp="be" n="jesus-natus" rend="" sameAs="">Jesus Natus&lt;/item>
-                                            &lt;item corresp="" n="jesus-puer" rend="" sameAs="">Jesus Puer&lt;/item>
-                                            &lt;item corresp="" n="jesus-passus" rend="" sameAs="">Jesus Passus&lt;/item>
-                                            &lt;item corresp="" n="jesus-resurgens" rend="" sameAs="">Jesus Resurgens&lt;/item>
-                                            &lt;item corresp="" n="jesus-other" rend="" sameAs="">Other [e.g., Pater]&lt;/item>
+                                            &lt;item corresp="" n="jesus-natus" rend="">Jesus Natus&lt;/item>
+                                            &lt;item corresp="" n="jesus-puer" rend="">Jesus Puer&lt;/item>
+                                            &lt;item corresp="" n="jesus-passus" rend="">Jesus Passus&lt;/item>
+                                            &lt;item corresp="" n="jesus-resurgens" rend="" >Jesus Resurgens&lt;/item>
+                                            &lt;item corresp="" n="jesus-other" rend="">Other [e.g., Pater]&lt;/item>
                                         &lt;/list>
                                         &lt;note/>
                                     &lt;/item>
                                     &lt;item n="extras">
                                         &lt;list>
-                                            &lt;item corresp="" n="moses-Aaron" rend="" sameAs="">Moses and Aaron&lt;/item>
-                                            &lt;item corresp="" n="nebuchadnezzar" rend="" sameAs="">Nebuchadnezzar&lt;/item>
-                                            &lt;item corresp="" n="alexander" rend="" sameAs="">Alexander&lt;/item>
+                                            &lt;item corresp="" n="moses-Aaron" rend="">Moses and Aaron&lt;/item>
+                                            &lt;item corresp="" n="nebuchadnezzar" rend="">Nebuchadnezzar&lt;/item>
+                                            &lt;item corresp="" n="alexander" rend="">Alexander&lt;/item>
                                         &lt;/list>
                                         &lt;note/>
                                     &lt;/item>
                                     &lt;item n="other-medallions" rend="">
                                         &lt;list>
-                                            &lt;item corresp="" sameAs="">
+                                            &lt;item corresp="" >
                                                 &lt;label/>
                                                 &lt;note/>
-                                            &lt;/item>
-                                            &lt;item corresp="" sameAs="">
-                                                &lt;label/>
-                                                &lt;note/>
-                                            &lt;/item>
+                                            &lt;/item>                                          
                                         &lt;/list>
                                     &lt;/item>
                                 &lt;/list>
                             &lt;/decoNote>
-                            &lt;decoNote ana="chigc:Pictures" type="illustrations">
-                                &lt;list>&lt;item corresp="#" n="significant-pictures" sameAs="">
-                                        &lt;list>
-                                            &lt;item corresp="" n="cross" rend="" sameAs="">Cross (above Adam and Eve)&lt;/item>
-                                            &lt;item corresp="" n="cain-abel" rend="" sameAs="">Cain and Abel&lt;/item>
-                                            &lt;item corresp="" n="tower-babel" rend="" sameAs="">Tower of Babel&lt;/item>
-                                            &lt;item corresp="" n="city-babel" rend="" sameAs="">City of Babel&lt;/item>
-                                            &lt;item corresp="" n="rainbow" rend="" sameAs="">Rainbow&lt;/item>
-                                            &lt;item corresp="" n="god" rend="" sameAs="">God the Father&lt;/item>
-                                            &lt;item corresp="" n="creation" rend="" sameAs="">Scenes of Creation&lt;/item>
-                                        &lt;/list>
-                                    &lt;/item>
-                                    &lt;item n="other-pictures">
-                                        &lt;list> &lt;/list>
-                                    &lt;/item>
-                                &lt;/list>
-                            &lt;/decoNote></String>
+                         </String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1920,13 +1900,13 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 																<String>fragment</String>
 																<String>&lt;item n="significant-pictures" corresp="#" sameAs="" xmlns="http://www.tei-c.org/ns/1.0" >
                                     &lt;list>
-                                        &lt;item corresp="" n="cross" rend="" sameAs="">Cross (above Adam and Eve)&lt;/item>
-                                        &lt;item corresp="" n="cain-abel" rend="" sameAs="">Cain and Abel&lt;/item>
-                                        &lt;item corresp="" n="tower-babel" rend="" sameAs="">Tower of Babel&lt;/item>
-                                        &lt;item corresp="" n="city-babel" rend="" sameAs="">City of Babel&lt;/item>
-                                        &lt;item corresp="" n="rainbow" rend="" sameAs="">Rainbow&lt;/item>
-                                        &lt;item corresp="" n="god" rend="" sameAs="">God the Father&lt;/item>
-                                        &lt;item corresp="" n="creation" rend="" sameAs="">Scenes of Creation&lt;/item>                                       
+                                        &lt;item corresp="" n="cross" rend="" >Cross (above Adam and Eve)&lt;/item>
+                                        &lt;item corresp="" n="cain-abel" rend="">Cain and Abel&lt;/item>
+                                        &lt;item corresp="" n="tower-babel" rend="">Tower of Babel&lt;/item>
+                                        &lt;item corresp="" n="city-babel" rend="">City of Babel&lt;/item>
+                                        &lt;item corresp="" n="rainbow" rend="">Rainbow&lt;/item>
+                                        &lt;item corresp="" n="god" rend="">God the Father&lt;/item>
+                                        &lt;item corresp="" n="creation" rend="">Scenes of Creation&lt;/item>                                       
                                     &lt;/list>
                                 &lt;/item>
 &lt;item n="other-pictures" xmlns="http://www.tei-c.org/ns/1.0" >
@@ -2342,7 +2322,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item  xmlns="http://www.tei-c.org/ns/1.0" corresp="" sameAs="">
+																<String>&lt;item  xmlns="http://www.tei-c.org/ns/1.0" corresp="" >
                                                 &lt;label/>
                                                 &lt;note/>
                                             &lt;/item></String>
