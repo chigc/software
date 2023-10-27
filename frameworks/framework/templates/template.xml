@@ -211,7 +211,7 @@
                             <decoNote ana="chigc:Diagrams" corresp="#compendium-historiae" type="diagrams">
                                 <!-- mehrere Möglich, add button -->
                                 <list>
-                                    <item corresp="">
+                                    <item>
                                         <label/>
                                         <locus/>
                                         <note/>

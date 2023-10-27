@@ -666,7 +666,7 @@ msItem > note[type = 'significant-passages'] > list > item {
     margin-left: 14em;
     content: 
     oxy_label(text, 'ID: ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='texts']/item/@xml:id, ',')"), fontInherit, true, width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='texts']/item/concat( '#',@xml:id), ',')"), fontInherit, true, width, 15%)
  oxy_label(text, '   ')
  oxy_xpath("text()")
 }
@@ -764,6 +764,7 @@ layoutDesc > layout > p {
 
 layoutDesc > layout > p > seg[type = 'node'] {
     content: 
+    oxy_editor(type,combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='nodes']/item/concat( '#',@xml:id), ',')"), fontInherit, true, width, 15%)
     oxy_editor(type, text, edit, '#text', width, 10%, fontInherit, true)
  oxy_label(text, ' on Folio ')
 }
@@ -1049,7 +1050,7 @@ item[n = 'jesus-pictured'] > list > item {
     margin-left: 14em;
     content: 
     oxy_label(text, 'ID: ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/@xml:id, ',')"), fontInherit, true, width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/concat( '#',@xml:id), ',')"), fontInherit, true, width, 15%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
@@ -1073,7 +1074,7 @@ item[n = 'extras'] > list > item {
     margin-left: 14em;
     content: 
     oxy_label(text, 'ID: ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/@xml:id, ',')"), fontInherit, true, width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/concat( '#',@xml:id), ',')"), fontInherit, true, width, 15%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
@@ -1090,7 +1091,7 @@ item[n = 'other-medallions'] > list > item {
     content: 
     oxy_label(text, 'Medallion: ')
  oxy_label(text, '           ID: ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/@xml:id, ',')"), width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/concat( '#',@xml:id), ',')"), width, 15%)
 
 }
 
@@ -1117,7 +1118,7 @@ item[n = 'significant-pictures'] > list > item {
     margin-left: 14em;
     content: 
     oxy_label(text, 'ID: ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/@xml:id, ',')"), fontInherit, true, width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/concat( '#',@xml:id), ',')"), fontInherit, true, width, 15%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
@@ -1136,7 +1137,7 @@ item[n = 'other-pictures'] > list > item {
     margin-left: 14em;
     content: 
     oxy_label(text, 'ID:  ')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/@xml:id, ',')"), fontInherit, true, width, 15%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/concat( '#',@xml:id), ',')"), fontInherit, true, width, 15%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 

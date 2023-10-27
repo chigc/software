@@ -2,7 +2,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" rendition="chigc_lists">
+<TEI rendition="chigc_lists" xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -61,27 +61,27 @@
             </item>
             <item xml:id="co-five-ages">
                <label>Five Ages of Man</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-liberal-arts">
                <label>Liberal Arts</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-mary-genealogy">
                <label>Mary Genealogy</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-microcosm-macrocosm">
                <label>Microcosm-Macrocosm</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-philosophy">
                <label>Philsophy</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-sciences">
                <label>Sciences</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-scripture">
                <label>Scripture Diagram</label>
@@ -89,7 +89,7 @@
             </item>
             <item xml:id="co-candelabrum">
                <label>Seven-branched Candelabrum</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-shield-faith">
                <label>Shield of Faith</label>
@@ -97,27 +97,27 @@
             </item>
             <item xml:id="co-seraph">
                <label>Six-winged Seraph</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-tablet-law">
                <label>Tablet of the Law</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-ten-commandments">
                <label>Ten Commandmends</label>
-               <p></p>
-            </item>            
+               <p/>
+            </item>
             <item xml:id="co-tower-wisdom">
                <label>Tower of Wisdom</label>
                <p>Virtues in the shape of a tower</p>
             </item>
             <item xml:id="co-tree-affinity">
                <label>Tree of Affinity</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-tree-cosanguinity">
                <label>Tree of Cosanguinity</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-tree-life">
                <label>Tree of Life (Bonaventure)</label>
@@ -125,21 +125,23 @@
             </item>
             <item xml:id="co-virtue">
                <label>Virtue Diagram (with God)</label>
-               <p></p>
-            </item><item xml:id="co-vice">
+               <p/>
+            </item>
+            <item xml:id="co-vice">
                <label>Vices Diagram (with Devil)</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-tree-vices">
                <label>Tree of Vices</label>
-               <p></p>
-            </item><item xml:id="co-tree-virtues">
+               <p/>
+            </item>
+            <item xml:id="co-tree-virtues">
                <label>Tree of Virtues</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-twelve-articles">
                <label>Twelve Articles of Faith</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-wheels-seven">
                <label>Wheels of Seven</label>
@@ -147,7 +149,7 @@
             </item>
             <item xml:id="co-windrose">
                <label>Windrose</label>
-               <p></p>
+               <p/>
             </item>
             <item xml:id="co-world-map">
                <label>World Map</label>
@@ -155,12 +157,12 @@
             </item>
             <item xml:id="co-zodiac">
                <label>Zodiac</label>
-               <p></p>
+               <p/>
             </item>
             <item>
                <label/>
                <p/>
-            </item>            
+            </item>
          </list>
       </body>
    </text>

@@ -2,7 +2,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" rendition="chigc_lists">
+<TEI rendition="chigc_lists" xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -69,7 +69,7 @@
             <item xml:id="tc-gregory"><label>Gregory</label><p/></item>
             <item xml:id="tc-guillelmus-autissiodorensis"><label>Guillelmus Autissiodorensis: Summa super quattuor libros Sententiarum</label><p/></item>
             <item xml:id="tc-hilary-poitiers"><label>Hilary of Poitiers</label><p/></item>
-            <item xml:id="tc-history-ecclesiastica"><label>Historia ecclesiastica</label><p></p></item>
+            <item xml:id="tc-history-ecclesiastica"><label>Historia ecclesiastica</label><p/></item>
             <item xml:id="tc-history-ecclesiastica-I"><label>Historia ecclesiastica I. mit Randnotizen</label><p/></item>
             <item xml:id="tc-history-scholastica"><label>Historia Scholastica</label><p/></item>
             <item xml:id="tc-history-scholastica-interpol"><label>Historia scholastica (interpolated)</label><p/></item>
