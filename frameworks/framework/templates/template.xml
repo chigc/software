@@ -176,7 +176,8 @@
                                     </item>
                                     <item n="extras">
                                         <list>
-                                            <item corresp="" n="moses-Aaron" rend="">Moses and Aaron</item>
+                                            <item corresp="" n="moses" rend="">Moses</item>
+                                            <item corresp="" n="aaron" rend="">Aaron</item>
                                             <item corresp="" n="nebuchadnezzar" rend="">Nebuchadnezzar</item>
                                             <item corresp="" n="alexander" rend="">Alexander</item>
                                         </list>
