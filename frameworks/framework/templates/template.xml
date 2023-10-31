@@ -48,7 +48,7 @@
                             <placeName ana="dcterms:location"/>
                             <country ana="dcterms:location"/>
                         </settlement>
-                        <repository ana="chigc:hostedBy" xml:id=""/>
+                        <repository ana="chigc:hostedBy" corresp=""/>
                         <idno ana="dcterms:identifier" type="signature"/>
                     </msIdentifier>
                     <msContents>
@@ -146,7 +146,8 @@
                                     <item ana="chigc:graphInscriptions" n="inscriptions">
                                         <list>
                                             <item n="female-male" rend="present">Red for female, black for male</item>
-                                            <item n="other-inscription">Color of inscription: <seg/></item>
+                                            <item n="other-inscription" rend="">Other Inscription: <seg/>
+                                            </item>
                                         </list>
                                     </item>
                                 </list>

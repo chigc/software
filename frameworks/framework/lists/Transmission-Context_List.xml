@@ -89,6 +89,10 @@
             <item xml:id="tc-pseudo-dionysius"><label>Pseudo-Dionysius</label><p/></item>
             <item xml:id="tc-speculum-humanae"><label>Speculum humanae salvationis</label><p/></item>
             <item xml:id="tc-speculum-theologiae"><label>Speculum theologiae</label><p/></item>
+            <item>
+               <label/>
+               <p/>
+            </item>
          </list>
       </body>
    </text>

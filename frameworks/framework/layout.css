@@ -493,7 +493,7 @@ msIdentifier > settlement > country {
 }
 msIdentifier > repository {
     content: 
-    oxy_editor(type, combo, edit, '@xml:id', editable, false, values, oxy_xpath("string-join(doc('./../lists/Archivliste/Archives_List.xml')//org[@xml:id]/concat('#',@xml:id), ',')"), width, 20%, fontInherit, true)
+    oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Archivliste/Archives_List.xml')//org[@xml:id]/concat('#',@xml:id), ',')"), width, 20%, fontInherit, true)
     oxy_editor(type, text, edit, "#text", width, 70%, fontInherit, true)
 }
 msIdentifier > idno {
@@ -744,7 +744,7 @@ supportDesc width {
 
 supportDesc > condition {
     content: 
-    oxy_editor(type, combo, edit, '@type', editable, false, values, ',fragmentory,complete,incomplete,unclear', width, 10%, fontInherit, true)
+    oxy_editor(type, combo, edit, '@n', editable, false, values, ',fragmentory,complete,incomplete,unclear', width, 10%, fontInherit, true)
 }
 
 supportDesc > condition > p {
@@ -764,7 +764,7 @@ layoutDesc > layout > p {
 
 layoutDesc > layout > p > seg[type = 'node'] {
     content: 
-    oxy_editor(type,combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='nodes']/item/concat( '#',@xml:id), ',')"), fontInherit, true, width, 15%)
+    oxy_editor(type,combo, edit, '@corresp', editable, true, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='nodes']/item/concat( '#',@xml:id), ',')"), fontInherit, true, width, 15%)
     oxy_editor(type, text, edit, '#text', width, 10%, fontInherit, true)
  oxy_label(text, ' on Folio ')
 }
@@ -841,17 +841,23 @@ item[n = 'inscriptions'] > list > item[n = "female-male"] {
  oxy_combobox(edit, '@rend', editable, false, labels, 'yes, no', values, 'present, not-present', width, 10%, fontInherit, true)
  oxy_label(text, '   ')
 }
+
+
 item[n = 'other-inscription'] {
-    display: block;
+     display: block;
+    margin-left: 15em;
+content:
+'Other Inscription:'
+    oxy_label(text, '   ')
+ oxy_label(text, '    Y/N:  ', styles, ' font-style:italic;')
+ oxy_combobox(edit, '@rend', editable, false, labels, 'yes, no', values, 'present, not-present', width, 10%, fontInherit, true)
+ }
+ 
+item[n = 'other-inscription'] > seg {
+     display: block;
     margin-left: 15em;
     content: 
-    oxy_xpath('text()')
-}
-
-item[n = 'other-inscription'] > seg {
-
-    content: 
-    oxy_combobox(edit, '#text', editable, false, values, 'red, blue, green', fontInherit, true, width, 10%)
+     oxy_textArea(edit, '#text', fontInherit, true)
 }
 item[n = 'color-coding'] {
     content: oxy_label(text, 'Color Coding across page breaks', styles, 'font-weight:bold;')
