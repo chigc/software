@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main" ana="rdfs:label"/>
+                <title ana="rdfs:label" type="main"/>
                 <author ref="https://viaf.org/viaf/17579848/">Peter of Poitiers</author>
             </titleStmt>
             <publicationStmt>
@@ -253,8 +253,9 @@
         </fileDesc>
         <revisionDesc status="STATUS">
             <!-- Verpflichtend für die Qualitycontrol -->
-            <change n="manuscriptRecord" when=""><p>Manuscript was recorded by <persName/>.</p>
+            <change n="manuscriptRecord" when="2023-11-20"><p>Manuscript was recorded by <persName/>.</p>
             </change>
+            
         </revisionDesc>
     </teiHeader>
     <text>

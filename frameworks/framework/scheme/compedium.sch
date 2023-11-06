@@ -8,8 +8,13 @@
         </rule>
     </pattern>
     <pattern>
-        <rule context="tei:idno[@type='PID']/text()">
-            <assert test="starts-with(., 'o:chigc.')"> The ID of the manuscript has to start with 'o:chigc.'</assert>
+        <rule context="tei:change[@n='manuscriptRecord']/@when"> <!-- ???? --> 
+            <assert test="format-date(., '[Y]-[M,2]-[D,2]')"> The ID of the manuscript has to start with 'o:chigc.'</assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:change[@n='manuscriptRecord']/persName"> <!-- ???? --> 
+            <assert test=". != ''"> The ID of the manuscript has to start with 'o:chigc.'</assert>
         </rule>
     </pattern>
 </sch:schema>

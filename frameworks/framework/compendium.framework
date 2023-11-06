@@ -322,7 +322,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>contains(//change[@type="contentCheck"]/@when, '20') </String>
+														<String>contains(//change[@n="contentCheck"]/@when, '20') </String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -336,7 +336,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::change[@type='contentCheck']</String>
+																<String>ancestor-or-self::change[@n='contentCheck']</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -1431,15 +1431,27 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0"  type="contentCheck" when="">&lt;p>Manuscript was reviewed by&lt;persName>&lt;/persName>.&lt;/p>&lt;/change></String>
+																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0" n="contentCheck" when="">&lt;p>Manuscript was reviewed by&lt;persName>&lt;/persName>.&lt;/p>&lt;/change></String>
+															</entry>
+															<entry>
+																<String>goToNextEditablePosition</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>insertEvenIfInvalid</String>
+																<String>false</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>if (//change[@type='transformation']) then //change[@type='transformation'] else //change[@type='manuscriptRecord']</String>
+																<String>if (//change[@type='transformation']) then //change[@type='transformation'] else //change[@n='manuscriptRecord']</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
 																<String>After</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -2549,6 +2561,62 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 								</field>
 								<field name="name">
 									<String>Compendium</String>
+								</field>
+							</validationScenario>
+							<validationScenario>
+								<field name="pairs">
+									<list>
+										<validationUnit>
+											<field name="validationType">
+												<validationUnitType>
+													<field name="validationInputType">
+														<String>text/xml</String>
+													</field>
+												</validationUnitType>
+											</field>
+											<field name="url">
+												<String>${currentFileURL}</String>
+											</field>
+											<field name="validationEngine">
+												<validationEngine>
+													<field name="engineType">
+														<String>&lt;Default engine></String>
+													</field>
+													<field name="allowsAutomaticValidation">
+														<Boolean>true</Boolean>
+													</field>
+												</validationEngine>
+											</field>
+											<field name="allowAutomaticValidation">
+												<Boolean>true</Boolean>
+											</field>
+											<field name="extensions">
+												<null/>
+											</field>
+											<field name="validationSchema">
+												<validationUnitSchema>
+													<field name="dtdSchemaPublicID">
+														<null/>
+													</field>
+													<field name="schematronPhase">
+														<null/>
+													</field>
+													<field name="type">
+														<Integer>7</Integer>
+													</field>
+													<field name="uri">
+														<String>${framework}/scheme/compedium.sch</String>
+													</field>
+												</validationUnitSchema>
+											</field>
+										</validationUnit>
+									</list>
+								</field>
+								<field name="type">
+									<String>Validation_scenario</String>
+								</field>
+								<field name="name">
+									<String>Compendium1</String>
 								</field>
 							</validationScenario>
 						</validationScenario-array>
