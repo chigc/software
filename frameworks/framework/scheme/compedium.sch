@@ -42,4 +42,9 @@
             <assert test="contains(., '#')">Choose the respective superstructure ID</assert>
         </rule>
     </pattern>
+    <pattern>
+        <rule context="repository/@corresp"> <!-- ???? --> 
+            <assert test="contains(., '#')">Choose the respective ID for the repository. You can find </assert>
+        </rule>
+    </pattern>
 </sch:schema>

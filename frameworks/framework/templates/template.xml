@@ -52,7 +52,7 @@
                         <idno ana="dcterms:identifier" type="signature"/>
                     </msIdentifier>
                     <msContents>
-                        <msItem ana="chigc:Item" xml:id="compendium-historiae"><locus from="" to=""></locus>
+                        <msItem ana="chigc:Item" xml:id="compendium-historiae"><locus from="" to=""/>
                             <!-- Mehrere Möglich -->
                             <incipit ana="chigc:inplicit"/>
                             <author xml:lang="en">Peter of Poitiers</author>
@@ -87,7 +87,7 @@
                             <title/>
                             <note> </note>
                         </msItem>
-                        <msItem ana="chigc:TextualCoTransmission" corresp="#" n="transmission-context">
+                        <msItem ana="chigc:TextualCoTransmission" corresp="" n="transmission-context">
                             <locus/>
                             <title/>
                             <note/>
@@ -253,8 +253,8 @@
         </fileDesc>
         <revisionDesc status="STATUS">
             <!-- Verpflichtend für die Qualitycontrol -->
-            <change n="manuscriptRecord" when=""><p>Manuscript was recorded by <persName></persName>.</p>
-            </change>          
+            <change n="manuscriptRecord" when=""><p>Manuscript was recorded by <persName>SK</persName>.</p>
+            </change>
         </revisionDesc>
     </teiHeader>
     <text>

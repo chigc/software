@@ -1350,3 +1350,7 @@ change[n = 'NOmanuscriptLiveView']:after {
     content: 
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
+change[n = 'readyForPublication']:after {
+    content: 
+    oxy_editor(type, button, actionID, validate_content, transparent, true, color, #FF0000)
+}
