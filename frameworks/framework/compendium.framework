@@ -322,7 +322,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>contains(//change[@n="contentCheck"]/@when, '20') </String>
+														<String>contains(//change[@n="contentCheck"]/@when, '20') and //change[@n="contentCheck"]/p/persName/text()</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -1425,7 +1425,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>not(//change[@when=""]) </String>
+														<String> //change[@n='manuscriptRecord']/p/persName/text() and contains(//change[@n='manuscriptRecord']/@when, '20')</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>

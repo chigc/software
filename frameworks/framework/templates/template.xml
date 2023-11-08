@@ -52,7 +52,7 @@
                         <idno ana="dcterms:identifier" type="signature"/>
                     </msIdentifier>
                     <msContents>
-                        <msItem ana="chigc:Item" xml:id="compendium-historiae"><locus from="" to=""/>
+                        <msItem ana="chigc:Item" xml:id="compendium-historiae"><locus from="" to=""></locus>
                             <!-- Mehrere Möglich -->
                             <incipit ana="chigc:inplicit"/>
                             <author xml:lang="en">Peter of Poitiers</author>
@@ -176,12 +176,12 @@
                                     </item>
                                     <item n="extras">
                                         <list>
-                                            <item corresp="" n="moses" rend="">Moses</item>
+                                            <item corresp="" n="moses" rend="present">Moses</item>
                                             <item corresp="" n="aaron" rend="">Aaron</item>
                                             <item corresp="" n="nebuchadnezzar" rend="">Nebuchadnezzar</item>
                                             <item corresp="" n="alexander" rend="">Alexander</item>
                                         </list>
-                                        <note/>
+                                        <note>test</note>
                                     </item>
                                     <item n="other-medallions" rend="">
                                         <list> </list>
@@ -253,9 +253,8 @@
         </fileDesc>
         <revisionDesc status="STATUS">
             <!-- Verpflichtend für die Qualitycontrol -->
-            <change n="manuscriptRecord" when="2023-11-20"><p>Manuscript was recorded by <persName/>.</p>
-            </change>
-            
+            <change n="manuscriptRecord" when=""><p>Manuscript was recorded by <persName></persName>.</p>
+            </change>          
         </revisionDesc>
     </teiHeader>
     <text>
