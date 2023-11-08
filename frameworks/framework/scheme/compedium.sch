@@ -8,13 +8,38 @@
         </rule>
     </pattern>
     <pattern>
-        <rule context="tei:change[@n='manuscriptRecord']/@when"> <!-- ???? --> 
-            <assert test="format-date(., '[Y]-[M,2]-[D,2]')"> The ID of the manuscript has to start with 'o:chigc.'</assert>
+        <rule context="tei:p/tei:persName"> <!-- ???? --> 
+            <assert test="matches(text(), '[A-Z]+')">Enter the initials of the person responsible. If the person is unknown, enter NN. </assert>
         </rule>
     </pattern>
     <pattern>
-        <rule context="tei:change[@n='manuscriptRecord']/persName"> <!-- ???? --> 
-            <assert test=". != ''"> The ID of the manuscript has to start with 'o:chigc.'</assert>
+        <rule context="@rend"> <!-- ???? --> 
+            <assert test="matches(., 'present|not-present')">Choose Yes or No.</assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:locus/@from"> <!-- ???? --> 
+            <assert test="matches(., '[1-9] | \?')">Insert the Folionumber, where the Item starts, or delete the section.</assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:locus/@to"> <!-- ???? --> 
+            <assert test="matches(., '[1-9] | \?')">Insert the Folionumber, where the Item ends, or delete the section.</assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:incipit"> <!-- ???? --> 
+            <assert test="matches(text(), '[A-Z] | \[Missing\]')">Insert the Incipit text or [Missing]. </assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:msItem/@corresp"> <!-- ???? --> 
+            <assert test="contains(., '#')">Choose the respective superstructure ID</assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="item/@corresp"> <!-- ???? --> 
+            <assert test="contains(., '#')">Choose the respective superstructure ID</assert>
         </rule>
     </pattern>
 </sch:schema>
