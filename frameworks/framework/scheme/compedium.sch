@@ -80,7 +80,7 @@
     <!-- Link check --> 
     <pattern>
         <rule context="tei:surrogates/tei:list/tei:item/@corresp"> 
-            <assert test="contains(., 'http')">Link is missing.</assert>
+            <assert test="contains(., 'http')">Add a link or delete the section.</assert>
         </rule>
     </pattern>
     <!-- measurements -->  

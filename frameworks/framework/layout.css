@@ -1289,6 +1289,7 @@ additional > surrogates > list > item[n = 'metadata'] {
     content: 
     oxy_label(text, 'Metadata (URL):  ', styles, 'font-size:small;')
  oxy_editor(type, text, edit, '@corresp', width, 70%, fontInherit, true)
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 surrogates > list > item[n = 'IIIF'] {
     margin-left: 10em;
@@ -1296,6 +1297,7 @@ surrogates > list > item[n = 'IIIF'] {
     content: 
     oxy_label(text, 'IFFF (URL):  ', styles, 'font-size:small;')
  oxy_editor(type, text, edit, '@resp', width, 70%, fontInherit, true)
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 
 surrogates > list > item[n = 'ImageAvailability'] {
@@ -1305,6 +1307,7 @@ surrogates > list > item[n = 'ImageAvailability'] {
  oxy_editor(type, text, edit, '#text', width, 30%, styles, 'display:inline-block;', fontInherit, true)
  oxy_label(text, '   URL:  ', styles, 'font-size:small; display:block;')
  oxy_editor(type, text, edit, '@corresp', width, 40%, styles, 'display:inline-block;', fontInherit, true)
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 
 /* ############################################# BIBLIOGRAPHY        ################################################################## */
