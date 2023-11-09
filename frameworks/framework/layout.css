@@ -1330,6 +1330,11 @@ change > p > persName {
     oxy_editor(type, text, edit, '#text', width, 20%, fontInherit, true)
 }
 
+change[n = 'transformation']:after {
+    content: 
+    oxy_label(text, '   READY FOR REVIEW   ', styles, 'font-weight:bold; color:#00ba00;')
+ oxy_editor(type, button, actionID, add_change-readyForReview, transparent, true, color, #FF0000)
+}
 change[n = 'manuscriptRecord']:after {
     content: 
     oxy_label(text, '   READY FOR REVIEW   ', styles, 'font-weight:bold; color:#00ba00;')
@@ -1339,7 +1344,7 @@ change[n = 'manuscriptRecord']:after {
 change[n = 'contentCheck']:after {
     content: 
     oxy_label(text, '   READY FOR PUBLICATION  ', styles, 'font-weight:bold; color:#00ba00;')
- oxy_editor(type, button, actionID, add_change-readyForPublication, transparent, true, color, #FF0000)
+  oxy_editor(type, button, actionID, add_change-readyForPublication, transparent, true, color, #FF0000)
 
 }
 change[n = 'manuscriptLiveView']:after {
@@ -1350,7 +1355,15 @@ change[n = 'NOmanuscriptLiveView']:after {
     content: 
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
-change[n = 'readyForPublication']:after {
+change[n = 'readyForPublication']:before {
+    font-weight: bold;
     content: 
+    'Validate Data     '
     oxy_editor(type, button, actionID, validate_content, transparent, true, color, #FF0000)
+    oxy_label(text, '                                                                                     ')
 }
+
+change[n = 'readyForPublication'] {
+    margin-top: 50px;
+}
+

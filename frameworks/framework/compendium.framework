@@ -1425,7 +1425,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String> //change[@n='manuscriptRecord']/p/persName/text() and contains(//change[@n='manuscriptRecord']/@when, '20')</String>
+														<String> //change[@n='manuscriptRecord']/p/persName/text() and contains(//change[@n='manuscriptRecord']/@when, '20') </String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -1444,6 +1444,42 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 															<entry>
 																<String>insertLocation</String>
 																<String>if (//change[@type='transformation']) then //change[@type='transformation'] else //change[@n='manuscriptRecord']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String> contains(//change[@n='transformation']/@when, '20') </String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0" n="contentCheck" when="">&lt;p>Manuscript was reviewed by&lt;persName>&lt;/persName>.&lt;/p>&lt;/change></String>
+															</entry>
+															<entry>
+																<String>goToNextEditablePosition</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>insertEvenIfInvalid</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>if (//change[@n='transformation']) then //change[@n='transformation'] else //change[@n='manuscriptRecord']</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -1497,7 +1533,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 														<serializableOrderedMap/>
 													</field>
 													<field name="operationID">
-														<String></String>
+														<String>ro.sync.ecss.extensions.commons.operations.WebappMarkAsSavedOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -2368,7 +2404,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 											<String>Validate Content</String>
 										</field>
 										<field name="description">
-											<String></String>
+											<String>Activates the schema and tests, if the data is valide.</String>
 										</field>
 										<field name="largeIconPath">
 											<String>${framework}/icons/tick.png</String>
@@ -2392,7 +2428,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 														<serializableOrderedMap>
 															<entry>
 																<String>scenarioNames</String>
-																<String>compendium.sch</String>
+																<String>Compendium</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
