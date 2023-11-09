@@ -54,7 +54,7 @@
                     <msContents>
                         <msItem ana="chigc:Item" xml:id="compendium-historiae"><locus from="" to=""/>
                             <!-- Mehrere Möglich -->
-                            <incipit ana="chigc:inplicit"/>
+                            <incipit ana="chigc:incipit"/>
                             <author xml:lang="en">Peter of Poitiers</author>
                             <title ana="rdfs:label" type="uniform" xml:lang="la">Compendium Historiae</title>
                             <!-- Alternativ -->
@@ -98,9 +98,7 @@
                             <supportDesc ana="dcterms:medium" material="material">
                                 <extent ana="memo:sizeMeasurement">
                                     <height ana="memo:hasLength" unit="mm"/>
-                                    <!-- mehrere Möglich, add button -->
                                     <width ana="memo:hasWidth" unit="mm"/>
-                                    <!-- mehrere Möglich, add button -->
                                 </extent>
                                 <condition ana="chigc:condition" n="">
                                     <p/>
@@ -108,7 +106,6 @@
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <!-- mehrere Möglich, add button -->
                                     <p>Pagebreak at <seg type="node"/>
                                         <dim type="folio"/>
                                     </p>
@@ -152,8 +149,6 @@
                                     </item>
                                 </list>
                             </decoNote>
-                            <!-- Pictures in Medaillons and outside -->
-                            <!-- <xsl:if test="contains($row/t:cell[23], 'Y')">-->
                             <decoNote ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedmedallions">
                                 <list>
                                     <item n="all-pictured" rend="">
@@ -241,7 +236,7 @@
                             <list>
                                 <item ana="chigc:description" corresp="" n="metadata"/>
                                 <item ana="chigc:ImageAvailability" corresp="" n="ImageAvailability">Images seen/available?</item>
-                                <item n="IIIF" resp=""/></list>
+                                <item n="IIIF" corresp=""/></list>
                         </surrogates>
                     </additional>
                 </msDesc>
@@ -251,7 +246,7 @@
                 </listBibl>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="STATUS">
+        <revisionDesc>
             <!-- Verpflichtend für die Qualitycontrol -->
             <change n="manuscriptRecord" when=""><p>Manuscript was recorded by <persName>SK</persName>.</p>
             </change>
