@@ -1920,7 +1920,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 											<String>add_picture-info</String>
 										</field>
 										<field name="name">
-											<String>Adds picture</String>
+											<String>Adds Picture Info</String>
 										</field>
 										<field name="description">
 											<String>Adds Section to note down Pictures outside of graph</String>
@@ -1947,7 +1947,8 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item n="significant-pictures" corresp="#" sameAs="" xmlns="http://www.tei-c.org/ns/1.0" >
+																<String>&lt;decoNote type="illustrations" ana="chigc:Pictures" xmlns="http://www.tei-c.org/ns/1.0">
+                        &lt;list>&lt;item n="significant-pictures" corresp="#" sameAs="" >
                                     &lt;list>
                                         &lt;item corresp="" n="cross" rend="" >Cross (above Adam and Eve)&lt;/item>
                                         &lt;item corresp="" n="cain-abel" rend="">Cain and Abel&lt;/item>
@@ -1961,15 +1962,16 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 &lt;item n="other-pictures" xmlns="http://www.tei-c.org/ns/1.0" >
                                         &lt;list>
                                         &lt;/list>
-                                    &lt;/item></String>
+                                    &lt;/item>
+                          &lt;/list>&lt;/decoNote></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>//decoNote[@type='illustrations']/list</String>
+																<String>//decoNote[@type='illustrations']</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
-																<String>Inside as first child</String>
+																<String>Replace</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
