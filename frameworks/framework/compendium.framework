@@ -472,8 +472,8 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;altIdentifier xmlns="http://www.tei-c.org/ns/1.0">
-        &lt;idno ana="chigc:hasSigla" type="sigla">&lt;/idno>
+																<String>&lt;altIdentifier xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:hasSigla" type="sigla">
+        &lt;idno >&lt;/idno>
 &lt;/altIdentifier></String>
 															</entry>
 															<entry>
@@ -2436,6 +2436,62 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ExecuteValidationScenariosOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_shelfmark</String>
+										</field>
+										<field name="name">
+											<String>Add Shelfmark</String>
+										</field>
+										<field name="description">
+											<String>Adds a Field to note a former Shelfmark</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;altIdentifier xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:hasFormerIdentifier" type="former">
+        &lt;idno >&lt;/idno>
+&lt;/altIdentifier></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//msIdentifier</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>

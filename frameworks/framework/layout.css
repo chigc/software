@@ -207,7 +207,7 @@ additional:before {
 physDesc:after {
     display: block;
     content: 
-    oxy_label(text, 'Provenance', styles, 'font-weight:bold; font-size:large;')
+    oxy_label(text, 'Origin/Provenance', styles, 'font-weight:bold; font-size:large;')
  oxy_label(text, '         Add Provenance') oxy_editor(type, button, actionID, add_provenance, transparent, true, color, #FFFFFF)
 }
 
@@ -313,10 +313,16 @@ msIdentifier > idno:before {
     content: "Signature:"
 }
 
-msIdentifier > altIdentifier > idno:before {
+msIdentifier > altIdentifier[type='sigla'] > idno:before {
     display: inline-block;
     width: 20%;
     content: "Sigla:"
+}
+
+msIdentifier > altIdentifier[type='former'] > idno:before {
+    display: inline-block;
+    width: 20%;
+    content: "Former Shelfmark:"
 }
 
 msItem > locus:before {
@@ -428,13 +434,9 @@ history > provenance:before {
     content: "Provenance:"
 }
 
-history > provenance > p:first-of-type:before {
-    font-size: small;
-    content: 'Place of Creation      '
-}
-history > provenance > p:not(first-of-type):before {
-    font-size: small;
-    content: 'Provenance              '
+history > origin:before {
+    display: inline-block;
+    content: "Origin:"
 }
 
 /* ########################################### Additional ############################################# */
@@ -481,6 +483,8 @@ msDesc:before {
     oxy_label(text, 'Manuscript  - General Information', styles, 'font-weight:bold; font-size: large;')
  oxy_label(text, '        Add Sigla (optional)', styles, 'font-size:small; ')
  oxy_editor(type, button, actionID, add_siglum, transparent, true, color, #FF0000)
+ oxy_label(text, '        Add Former Shelfmark (optional)', styles, 'font-size:small; ')
+ oxy_editor(type, button, actionID, add_shelfmark, transparent, true, color, #FF0000)
 }
 msIdentifier > settlement > placeName {
     content: 
@@ -1186,7 +1190,7 @@ item[n = 'significant-pictures'] > list > item[rend]:after {
 }
 
 /*  Diagrams */
-decoNote[type = 'diagrams'] > list > item {
+decoNote[type = 'diagrams'] > list > item[corresp] {
     display: block;
     margin-left: 20%;
     content: 
@@ -1200,7 +1204,7 @@ decoNote[type = 'diagrams'] > list {
     content: ' '
 }
 
-decoNote[type = 'diagrams'] > list > item:after {
+decoNote[type = 'diagrams'] > list > item[corresp]:after {
     content: 
     oxy_label(text, '   Delete Diagram:   ', styles, 'color:red')
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000);
@@ -1269,6 +1273,19 @@ msItem > docDate > date[notBefore] {
  oxy_editor(type, text, edit, '@notAfter', width, 10%, fontInherit, true)
  oxy_label(text, ' [Format: 0000]    ', styles, 'font-size:smaller;')
  oxy_editor(type, button, actionID, delete_docDate, transparent, true, color, #FF0000);
+}
+
+history > origin > p {
+    margin-left: 12em;
+    content: 
+    oxy_editor(type, text, edit, '#text', width, 80%, fontInherit, true)
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+}
+history > origin > p {
+    margin-left: 12em;
+    content: 
+    oxy_editor(type, text, edit, '#text', width, 80%, fontInherit, true)
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 history > provenance > p {
     margin-left: 12em;

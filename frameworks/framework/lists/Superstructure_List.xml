@@ -755,8 +755,8 @@
             <item xml:id="c-joatan-achaz">c-joatan-achaz</item>
             <item xml:id="c-joatan-facee">c-joatan-facee</item>
             <item xml:id="c-johannes-1-jadus">c-johannes-1-jadus</item>
-            <item xml:id="c-johannes-1-manasses-3">c-johannes-1-manasses-3</item>
-            <item xml:id="c-johannes-1-manasses-3x">c-johannes-1-manasses-3x</item>
+            <item xml:id="c-johannes-1-manasses-3-1">c-johannes-1-manasses-3</item>
+            <item xml:id="c-johannes-1-manasses-3-2">c-johannes-1-manasses-3</item>
             <item xml:id="c-johannes-3-hyrcanus-artistobolus-rex">c-johannes-3-hyrcanus-artistobolus-rex</item>
             <item xml:id="c-johannes-5-euangelista">c-johannes-5-euangelista</item>
             <item xml:id="c-joida-azarias-2">c-joida-azarias-2</item>
@@ -897,8 +897,8 @@
             <item xml:id="c-salmanasar-sennacherib">c-salmanasar-sennacherib</item>
             <item xml:id="c-salmon-booz">c-salmon-booz</item>
             <item xml:id="c-salome-maria-2-salome">c-salome-maria-2-salome</item>
-            <item xml:id="c-salome-maria-2-salome2">c-salome-maria-2-salome2</item>
-            <item xml:id="c-salome-maria-2-salome3">c-salome-maria-2-salome3</item>
+            <item xml:id="c-salome-maria-2-salome-2">c-salome-maria-2-salome</item>
+            <item xml:id="c-salome-maria-2-salome-3">c-salome-maria-2-salome</item>
             <item xml:id="c-salomon-roboam">c-salomon-roboam</item>
             <item xml:id="c-samson-hely-judex">c-samson-hely-judex</item>
             <item xml:id="c-sangar-delbora">c-sangar-delbora</item>
@@ -992,6 +992,7 @@
             <item xml:id="g-age5">g-age5</item>
             <item xml:id="g-age6">g-age6</item>
             <item xml:id="g-alexander">g-alexander</item>
+            <item xml:id="g-ancient_syria">g-ancient_syria</item>
             <item xml:id="g-antipater">g-antipater</item>
             <item xml:id="g-apostles">g-apostles</item>
             <item xml:id="g-arks">g-arks</item>
@@ -1010,8 +1011,8 @@
             <item xml:id="g-jacob">g-jacob</item>
             <item xml:id="g-jerusalem">g-jerusalem</item>
             <item xml:id="g-judaea">g-judaea</item>
-            <item xml:id="g-judah-israel1">g-judah-israel1</item>
-            <item xml:id="g-judah-israel2">g-judah-israel2</item>
+            <item xml:id="g-judah_israel1">g-judah_israel1</item>
+            <item xml:id="g-judah_israel2">g-judah_israel2</item>
             <item xml:id="g-judges">g-judges</item>
             <item xml:id="g-kingdom_syria">g-kingdom_syria</item>
             <item xml:id="g-lia">g-lia</item>
@@ -1026,11 +1027,10 @@
             <item xml:id="g-priests1">g-priests1</item>
             <item xml:id="g-priests2">g-priests2</item>
             <item xml:id="g-priests3">g-priests3</item>
-            <item xml:id="g-priests4">g-priests4</item>
             <item xml:id="g-prologue">g-prologue</item>
-            <item xml:id="g-prophets1">g-prophets1</item>
-            <item xml:id="g-prophets2">g-prophets2</item>
-            <item xml:id="g-prophets3">g-prophets3</item>
+            <item xml:id="g-prophets_babylon">g-prophets_babylon</item>
+            <item xml:id="g-prophets_israel">g-prophets_israel</item>
+            <item xml:id="g-prophets_judah">g-prophets_judah</item>
             <item xml:id="g-ruth">g-ruth</item>
             <item xml:id="g-salomon">g-salomon</item>
             <item xml:id="g-samuel">g-samuel</item>
@@ -1039,10 +1039,9 @@
             <item xml:id="g-seth">g-seth</item>
             <item xml:id="g-shem">g-shem</item>
             <item xml:id="g-thamar">g-thamar</item>
-            <item xml:id="g-thare">g-thare</item>
+            <item xml:id="g-thare_sons">g-thare_sons</item>
             <item xml:id="g-tobias_anna">g-tobias_anna</item>
             <item xml:id="g-tribes">g-tribes</item>
-            <item xml:id="s-ancient_syria">s-ancient_syria</item>
         </list>
     </item>
     <item>
@@ -1378,6 +1377,7 @@
             <item xml:id="p-buz">p-buz</item>
             <item xml:id="p-caath">p-caath</item>
             <item xml:id="p-cain">p-cain</item>
+            <item xml:id="p-cainAbel">p-cainAbel</item>
             <item xml:id="p-cainAbelA">p-cainAbelA</item>
             <item xml:id="p-cainAbelB">p-cainAbelB</item>
             <item xml:id="p-cainan">p-cainan</item>
@@ -1597,6 +1597,7 @@
             <item xml:id="p-nadab1">p-nadab1</item>
             <item xml:id="p-nadab2">p-nadab2</item>
             <item xml:id="p-nativity">p-nativity</item>
+            <item xml:id="p-natus">p-natus</item>
             <item xml:id="p-natusA">p-natusA</item>
             <item xml:id="p-natusB">p-natusB</item>
             <item xml:id="p-naum">p-naum</item>
@@ -1650,6 +1651,7 @@
             <item xml:id="p-ptolomeus4">p-ptolomeus4</item>
             <item xml:id="p-ptolomeus5">p-ptolomeus5</item>
             <item xml:id="p-ptolomeus6">p-ptolomeus6</item>
+            <item xml:id="p-puer">p-puer</item>
             <item xml:id="p-puerA">p-puerA</item>
             <item xml:id="p-puerB">p-puerB</item>
             <item xml:id="p-puerC">p-puerC</item>
@@ -1660,6 +1662,7 @@
             <item xml:id="p-rasin">p-rasin</item>
             <item xml:id="p-rebecca">p-rebecca</item>
             <item xml:id="p-regusar">p-regusar</item>
+            <item xml:id="p-resurgens">p-resurgens</item>
             <item xml:id="p-resurgensA">p-resurgensA</item>
             <item xml:id="p-resurgensB">p-resurgensB</item>
             <item xml:id="p-resurgensC">p-resurgensC</item>

@@ -142,7 +142,7 @@
                                     </item>
                                     <item ana="chigc:graphInscriptions" n="inscriptions">
                                         <list>
-                                            <item n="female-male" rend="present">Red for female, black for male</item>
+                                            <item n="female-male" rend="">Red for female, black for male</item>
                                             <item n="other-inscription" rend="">Other Inscription: <seg/>
                                             </item>
                                         </list>

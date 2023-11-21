@@ -97,7 +97,7 @@
     <!-- Incipit, condition, date on oPublication flag --> 
     <pattern>
         <rule context="tei:incipit"> 
-            <assert test="matches(text(), '[A-z]+ | \[Missing\]')">Insert the Incipit text or [Missing]. </assert>
+            <assert test="matches(text(), '[A-z]+' )">Insert the Incipit text or [Missing]. </assert>
         </rule>
     </pattern>
     
