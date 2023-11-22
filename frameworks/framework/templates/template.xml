@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI rendition="chigc_transcript" xmlns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    xmlns:rng="http://relaxng.org/ns/structure/1.0"   
+    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" rendition="chigc_transcript">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -24,18 +26,33 @@
                     <orgName ref="https://d-nb.info/gnd/36187-2">University of Tübingen</orgName>
                 </authority>
                 <authority>
+                    <ref target="https://www.uni-wuppertal.de"/>
+                    <orgName ref="https://d-nb.info/gnd/64944-2">University of Wuppertal</orgName>
+                </authority>
+                <authority>
                     <ref target="https://informationsmodellierung.uni-graz.at"/>
                     <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling (ZIM), University of Graz</orgName>
                 </authority>
+                <authority>
+                    <ref target="https://www.unive.it/pag/39287"/>
+                    <orgName ref="http://viaf.org/viaf/129635795">Venice Centre for Digital and Public Humanities, Università Ca’ Foscari Venezia</orgName>
+                </authority>
+                <authority>
+                    <ref target="https://www.sas.ac.uk"/>
+                    <orgName ref=" https://d-nb.info/gnd/5166817-8">School of Advanced Study, University of London</orgName>
+                </authority>
                 <distributor>
                     <ref target="https://gams.uni-graz.at"/>
-                    <orgName> GAMS - Geisteswissenschaftliches Asset Management System </orgName>
+                    <orgName>
+                        GAMS - Geisteswissenschaftliches Asset Management System
+                    </orgName>
                 </distributor>
                 <availability>
                     <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
-                    <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 </licence>
+                    <licence n="facsimile"
+                        target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 </licence>
                 </availability>
-                <pubPlace> Graz/Tübingen/Wuppertal</pubPlace>
+                <pubPlace>Graz/Tübingen/Wuppertal/Venice/London</pubPlace>
                 <date when="2023">2023</date>
                 <idno ana="dcterms:identifier" type="PID"/>
                 <ref target="info:fedora/context:chigc" type="context"/>
@@ -52,7 +69,8 @@
                         <idno ana="dcterms:identifier" type="signature"/>
                     </msIdentifier>
                     <msContents>
-                        <msItem ana="chigc:Item" xml:id="compendium-historiae"><locus from="" to=""/>
+                        <msItem ana="chigc:Item" xml:id="compendium-historiae">
+                            <locus from="" to=""/>
                             <!-- Mehrere Möglich -->
                             <incipit ana="chigc:incipit"/>
                             <author xml:lang="en">Peter of Poitiers</author>
@@ -113,106 +131,27 @@
                             </layoutDesc>
                         </objectDesc>
                         <decoDesc>
-                            <decoNote ana="chigc:Graph" corresp="#compendium-historiae" type="graph">
+                            <decoNote type="graph" corresp="#compendium-historiae" ana="chigc:Graph">
                                 <list>
-                                    <item ana="chigc:graphOrientation" n="orientation">
-                                        <p>Orientation: <seg/></p>
-                                        <note/>
-                                    </item>
-                                    <item ana="chigc:LineaChristiLocalisation" n="linea-christi">
-                                        <list>
-                                            <item n="presence" rend="">Linea Christi present</item>
-                                            <item n="orientation">
-                                                <seg/>
-                                            </item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item ana="chigc:ColorCoding" n="color-coding" rend=""> Color-Coding </item>
-                                    <item ana="chigc:LetterCoding" n="letter-coding" rend=""> Letter Coding </item>
-                                    <item ana="chigc:MedaillonsRendition" n="medallion-rendition">
-                                        <list>
-                                            <item n="medallion-shape"/>
-                                            <item n="medallion-color">Medallion color: <seg/></item>
-                                            <item n="six-ages-emphasized" rend="">Six Ages Emphasized</item>
-                                            <item n="adam-eve">Adam and Eve Medallions: <seg/></item>
-                                            <item n="mary-apostles">Arrangement of Mary and Apostles: <seg/></item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item ana="chigc:graphInscriptions" n="inscriptions">
-                                        <list>
-                                            <item n="female-male" rend="">Red for female, black for male</item>
-                                            <item n="other-inscription" rend="">Other Inscription: <seg/>
-                                            </item>
-                                        </list>
-                                    </item>
+                                    <item/>
                                 </list>
                             </decoNote>
-                            <decoNote ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedmedallions">
+                            <decoNote type="illustratedmedallions"
+                                corresp="#compendium-historiae"
+                                ana="chigc:IllustratedMedaillons">
                                 <list>
-                                    <item n="all-pictured" rend="">
-                                        <p>All Medaillons are illustrated</p>
-                                        <note/>
-                                    </item>
-                                    <item corresp="" n="six-ages-pictured" rend="">
-                                        <p>Six Ages Pictured</p>
-                                        <note/>
-                                    </item>
-                                    <item n="jesus-pictured" rend="">
-                                        <list>
-                                            <item corresp="" n="jesus-natus" rend="">Jesus Natus</item>
-                                            <item corresp="" n="jesus-puer" rend="">Jesus Puer</item>
-                                            <item corresp="" n="jesus-passus" rend="">Jesus Passus</item>
-                                            <item corresp="" n="jesus-resurgens" rend="">Jesus Resurgens</item>
-                                            <item corresp="" n="jesus-other" rend="">Other [e.g., Pater]</item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item n="extras">
-                                        <list>
-                                            <item corresp="" n="moses" rend="present">Moses</item>
-                                            <item corresp="" n="aaron" rend="">Aaron</item>
-                                            <item corresp="" n="nebuchadnezzar" rend="">Nebuchadnezzar</item>
-                                            <item corresp="" n="alexander" rend="">Alexander</item>
-                                        </list>
-                                        <note>test</note>
-                                    </item>
-                                    <item n="other-medallions" rend="">
-                                        <list> </list>
-                                    </item>
+                                    <item/>
                                 </list>
                             </decoNote>
-                            <decoNote ana="chigc:Pictures" corresp="#compendium-historiae" type="illustrations">
-                                <list><item n="significant-pictures">
-                                        <list>
-                                            <item corresp="" n="cross" rend="">Cross (above Adam and Eve)</item>
-                                            <item corresp="" n="cain-abel" rend="">Cain and Abel</item>
-                                            <item corresp="" n="tower-babel" rend="">Tower of Babel</item>
-                                            <item corresp="" n="city-babel" rend="">City of Babel</item>
-                                            <item corresp="" n="rainbow" rend="">Rainbow</item>
-                                            <item corresp="" n="god" rend="">God the Father</item>
-                                            <item corresp="" n="creation" rend="">Scenes of Creation</item>
-                                        </list>
-                                    </item>
-                                    <item n="other-pictures">
-                                        <list>
-                                            <item corresp="">
-                                                <label/>
-                                                <note/>
-                                            </item>
-                                        </list>
-                                    </item>
+                            <decoNote type="illustrations" ana="chigc:Pictures">
+                                <list>
+                                    <item/>
                                 </list>
                             </decoNote>
                             <decoNote ana="chigc:Diagrams" corresp="#compendium-historiae" type="diagrams">
                                 <!-- mehrere Möglich, add button -->
                                 <list>
-                                    <item>
-                                        <label/>
-                                        <locus/>
-                                        <note/>
-                                    </item>
+                                    <item/>
                                 </list>
                             </decoNote>
                         </decoDesc>
@@ -248,7 +187,7 @@
         </fileDesc>
         <revisionDesc>
             <!-- Verpflichtend für die Qualitycontrol -->
-            <change n="manuscriptRecord" when=""><p>Manuscript was recorded by <persName>SK</persName>.</p>
+            <change n="manuscriptRecord" when=""><p>Manuscript was recorded by <persName></persName>.</p>
             </change>
         </revisionDesc>
     </teiHeader>
