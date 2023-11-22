@@ -43,14 +43,11 @@
                 </authority>
                 <distributor>
                     <ref target="https://gams.uni-graz.at"/>
-                    <orgName>
-                        GAMS - Geisteswissenschaftliches Asset Management System
-                    </orgName>
+                    <orgName> GAMS - Geisteswissenschaftliches Asset Management System </orgName>
                 </distributor>
                 <availability>
                     <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
-                    <licence n="facsimile"
-                        target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 </licence>
+                    <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 </licence>
                 </availability>
                 <pubPlace>Graz/Tübingen/Wuppertal/Venice/London</pubPlace>
                 <date when="2023">2023</date>
@@ -105,11 +102,13 @@
                             <title/>
                             <note> </note>
                         </msItem>
-                        <msItem ana="chigc:TextualCoTransmission" corresp="" n="transmission-context">
-                            <locus/>
-                            <title/>
-                            <note/>
-                        </msItem>
+                        <msItem ana="chigc:TextualCoTransmission" corresp="" n="transmission-context"><locus/><title/>
+                            <author xml:lang="en"/>
+                            <!-- Alternativ -->
+                            <docDate ana="chigc:date">
+                                <date notAfter="" notBefore=""/>
+                            </docDate>
+                            <textLang ana="dcterms:language" mainLang=""/><note/></msItem>
                     </msContents>
                     <physDesc>
                         <objectDesc ana="chigc:manifestationType" form="codex">
@@ -131,19 +130,89 @@
                             </layoutDesc>
                         </objectDesc>
                         <decoDesc>
-                            <decoNote type="graph" corresp="#compendium-historiae" ana="chigc:Graph">
+                            <decoNote ana="chigc:Graph" corresp="#compendium-historiae" type="graph">
                                 <list>
-                                    <item/>
+                                    <item ana="chigc:graphOrientation" n="orientation">
+                                        <p>Orientation: <seg/></p>
+                                        <note/>
+                                    </item>
+                                    <item ana="chigc:LineaChristiLocalisation" n="linea-christi">
+                                        <list>
+                                            <item n="presence" rend="">Linea Christi present</item>
+                                            <item n="orientation">
+                                                <seg/>
+                                            </item>
+                                        </list>
+                                        <note/>
+                                    </item>
+                                    <item ana="chigc:ColorCoding" n="color-coding" rend=""> Color-Coding </item>
+                                    <item ana="chigc:LetterCoding" n="letter-coding" rend=""> Letter Coding </item>
+                                    <item ana="chigc:MedaillonsRendition" n="medallion-rendition">
+                                        <list>
+                                            <item n="medallion-shape"/>
+                                            <item n="medallion-color">Medallion color: <seg/></item>
+                                            <item n="six-ages-emphasized" rend="">Six Ages Emphasized</item>
+                                            <item n="adam-eve">Adam and Eve Medallions: <seg/></item>
+                                            <item n="mary-apostles">Arrangement of Mary and Apostles: <seg/></item>
+                                        </list>
+                                        <note/>
+                                    </item>
+                                    <item ana="chigc:graphInscriptions" n="inscriptions">
+                                        <list>
+                                            <item n="female-male" rend="present">Red for female, black for male</item>
+                                            <item n="other-inscription">Color of inscription: <seg/></item>
+                                        </list>
+                                    </item>
                                 </list>
                             </decoNote>
-                            <decoNote type="illustratedmedallions"
-                                corresp="#compendium-historiae"
-                                ana="chigc:IllustratedMedaillons">
+                            <decoNote ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedmedallions">
                                 <list>
-                                    <item/>
+                                    <item n="all-pictured" rend="">
+                                        <p>All Medaillons are illustrated</p>
+                                        <note/>
+                                    </item>
+                                    <item corresp="" n="six-ages-pictured" rend="">
+                                        <list>
+                                            <item corresp="" n="adam-single" rend="">Adam (single)</item>
+                                            <item corresp="" n="eva-single" rend="">Eva (single)</item>
+                                            <item corresp="" n="adam-eve" rend="">Adam and Eva (together)</item>
+                                            <item corresp="" n="noah" rend="">Noah</item>
+                                            <item corresp="" n="abraham" rend="">Abraham</item>
+                                            <item corresp="" n="david" rend="">David</item>
+                                            <item corresp="" n="zedekiah" rend="">Zedekiah</item>
+                                        </list>
+                                        <note/>
+                                    </item>
+                                    <item n="jesus-pictured" rend="">
+                                        <list>
+                                            <item corresp="" n="jesus-natus" rend="">Jesus Natus</item>
+                                            <item corresp="" n="jesus-puer" rend="">Jesus Puer</item>
+                                            <item corresp="" n="jesus-passus" rend="">Jesus Passus</item>
+                                            <item corresp="" n="jesus-resurgens" rend="">Jesus Resurgens</item>
+                                            <item corresp="" n="jesus-other" rend="">Other [e.g., Pater]</item>
+                                        </list>
+                                        <note/>
+                                    </item>
+                                    <item n="extras">
+                                        <list>
+                                            <item corresp="" n="moses" rend="">Moses</item>
+                                            <item corresp="" n="aaron" rend="">Aaron</item>
+                                            <item corresp="" n="nebuchadnezzar" rend="">Nebuchadnezzar</item>
+                                            <item corresp="" n="alexander" rend="">Alexander</item>
+                                        </list>
+                                        <note/>
+                                    </item>
+                                    <item n="other-medallions" rend="">
+                                        <list>
+                                            <item corresp="">
+                                                <label/>
+                                                <note/>
+                                            </item>
+                                        </list>
+                                    </item>
                                 </list>
                             </decoNote>
-                            <decoNote type="illustrations" ana="chigc:Pictures">
+                            <decoNote ana="chigc:Pictures" type="illustrations">
                                 <list>
                                     <item/>
                                 </list>
@@ -175,7 +244,7 @@
                             <list>
                                 <item ana="chigc:description" corresp="" n="metadata"/>
                                 <item ana="chigc:ImageAvailability" corresp="" n="ImageAvailability">Images seen/available?</item>
-                                <item n="IIIF" corresp=""/></list>
+                                <item corresp="" n="IIIF"/></list>
                         </surrogates>
                     </additional>
                 </msDesc>

@@ -1861,7 +1861,15 @@ xmlns="http://www.tei-c.org/ns/1.0"  type="NOmanuscriptLiveView" when="">&lt;p>M
                                         &lt;note/>
                                     &lt;/item>
                                     &lt;item corresp="" n="six-ages-pictured" rend="">
-                                        &lt;p>Six Ages Pictured&lt;/p>
+                                         &lt;list>
+                                            &lt;item corresp="" n="adam-single" rend="">Adam (single)&lt;/item>
+                                            &lt;item corresp="" n="eva-single" rend="">Eva (single)&lt;/item>
+                                            &lt;item corresp="" n="adam-eve" rend="">Adam and Eva (together)&lt;/item>
+                                            &lt;item corresp="" n="noah" rend="">Noah&lt;/item>
+                                            &lt;item corresp="" n="abraham" rend="">Abraham&lt;/item>
+                                            &lt;item corresp="" n="david" rend="">David&lt;/item>
+                                            &lt;item corresp="" n="zedekiah" rend="">Zedekiah&lt;/item>
+                                        &lt;/list>
                                         &lt;note/>
                                     &lt;/item>
                                     &lt;item n="jesus-pictured" rend="">
