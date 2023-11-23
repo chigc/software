@@ -1,7 +1,4 @@
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-    xmlns:rng="http://relaxng.org/ns/structure/1.0"   
-    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" rendition="chigc_transcript">
+<TEI rendition="chigc_transcript" xmlns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -102,15 +99,16 @@
                             <title/>
                             <note> </note>
                         </msItem>
-                        <msItem ana="chigc:TextualCoTransmission" corresp="" n="transmission-context"><locus/><title/>
+                        <msItem ana="chigc:TextualCoTransmission" corresp="" n="transmission-context">
+                            <locus/>
+                            <title/>
                             <author xml:lang="en"/>
                             <!-- Alternativ -->
                             <docDate ana="chigc:date">
                                 <date notAfter="" notBefore=""/>
                             </docDate>
                             <textLang ana="dcterms:language" mainLang=""/><note/></msItem>
-                    </msContents>
-                    <physDesc>
+                    </msContents><physDesc>
                         <objectDesc ana="chigc:manifestationType" form="codex">
                             <supportDesc ana="dcterms:medium" material="material">
                                 <extent ana="memo:sizeMeasurement">
@@ -130,97 +128,17 @@
                             </layoutDesc>
                         </objectDesc>
                         <decoDesc>
-                            <decoNote ana="chigc:Graph" corresp="#compendium-historiae" type="graph">
-                                <list>
-                                    <item ana="chigc:graphOrientation" n="orientation">
-                                        <p>Orientation: <seg/></p>
-                                        <note/>
-                                    </item>
-                                    <item ana="chigc:LineaChristiLocalisation" n="linea-christi">
-                                        <list>
-                                            <item n="presence" rend="">Linea Christi present</item>
-                                            <item n="orientation">
-                                                <seg/>
-                                            </item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item ana="chigc:ColorCoding" n="color-coding" rend=""> Color-Coding </item>
-                                    <item ana="chigc:LetterCoding" n="letter-coding" rend=""> Letter Coding </item>
-                                    <item ana="chigc:MedaillonsRendition" n="medallion-rendition">
-                                        <list>
-                                            <item n="medallion-shape"/>
-                                            <item n="medallion-color">Medallion color: <seg/></item>
-                                            <item n="six-ages-emphasized" rend="">Six Ages Emphasized</item>
-                                            <item n="adam-eve">Adam and Eve Medallions: <seg/></item>
-                                            <item n="mary-apostles">Arrangement of Mary and Apostles: <seg/></item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item ana="chigc:graphInscriptions" n="inscriptions">
-                                        <list>
-                                            <item n="female-male" rend="present">Red for female, black for male</item>
-                                            <item n="other-inscription">Color of inscription: <seg/></item>
-                                        </list>
-                                    </item>
-                                </list>
-                            </decoNote>
-                            <decoNote ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedmedallions">
-                                <list>
-                                    <item n="all-pictured" rend="">
-                                        <p>All Medaillons are illustrated</p>
-                                        <note/>
-                                    </item>
-                                    <item corresp="" n="six-ages-pictured" rend="">
-                                        <list>
-                                            <item corresp="" n="adam-single" rend="">Adam (single)</item>
-                                            <item corresp="" n="eva-single" rend="">Eva (single)</item>
-                                            <item corresp="" n="adam-eve" rend="">Adam and Eva (together)</item>
-                                            <item corresp="" n="noah" rend="">Noah</item>
-                                            <item corresp="" n="abraham" rend="">Abraham</item>
-                                            <item corresp="" n="david" rend="">David</item>
-                                            <item corresp="" n="zedekiah" rend="">Zedekiah</item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item n="jesus-pictured" rend="">
-                                        <list>
-                                            <item corresp="" n="jesus-natus" rend="">Jesus Natus</item>
-                                            <item corresp="" n="jesus-puer" rend="">Jesus Puer</item>
-                                            <item corresp="" n="jesus-passus" rend="">Jesus Passus</item>
-                                            <item corresp="" n="jesus-resurgens" rend="">Jesus Resurgens</item>
-                                            <item corresp="" n="jesus-other" rend="">Other [e.g., Pater]</item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item n="extras">
-                                        <list>
-                                            <item corresp="" n="moses" rend="">Moses</item>
-                                            <item corresp="" n="aaron" rend="">Aaron</item>
-                                            <item corresp="" n="nebuchadnezzar" rend="">Nebuchadnezzar</item>
-                                            <item corresp="" n="alexander" rend="">Alexander</item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item n="other-medallions" rend="">
-                                        <list>
-                                            <item corresp="">
-                                                <label/>
-                                                <note/>
-                                            </item>
-                                        </list>
-                                    </item>
-                                </list>
-                            </decoNote>
-                            <decoNote ana="chigc:Pictures" type="illustrations">
-                                <list>
-                                    <item/>
-                                </list>
-                            </decoNote>
+                            <decoNote ana="chigc:Graph" corresp="#compendium-historiae" type="graph"> </decoNote>
+                            <decoNote ana="chigc:IllustratedMedaillons" corresp="#compendium-historiae" type="illustratedmedallions"> </decoNote>
+                            <decoNote ana="chigc:Pictures" type="illustrations"> </decoNote>
                             <decoNote ana="chigc:Diagrams" corresp="#compendium-historiae" type="diagrams">
                                 <!-- mehrere Möglich, add button -->
                                 <list>
-                                    <item/>
+                                    <item corresp="#">
+                                        <label/>
+                                        <locus/>
+                                        <note/>
+                                    </item>
                                 </list>
                             </decoNote>
                         </decoDesc>
@@ -256,13 +174,14 @@
         </fileDesc>
         <revisionDesc>
             <!-- Verpflichtend für die Qualitycontrol -->
-            <change n="manuscriptRecord" when=""><p>Manuscript was recorded by <persName></persName>.</p>
+            <change n="manuscriptRecord" when=""><p>Manuscript was recorded/Data was entered by <persName/>.</p>
             </change>
+            <change n="compendiumPresence" status="sure" when=""><p>Presence of Compendium was checked by <persName/></p></change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <p>Transcription</p>
-        </body>        
+        </body>
     </text>
 </TEI>
