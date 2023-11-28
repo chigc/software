@@ -616,7 +616,7 @@ msItem[*|id] > author {
  oxy_label(text, "                              language: en ")
 }
 
-msItem > author {
+msItem[*|id] > author {
     display: none; 
     /*content: 
     oxy_editor(type, text, edit, '#text', width, 30%)
@@ -736,6 +736,13 @@ msItem[n = transmission-context] > locus {
     padding: 5px;
     content: 
     oxy_editor(type, text, edit, "#text", width, 10%)
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+}
+
+msItem[n = transmission-context] > author {
+    padding: 5px;
+    content: 
+    oxy_editor(type, text, edit, "#text", width, 40%)
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 
