@@ -121,7 +121,7 @@
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <p>Pagebreak at <seg type="node"/>
+                                    <p n="">Pagebreak at <seg type="node"/>
                                         <dim type="folio"/>
                                     </p>
                                 </layout>
@@ -144,6 +144,10 @@
                         </decoDesc>
                     </physDesc>
                     <history>
+                        <origin>
+                            <p></p>
+                            <p></p>
+                        </origin>
                         <provenance>
                             <p/>
                             <p/>

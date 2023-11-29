@@ -947,9 +947,9 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;msItem xmlns="http://www.tei-c.org/ns/1.0" corresp="#" n="co-transmission" ana="chigc:Item">
-                     &lt;locus/>
-                     &lt;title ana="rdfs:label">&lt;/title>
+																<String>&lt;msItem xmlns="http://www.tei-c.org/ns/1.0" corresp="#" n="co-transmission" ana="chigc:GraphicalCoTransmission">
+                     &lt;locus ana="chigc:locus"/>
+                     &lt;title>&lt;/title>
                     &lt;note/>
                   &lt;/msItem></String>
 															</entry>
@@ -1008,8 +1008,8 @@
 															<entry>
 																<String>fragment</String>
 																<String>&lt;msItem xmlns="http://www.tei-c.org/ns/1.0" corresp="#xy" n="transmission-context" ana="chigc:TextualCoTransmission">
-                     &lt;locus/>
-                     &lt;title ana="rdfs:label">&lt;/title>
+                     &lt;locus ana="chigc:locus"/>
+                     &lt;title>&lt;/title>
                     &lt;note/>
                   &lt;/msItem></String>
 															</entry>
@@ -1220,7 +1220,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>elementLocation</String>
-																<String>//layout/p[last()]</String>
+																<String>ancestor-or-self::*/p</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -1377,7 +1377,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="manuscriptLiveView" when="">&lt;p>Manusc
 															<entry>
 																<String>fragment</String>
 																<String>&lt;change 
-xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" when="">&lt;p>Manuscript was not seen live.&lt;/p>&lt;/change>  </String>
+xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript was not seen live.&lt;/p>&lt;/change>  </String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1734,7 +1734,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" when="">&lt;p>Manu
 																<String>fragment</String>
 																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="#" >
                                         &lt;label/>
-                                        &lt;locus/>
+                                        &lt;locus ana="chigc:locus"/>
                                         &lt;note/>
                                     &lt;/item></String>
 															</entry>
@@ -2126,10 +2126,10 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" when="">&lt;p>Manu
 																<String>fragment</String>
 																<String> &lt;author xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">&lt;/author>                          
                             &lt;!-- Alternativ -->
-                            &lt;docDate  xmlns="http://www.tei-c.org/ns/1.0"  ana="chigc:date">
+                            &lt;docDate  xmlns="http://www.tei-c.org/ns/1.0" >
                                 &lt;date notAfter="" notBefore=""/>
                             &lt;/docDate>
-                            &lt;textLang  xmlns="http://www.tei-c.org/ns/1.0" ana="dcterms:language" mainLang=""/></String>
+                            &lt;textLang  xmlns="http://www.tei-c.org/ns/1.0" mainLang=""/></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>

@@ -10,7 +10,7 @@
     </pattern>
     <pattern>
         <rule context="@rend"> 
-            <assert test="matches(., 'present|not-present')">Choose Yes or No.</assert>
+            <assert test="matches(., 'yes|no')">Choose Yes or No.</assert>
         </rule>
     </pattern>
     <pattern>
@@ -25,7 +25,7 @@
     </pattern>
     <!--- ID Warnings --> 
     <pattern>
-        <rule context="tei:msItem[@rend='present']/@corresp"> 
+        <rule context="tei:msItem[@rend='yes']/@corresp"> 
             <assert test="contains(., '#')">Choose the respective superstructure ID</assert>
         </rule>
     </pattern>
