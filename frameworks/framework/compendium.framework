@@ -1732,7 +1732,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="#" >
+																<String>&lt;item ana="chigc:Diagram" xmlns="http://www.tei-c.org/ns/1.0" corresp="#" >
                                         &lt;label/>
                                         &lt;locus ana="chigc:locus"/>
                                         &lt;note/>
