@@ -1,4 +1,4 @@
-<TEI rendition="chigc_transcript" xmlns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" rendition="chigc_transcript" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -121,9 +121,7 @@
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <p n="">Pagebreak at <seg type="node"/>
-                                        <dim type="folio"/>
-                                    </p>
+                                    <secFol corresp=""> <dim type="folio"></dim></secFol>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
