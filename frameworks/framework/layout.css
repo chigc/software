@@ -938,7 +938,7 @@ item[n = 'adam-eve'] > seg {
 item[n = 'mary-apostles'] > seg {
     content: 
     oxy_label(text, '   ')
- oxy_combobox(edit, '#text', editable, false, values, "Type A (2 groups of six - Christ middle), Type B (2 groups of six - Christ above), Type C (in a row - mary and joseph centered), Type D (in a row - mary and joseph left), Type E (in a row separate from Mary), Type F (in circle), Type G (around crucifixation scene), Type H (in triangle), Type I (divided), Other", width, 50%)
+ oxy_combobox(edit, '#text', editable, false, values, "Variant A: Apostles in 2 groups of six  [Klosterneuburg 696], Variant B: Apostles in a row (mary and joseph to the left) [Royal 14 B IX], Variant C: Apostles in a circle [Cleveland, Arsenal 1234], Variant D: Apostles around crucifixion scene [Italian rolls], Variant E: Apostles in triangle [Wolfenbüttel 305a], Other", width, 50%)
  oxy_label(text, '   ')
 }
 
