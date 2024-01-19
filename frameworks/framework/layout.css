@@ -1540,7 +1540,7 @@ change > p > persName {
 
 change[n = 'compendiumPresence'][status = 'sure']:after {
     content: 
-    oxy_label(text, ' TO REVIEW  ', styles, ' font-weight:bold;color:#00ba00;')
+    oxy_label(text, '    TO DATABASE  ', styles, ' font-weight:bold;color:#00ba00;')
  oxy_editor(type, button, actionID, add_change-readyForReview, transparent, true, color, #FF0000)
 }
 /*change[n = 'manuscriptRecord']:after {
