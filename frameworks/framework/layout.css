@@ -928,7 +928,7 @@ item[n = 'medallion-color'] > seg {
     oxy_combobox(edit, '#text', values, 'red,black,mixed (red and black), other', width, 15%)
 }
 
-item[n = 'adam-eve'] > seg {
+item[n='medallion-rendition'] > list > item[n = 'adam-eve'] > seg {
     content: 
     oxy_label(text, '   ')
  oxy_combobox(edit, '#text', editable, false, values, 'One Medallion, Two Medallions', width, 20%)
@@ -1017,16 +1017,75 @@ item[n = 'six-ages-pictured'] > list > item[rend]:after {
  oxy_label(text, '   ')
 }
 
-item[n = 'six-ages-pictured'] > list > item {
+item[n = 'six-ages-pictured'] > list > item[n='adam-single'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/concat( '#',@xml:id), ',')"), width, 20%)
+    oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-adamA', ', #p-adamB', ', #p-adamC',', #p-adamD')"), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
+item[n = 'six-ages-pictured'] > list > item[n='eva-single'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-euaA', ', #p-euaB', ', #p-euaC',', #p-euaD')"), width, 20%) 
+oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+
+item[n = 'six-ages-pictured'] > list > item[n='adam-eve'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-adamEuaA', ', #p-adamEuaB', ', #p-adamEuaC',', #p-adamEuaD',', #p-adamEuaE')"), width, 20%) 
+oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+
+item[n = 'six-ages-pictured'] > list > item[n='noah'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-noeA', ', #p-noeB', ', #p-noeC',', #p-noeD')"), width, 20%) 
+oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+
+item[n = 'six-ages-pictured'] > list > item[n='abraham'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-abrahamA', ', #p-abrahamB')"), width, 20%) 
+oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+
+item[n = 'six-ages-pictured'] > list > item[n='david'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-davidA', ', #p-davidB', ', #p-davidC')"), width, 20%)
+oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+
+item[n = 'six-ages-pictured'] > list > item[n='zedekiah'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-sedechiasA', ', #p-sedechiasB', ', #p-sedechiasC')"), width, 20%)
+oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
 
 item[n = 'jesus-pictured'] > list > item[rend]:after {
 
@@ -1106,7 +1165,43 @@ item[n = 'all-pictured'] > p, item[n = 'six-ages-pictured'] > p {
  oxy_label(text, '   ')
 }*/
 
-item[n = 'jesus-pictured'] > list > item {
+item[n = 'jesus-pictured'] > list > item[n='jesus-natus'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-natusA', ', #p-natusB')"), width, 20%)
+ oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+item[n = 'jesus-pictured'] > list > item[n='jesus-puer'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-puerA', ', #p-puerB', ', #p-puerC', ', #p-puerD')"), width, 20%)
+ oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+item[n = 'jesus-pictured'] > list > item[n='jesus-passus'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath('@corresp'), width, 20%)
+ oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+item[n = 'jesus-pictured'] > list > item[n='jesus-resurgens'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-resurgensA', ', #p-resurgensB', ', #p-resurgensC')"), width, 20%)
+ oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+item[n = 'jesus-pictured'] > list > item[n='jesus-other'] {
     display: block;
     font-style: italic;
     content: 
@@ -1129,12 +1224,42 @@ item[n = 'jesus-pictured'] > list:before {
     margin-top: 15px;
 }
 
-item[n = 'extras'] > list > item {
+item[n = 'extras'] > list > item[n='moses'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/concat( '#',@xml:id), ',')"), width, 20%)
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-moysesA', ', #p-moysesB')"), width, 20%)
+ oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+
+item[n = 'extras'] > list > item[n='aaron'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-aaronA', ', #p-aaronB', ', #p-aaronC')"), width, 20%)
+ oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+
+item[n = 'extras'] > list > item[n="nebuchadnezzar"] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath('@corresp'), width, 20%)
+ oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+
+item[n = 'extras'] > list > item[n="alexander"] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
+oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath('@corresp'), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
@@ -1175,10 +1300,19 @@ item[n = 'other-medallions'] > list > item > label {
 item[n = 'significant-pictures'] > list > item {
     display: block;
     font-style: italic;
-
     content: 
     oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
- oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure_List.xml')//list[@xml:id='pictures']/item/concat( '#',@xml:id), ',')"), width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath('@corresp'), width, 20%)
+ oxy_label(text, '   ')
+ oxy_xpath('text()')
+}
+
+item[n = 'significant-pictures'] > list > item[n='cain-abel'] {
+    display: block;
+    font-style: italic;
+    content: 
+    oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-cainAbelA', ', #p-cainAbelB')"), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
@@ -1435,15 +1569,6 @@ change[n = 'NOmanuscriptLiveView'] {
         display: inline-block;
         content: 
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
-}
-
-
-change[n = 'readyForPublication']:before {
-    font-weight: bold;
-    content: 
-    'Validate Data     '
-    oxy_editor(type, button, actionID, validate_content, transparent, true, color, #FF0000)
-    oxy_label(text, '                                                                                     ')
 }
 
 change[n = 'readyForPublication'] {

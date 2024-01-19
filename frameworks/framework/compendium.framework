@@ -1425,13 +1425,13 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String> //change[@n='compendiumPresence']/p/persName/text() and contains(//change[@n='compendiumPresence']/@when, '20') </String>
+														<String> //change[@n='compendiumPresence']/p/persName/text() and contains(//change[@n='manuscriptRecord']/@when, '20') </String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0" n="contentCheck" when="">&lt;p>Manuscript was reviewed by&lt;persName>&lt;/persName>.&lt;/p>&lt;/change></String>
+																<String>&lt;change xmlns="http://www.tei-c.org/ns/1.0" n="readyForPublication" when="">&lt;p>Manuscript is ready for Publication in Database.&lt;/p>&lt;/change></String>
 															</entry>
 															<entry>
 																<String>goToNextEditablePosition</String>
@@ -1826,32 +1826,32 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
                                     &lt;/item>
                                     &lt;item corresp="" n="six-ages-pictured" rend="">
                                          &lt;list>
-                                            &lt;item corresp="" n="adam-single" rend="">Adam (single)&lt;/item>
-                                            &lt;item corresp="" n="eva-single" rend="">Eva (single)&lt;/item>
-                                            &lt;item corresp="" n="adam-eve" rend="">Adam and Eva (together)&lt;/item>
-                                            &lt;item corresp="" n="noah" rend="">Noah&lt;/item>
-                                            &lt;item corresp="" n="abraham" rend="">Abraham&lt;/item>
-                                            &lt;item corresp="" n="david" rend="">David&lt;/item>
-                                            &lt;item corresp="" n="zedekiah" rend="">Zedekiah&lt;/item>
+                                            &lt;item corresp="#p-adam" n="adam-single" rend="">Adam (single)&lt;/item>
+                                            &lt;item corresp="#p-eua" n="eva-single" rend="">Eva (single)&lt;/item>
+                                            &lt;item corresp="#p-adamEua" n="adam-eve" rend="">Adam and Eva (together)&lt;/item>
+                                            &lt;item corresp="#p-noe" n="noah" rend="">Noah&lt;/item>
+                                            &lt;item corresp="#p-abraham" n="abraham" rend="">Abraham&lt;/item>
+                                            &lt;item corresp="#p-david" n="david" rend="">David&lt;/item>
+                                            &lt;item corresp="#p-sedechias" n="zedekiah" rend="">Zedekiah&lt;/item>
                                         &lt;/list>
                                         &lt;note/>
                                     &lt;/item>
                                     &lt;item n="jesus-pictured" rend="">
                                         &lt;list>
-                                            &lt;item corresp="" n="jesus-natus" rend="">Jesus Natus&lt;/item>
-                                            &lt;item corresp="" n="jesus-puer" rend="">Jesus Puer&lt;/item>
-                                            &lt;item corresp="" n="jesus-passus" rend="">Jesus Passus&lt;/item>
-                                            &lt;item corresp="" n="jesus-resurgens" rend="" >Jesus Resurgens&lt;/item>
-                                            &lt;item corresp="" n="jesus-other" rend="">Other [e.g., Pater]&lt;/item>
+                                            &lt;item corresp="#p-natus" n="jesus-natus" rend="">Jesus Natus&lt;/item>
+                                            &lt;item corresp="#p-puer" n="jesus-puer" rend="">Jesus Puer&lt;/item>
+                                            &lt;item corresp="#p-passus" n="jesus-passus" rend="">Jesus Passus&lt;/item>
+                                            &lt;item corresp="#p-resurgens" n="jesus-resurgens" rend="" >Jesus Resurgens&lt;/item>
+                                            &lt;item corresp="#" n="jesus-other" rend="">Other [e.g., Pater]&lt;/item>
                                         &lt;/list>
                                         &lt;note/>
                                     &lt;/item>
                                     &lt;item n="extras">
                                         &lt;list>
-                                            &lt;item corresp="" n="moses" rend="">Moses&lt;/item>
-                                            &lt;item corresp="" n="aaron" rend="">Aaron&lt;/item>
-                                            &lt;item corresp="" n="nebuchadnezzar" rend="">Nebuchadnezzar&lt;/item>
-                                            &lt;item corresp="" n="alexander" rend="">Alexander&lt;/item>
+                                            &lt;item corresp="#p-moyses" n="moses" rend="">Moses&lt;/item>
+                                            &lt;item corresp="#p-aaron" n="aaron" rend="">Aaron&lt;/item>
+                                            &lt;item corresp="#p-nabucodonosor1" n="nebuchadnezzar" rend="">Nebuchadnezzar&lt;/item>
+                                            &lt;item corresp="#p-alexander1" n="alexander" rend="">Alexander&lt;/item>
                                         &lt;/list>
                                         &lt;note/>
                                     &lt;/item>
@@ -1922,13 +1922,13 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 																<String>&lt;decoNote type="illustrations" ana="chigc:Pictures" xmlns="http://www.tei-c.org/ns/1.0">
                         &lt;list>&lt;item n="significant-pictures" corresp="#" sameAs="" >
                                     &lt;list>
-                                        &lt;item corresp="" n="cross" rend="" >Cross (above Adam and Eve)&lt;/item>
-                                        &lt;item corresp="" n="cain-abel" rend="">Cain and Abel&lt;/item>
-                                        &lt;item corresp="" n="tower-babel" rend="">Tower of Babel&lt;/item>
-                                        &lt;item corresp="" n="city-babel" rend="">City of Babel&lt;/item>
-                                        &lt;item corresp="" n="rainbow" rend="">Rainbow&lt;/item>
-                                        &lt;item corresp="" n="god" rend="">God the Father&lt;/item>
-                                        &lt;item corresp="" n="creation" rend="">Scenes of Creation&lt;/item>                                       
+                                        &lt;item corresp="#p-cross" n="cross" rend="" >Cross (above Adam and Eve)&lt;/item>
+                                        &lt;item corresp="#p-cainAbel" n="cain-abel" rend="">Cain and Abel&lt;/item>
+                                        &lt;item corresp="#p-towerBabel" n="tower-babel" rend="">Tower of Babel&lt;/item>
+                                        &lt;item corresp="#p-cityBabel" n="city-babel" rend="">City of Babel&lt;/item>
+                                        &lt;item corresp="#p-rainbow" n="rainbow" rend="">Rainbow&lt;/item>
+                                        &lt;item corresp="#p-god" n="god" rend="">God the Father&lt;/item>
+                                        &lt;item corresp="#p-creation" n="creation" rend="">Scenes of Creation&lt;/item>                                       
                                     &lt;/list>
                                 &lt;/item>
 &lt;item n="other-pictures" xmlns="http://www.tei-c.org/ns/1.0" >
@@ -2362,52 +2362,6 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-										<field name="enabledInReadOnlyContext">
-											<Boolean>false</Boolean>
-										</field>
-									</action>
-									<action>
-										<field name="id">
-											<String>validate_content</String>
-										</field>
-										<field name="name">
-											<String>Validate Content</String>
-										</field>
-										<field name="description">
-											<String>Activates the schema and tests, if the data is valide.</String>
-										</field>
-										<field name="largeIconPath">
-											<String>${framework}/icons/tick.png</String>
-										</field>
-										<field name="smallIconPath">
-											<String>${framework}/icons/tick.png</String>
-										</field>
-										<field name="accessKey">
-											<String></String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String></String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>scenarioNames</String>
-																<String>Compendium</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.ExecuteValidationScenariosOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
