@@ -6,7 +6,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en">Compendium historiae - Transmission Context List</title>
+            <title xml:lang="en">Compendium historiae - List of textual Co-Transmissions</title>
             <author>Bleier, Roman</author>
             <author>Goerrs, Eleanor</author>
             <author>Krottmaier, Sina</author>
@@ -43,7 +43,7 @@
             </availability>
             <pubPlace> Graz/Tübingen/Wuppertal</pubPlace>
             <date when="2023">2023</date>
-            <idno ana="dcterms:identifier" type="PID">o:chigc.listtransmissioncontext</idno>
+            <idno ana="dcterms:identifier" type="PID">o:chigc.listtextualcotransmissions</idno>
             <ref target="context:chigc" type="context"/>
             <ref target="context:chigc.list" type="context"/>
          </publicationStmt>
@@ -54,11 +54,12 @@
    </teiHeader>
    <text>
       <body>
-         <list xml:id="transmissioncontext_list">
+         <list xml:id="textualcotransmission_list">
             <item xml:id="tc-allegorarium"><label>Allegoriarum Libri IX</label><p/></item>
+            <item xml:id="tc-hystoria-actuum"><label>Historia actuum apostolorum</label><p> by Peter of Poitiers</p></item>
             <item xml:id="tc-annales-hildesheim"><label>Annales Hildesheimenses</label><p/></item>
             <item xml:id="tc-summa-theologiae"><label>Summa theologiae</label><p>
-               written by Thomas Aquinas
+               by Thomas Aquinas
             </p></item>
             <item xml:id="tc-aurora"><label>Aurora</label><p>
                by Petrus Riga
@@ -68,6 +69,9 @@
             <item xml:id="tc-etymologiae"><label>Etymologiae</label><p>
                by Isidore of Seville
             </p></item>
+            <item xml:id="tc-de-laudibus-crucis"><label>De laudibus sanctae crucis</label><p>
+               by Hrabanus Maurus</p>
+            </item>
             <item xml:id="tc-antiquitates-ludaicae"><label>Antiquitates Iudaicae</label><p>
                by Flavius Josephus
             </p></item>
@@ -82,9 +86,18 @@
             <item xml:id="tc-super-cantica-canticorum"><label>Super cantica canticorum</label><p>
                by Hugh of Saint Victor
             </p></item>
-            <item xml:id="tc-hystoria-actuum"><label>Hystoria actuum apostolorum</label><p>
-               by Peter of Poiters
+            <item xml:id="tc-allegoriae"><label>Allegoriae in Vetus Testimentum</label><p>
+               by  Richard of Saint-Victor
             </p></item>
+            <item xml:id="tc-chronicon"><label>Chronicon</label><p>
+               by Hugh of Saint-Victor
+            </p></item>
+            <item xml:id="tc-de-mysterio-missae"><label>De mysterio missae</label><p>
+               by Albertus Magnus
+            </p></item>
+            <item xml:id="tc-de-corpore-domini"><label>De corpore domini</label><p>
+               by Albertus Magnus
+            </p></item>                  
             <item xml:id="tc-legenda-aurea"><label>Legenda aurea</label><p>
                by Jacobus de Voragine
             </p></item>
@@ -93,10 +106,55 @@
             </p></item>
             <item xml:id="tc-martyrologium-usuardi"><label>Martyrologium Usuardi</label><p/></item>
             <item xml:id="tc-moralia"><label>Moralia</label><p>by Gregory the Great</p></item>
-            <item xml:id="tc-postillae"><label>Postillae</label><p/></item>
-            <item xml:id="tc-pseudo-dionysius"><label>Pseudo-Dionysius</label><p/></item>
+            <item xml:id="tc-postillae"><label>Postillae</label><p> by Nicholas of Lyra</p></item>
+            <item xml:id="tc-doctrinale"><label>Doctrinale</label><p> by  Alexander de Villa Dei</p></item>
+            <item xml:id="tc-summarium"><label>Summarium biblicum</label><p> by Alexander de Villa Dei</p></item>           
             <item xml:id="tc-speculum-humanae"><label>Speculum humanae salvationis</label><p/></item>
-            <item xml:id="tc-speculum-theologiae"><label>Speculum theologiae</label><p/></item>
+            <item xml:id="tc-speculum-theologiae"><label>Speculum theologiae</label><p/></item>           
+            <item xml:id="tc-troiano">
+               <label>De bello Troiano</label>
+               <p> by Joseph of Exeter</p>
+            </item>
+            <item xml:id="tc-alexandreis">
+               <label>Alexandreis</label>
+               <p>by Walter of Châtillon</p>
+            </item>            
+            <item xml:id="tc-imago">
+               <label>Imago Mundi</label>
+               <p>by Honorius Augustodunensis</p>
+            </item>
+            <item xml:id="tc-chronica-bavariae">
+               <label>Chronica de principibus bavariae</label>
+               <p>by Andreas of Regensburg</p>
+            </item>
+            <item xml:id="tc-chronicon-pontificum-imperatorum">
+               <label>Chronicon pontificum et imperatorum Romanorum.</label>
+               <p></p>
+            </item>
+            <item xml:id="tc-annales-claustroneoburg">
+               <label>Annales Claustroneoburgenses</label>
+               <p></p>
+            </item>
+            <item xml:id="tc-chronicon-austriacum">
+               <label>Chronicon rhythmicum austriacum</label>
+               <p></p>
+            </item>
+            <item xml:id="tc-chronica-auxerre">
+               <label>Chronica</label>
+               <p>by Robert of Auxerre</p>
+            </item>
+            <item xml:id="tc-grammatica">
+               <label>Quaestiones de arte grammatica</label>
+               <p>by Donatus</p>
+            </item>
+            <item xml:id="tc-compendium-sensus">
+               <label> Compendium sensus litteralis totius sacrae scripturae</label>
+               <p>by Petrus Aureoli</p>
+            </item>
+            <item xml:id="tc-margarita-bibliae">
+               <label>Margarita Bibliae</label>
+               <p>by Guido Vicentinus</p>
+            </item>
             <item xml:id="tc-other">
                <label>Other textual Co-Transmissions</label>
                <p>Textual Co-Transmissions</p>
