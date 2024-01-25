@@ -70,6 +70,7 @@
                         <idno ana="dcterms:identifier" type="signature"/>
                     </msIdentifier>
                     <msContents>
+                        <summary n="single-text" ana="chigc:contentType"></summary>
                         <msItem ana="chigc:Item" xml:id="compendium-historiae">
                             <locus from="" to=""/>
                             <!-- Mehrere Möglich -->
