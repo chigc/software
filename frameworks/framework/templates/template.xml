@@ -94,32 +94,10 @@
                             </note>
                             <note type="significant-passages">
                                 <list>
-                                    <item n="prima-etas" rend="">Prima etas fuit (usually next to
-                                        Noah)</item>
-                                    <item n="beata-virgo" rend="">Beata virgo maria</item>
-                                    <item n="conceptus-est" rend="">Conceptus est dominus</item>
-                                    <item n="primam-annam" rend="">Primam annam accepit
-                                        ioachim</item>
-                                    <item n="tiberius-cesar" rend="">Tiberius cesar successit
-                                        augustus </item>
+                                    <item/>
                                 </list>
                             </note>
-                        </msItem>
-                        <msItem ana="chigc:GraphicalCoTransmission" corresp="" n="co-transmission">
-                            <locus/>
-                            <title/>
-                            <note> </note>
-                        </msItem>
-                        <msItem ana="chigc:TextualCoTransmission" corresp=""
-                            n="transmission-context">
-                            <locus/>
-                            <title/>
-                            <author xml:lang="en"/>
-                            <!-- Alternativ -->
-                            <docDate ana="chigc:date">
-                                <date notAfter="" notBefore=""/>
-                            </docDate>
-                            <textLang ana="dcterms:language" mainLang=""/><note/></msItem>
+                        </msItem>                       
                     </msContents><physDesc>
                         <objectDesc ana="chigc:manifestationType" form="codex">
                             <supportDesc ana="dcterms:medium" material="material">
@@ -139,108 +117,9 @@
                             </layoutDesc>
                         </objectDesc>
                         <decoDesc>
-                            <decoNote ana="chigc:Graph" corresp="#compendium-historiae" type="graph">
-                                <list>
-                                    <item ana="chigc:graphOrientation" n="orientation">
-                                        <p>Orientation: <seg/></p>
-                                        <note/>
-                                    </item>
-                                    <item ana="chigc:LineaChristiLocalisation" n="linea-christi">
-                                        <list>
-                                            <item n="presence" rend="">Linea Christi present</item>
-                                            <item n="orientation">
-                                                <seg/>
-                                            </item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item ana="chigc:ColorCoding" n="color-coding" rend="">
-                                        Color-Coding </item>
-                                    <item ana="chigc:LetterCoding" n="letter-coding" rend=""> Letter
-                                        Coding </item>
-                                    <item ana="chigc:MedaillonsRendition" n="medallion-rendition">
-                                        <list>
-                                            <item n="medallion-shape"/>
-                                            <item n="medallion-color">Medallion color: <seg/></item>
-                                            <item n="six-ages-emphasized" rend="">Six Ages
-                                                Emphasized</item>
-                                            <item n="adam-eve">Adam and Eve Medallions:
-                                                <seg/></item>
-                                            <item n="mary-apostles">Arrangement of Mary and
-                                                Apostles: <seg/></item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item ana="chigc:graphInscriptions" n="inscriptions">
-                                        <list>
-                                            <item n="female-male" rend="present">Red for female,
-                                                black for male</item>
-                                            <item n="other-inscription">Color of inscription:
-                                                <seg/></item>
-                                        </list>
-                                    </item>
-                                </list>
-                            </decoNote>
+                            <decoNote ana="chigc:Graph" corresp="#compendium-historiae" type="graph"> </decoNote>
                             <decoNote ana="chigc:IllustratedMedaillons"
-                                corresp="#compendium-historiae" type="illustratedmedallions">
-                                <list>
-                                    <item n="all-pictured" rend="">
-                                        <p>All Medaillons are illustrated</p>
-                                        <note/>
-                                    </item>
-                                    <item corresp="" n="six-ages-pictured" rend="">
-                                        <list>
-                                            <item corresp="#p-adam" n="adam-single" rend="">Adam
-                                                (single)</item>
-                                            <item corresp="#p-eua" n="eva-single" rend="">Eva
-                                                (single)</item>
-                                            <item corresp="#p-adamEua" n="adam-eve" rend="">Adam and
-                                                Eva (together)</item>
-                                            <item corresp="#p-noe" n="noah" rend="">Noah</item>
-                                            <item corresp="#p-abraham" n="abraham" rend=""
-                                                >Abraham</item>
-                                            <item corresp="#p-david" n="david" rend="">David</item>
-                                            <item corresp="#p-sedechias" n="zedekiah" rend=""
-                                                >Zedekiah</item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item n="jesus-pictured" rend="">
-                                        <list>
-                                            <item corresp="#p-natus" n="jesus-natus" rend="">Jesus
-                                                Natus</item>
-                                            <item corresp="#p-puer" n="jesus-puer" rend="">Jesus
-                                                Puer</item>
-                                            <item corresp="#p-passus" n="jesus-passus" rend="">Jesus
-                                                Passus</item>
-                                            <item corresp="#p-resurgens" n="jesus-resurgens" rend=""
-                                                >Jesus Resurgens</item>
-                                            <item corresp="#" n="jesus-other" rend="">Other [e.g.,
-                                                Pater]</item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item n="extras">
-                                        <list>
-                                            <item corresp="#p-moyses" n="moses" rend="">Moses</item>
-                                            <item corresp="#p-aaron" n="aaron" rend="">Aaron</item>
-                                            <item corresp="#p-nabucodonosor1" n="nebuchadnezzar"
-                                                rend="">Nebuchadnezzar</item>
-                                            <item corresp="#p-alexander1" n="alexander" rend=""
-                                                >Alexander</item>
-                                        </list>
-                                        <note/>
-                                    </item>
-                                    <item n="other-medallions" rend="">
-                                        <list>
-                                            <item corresp="">
-                                                <label/>
-                                                <note/>
-                                            </item>
-                                        </list>
-                                    </item>
-                                </list>
-                            </decoNote>
+                                corresp="#compendium-historiae" type="illustratedmedallions"> </decoNote>
                             <decoNote type="illustrations" ana="chigc:Pictures"> </decoNote>
                             <decoNote ana="chigc:Diagrams" corresp="#compendium-historiae"
                                 type="diagrams">
@@ -291,11 +170,11 @@
         </fileDesc>
         <revisionDesc>
             <!-- Verpflichtend für die Qualitycontrol -->
-            <change n="manuscriptRecord" when="2024-01-09"><p>Manuscript was recorded/Data was
-                    entered by <persName>ghj</persName>.</p>
+            <change n="manuscriptRecord" when=""><p>Manuscript was recorded/Data was
+                    entered by <persName></persName>.</p>
             </change>
-            <change n="compendiumPresence" status="sure" when=""><p>Presence of Compendium was
-                    checked by <persName>ghjghj</persName></p></change>        
+            <change n="compendiumPresence" status="unsure" when=""><p>Presence of Compendium was
+                    checked by <persName></persName></p></change>        
         </revisionDesc>
     </teiHeader>
     <text>
