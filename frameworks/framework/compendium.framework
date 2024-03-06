@@ -2277,7 +2277,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>not(//item[@n="prima-etas"])</String>
+														<String>not(//item[@n="de-filijs-iacob"])</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -2285,11 +2285,10 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 																<String>fragment</String>
 																<String>&lt;note type="significant-passages" xmlns="http://www.tei-c.org/ns/1.0">
                                 &lt;list>
-                                    &lt;item n="prima-etas" rend=""> Prima etas fuit (usually next to Noah)&lt;/item>
-                                    &lt;item n="beata-virgo" rend=""> Beata virgo maria&lt;/item>
-                                    &lt;item n="conceptus-est" rend="">Conceptus est dominus&lt;/item>
-                                    &lt;item n="primam-annam" rend="">Primam annam accepit ioachim&lt;/item>
-                                    &lt;item n="tiberius-cesar" rend="">Tiberius cesar successit augustus &lt;/item>
+                                    &lt;item corresp="#t-filiiJacob" n="de-filijs-iacob" rend=""> De filijs iacob numerosa [...] descendit christus &lt;/item>
+                                    &lt;item corresp="#t-beataVirgo" n="beata-virgo" rend=""> Beata virgo Maria [...] illius anni xliiii &lt;/item>
+                                    &lt;item corresp="#t-triaTempla" n="tria-templa" rend="">Tria templa legimus (?) in sacra scriptura fuisse facta [...] tempore antiochi epyphani &lt;/item>
+                                    &lt;item corresp="#t-conceptus" n="conceptus-est-dominus" rend="">Conceptus est dominus [...] qui sunt xii.ccc.xii. dies &lt;/item>  
                                 &lt;/list>
                             &lt;/note></String>
 															</entry>
