@@ -1508,7 +1508,7 @@ surrogates > list > item[n = 'IIIF'] {
     display: block;
     content: 
     oxy_label(text, 'IFFF (URL):  ', styles, 'font-size:small;')
- oxy_editor(type, text, edit, '@resp', width, 70%)
+ oxy_editor(type, text, edit, '@corresp', width, 70%)
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 
