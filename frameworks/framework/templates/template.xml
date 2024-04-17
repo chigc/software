@@ -67,7 +67,7 @@
                             <country ana="dcterms:location"/>
                         </settlement>
                         <repository ana="chigc:hostedBy" corresp=""/>
-                        <idno ana="dcterms:identifier" type="signature"/>
+                        <idno ana="chigc:signature" type="signature"/>
                     </msIdentifier>
                     <msContents>
                         <summary n="single-text" ana="chigc:contentType"></summary>
