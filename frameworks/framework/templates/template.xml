@@ -81,6 +81,7 @@
                             <!-- Alternativ -->
                             <docDate ana="chigc:date">
                                 <date notAfter="" notBefore=""/>
+                                <note/>
                             </docDate>
                             <textLang ana="dcterms:language" mainLang=""/>
                             <note type="citation"/>

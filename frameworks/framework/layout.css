@@ -1430,23 +1430,25 @@ decoNote[type = 'diagrams'] > list > item > note {
 
 msItem[*|id] > docDate > date[when] {
     content: 
-    oxy_label(text, 'Date (literal):   ', styles, 'font-size:small;')
- oxy_editor(type, text, edit, '#text', width, 20%)
  oxy_label(text, '  Index Date: ', styles, 'font-size:small;')
  oxy_editor(type, text, edit, '@when', width, 10%)
  oxy_label(text, ' [Format: 0000]   ', styles, 'font-size:smaller;')
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000);
 }
 msItem[*|id] > docDate > date[notBefore] {
-    content: 
-    oxy_label(text, 'Date-Range (literal):   ', styles, 'font-size:small;')
- oxy_editor(type, text, edit, '#text', width, 20%)
+    content:     
  oxy_label(text, ' Start Date: ', styles, 'font-size:small;')
  oxy_editor(type, text, edit, '@notBefore', width, 10%)
  oxy_label(text, ' End Date: ', styles, 'font-size:small;')
  oxy_editor(type, text, edit, '@notAfter', width, 10%)
  oxy_label(text, ' [Format: 0000]    ', styles, 'font-size:smaller;')
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000);
+}
+
+msItem[*|id] > docDate > note {
+    content:
+    oxy_label(text, 'Date (literal/catalogue entry):   ', styles, 'font-size:small;')
+    oxy_textArea(edit, '#text', width, 20%)
 }
 
 msItem > docDate > date[when] {
