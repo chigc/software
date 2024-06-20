@@ -687,7 +687,7 @@ msItem > note[type = 'citation'] {
 }
 msItem[*|id] > note[type = 'version'] {
     content: 
-    oxy_combobox(edit, '@n', editable, false, values, 'original,long,interpolated', labels, 'original version, long version, interpolated version', width, 40%)
+    oxy_combobox(edit, '@n', editable, false, values, 'short,long,interpolated', labels, 'short version, long version, interpolated version', width, 40%)
 }
 msItem > note[type = 'version'] > p {
     font-style: italic;
