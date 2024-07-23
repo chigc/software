@@ -390,6 +390,12 @@ font-weight:bold;
     width: 20%;
     content: 'Version:'
 }
+msItem > note[type = "msGroup"]:before {
+font-weight:bold;
+    display: inline-block;
+    width: 20%;
+    content: 'Manuscript Sub-Group:'
+}
 msItem > note[type = 'citation']:before {
     display: inline-block;
     width: 20%;
@@ -697,7 +703,19 @@ msItem > note[type = 'version'] > p {
  oxy_textArea(edit, '#text')
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
-
+msItem > note[type = 'msGroup'] > p {
+    font-style: italic;
+    font-size: small;
+    content: 
+    oxy_label(text, 'Notes:  ')
+ oxy_textArea(edit, '#text')
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+}
+msItem > note[type = 'msGroup'] {
+    
+    content: 
+ oxy_editor(type,text, edit, '@n', width, 30%)
+}
 msItem[*|id] > note[type = 'extension'] {
     content: 
     oxy_combobox(edit, '@n', editable, false, values, 'yes,no,unknown', labels, 'extended to universal chronicle, not extended to universal chronicle, unknown', width, 40%)
@@ -708,8 +726,9 @@ msItem > note[type = 'extension'] > p {
     content: 
     oxy_label(text, 'Notes:  ')
  oxy_textArea(edit, '#text')
- oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
+
+
 
 msItem > note[type = 'significant-passages'] > list > item {
     display: block;

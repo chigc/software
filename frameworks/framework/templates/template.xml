@@ -94,6 +94,9 @@
                             <note n="" type="version" ana="chigc:version">
                                 <p/>
                             </note>
+                            <note n="" type="msGroup" ana="chigc:msGroup">
+                                <p/>
+                            </note>
                             <note type="significant-passages">
                                 <list>
                                     <item/>
