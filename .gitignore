@@ -1,2 +1,4 @@
 **/Compendium-Framework.xpr
 *.xpr
+**/*.DS_Store
+*.DS_Store
