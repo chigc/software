@@ -163,7 +163,7 @@
                                 <item ana="chigc:description" corresp="" n="metadata"/>
                                 <item ana="chigc:ImageAvailability" corresp="" n="ImageAvailability"
                                     >Images seen/available?</item>
-                                <item corresp="" n="IIIF"/></list>
+                                <item corresp="" n="IIIF" ana="chigc:externalManifest"/></list>
                         </surrogates>
                     </additional>
                 </msDesc>
