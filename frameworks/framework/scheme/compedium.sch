@@ -9,7 +9,7 @@
         </rule>
     </pattern>
     <pattern>
-        <rule context="@rend"> 
+        <rule context="tei:item/@rend"> 
             <assert test="matches(., 'yes|no')">Choose Yes or No.</assert>
         </rule>
     </pattern>
