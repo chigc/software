@@ -112,6 +112,52 @@
             <assert test="contains(., '20')">Select a date.</assert>
         </rule>
     </pattern>
+    <!-- Version rules --> 
+    <pattern>
+        <rule context="tei:msItem[1][tei:note[@type='graphversion']/@n = '1']">
+            <assert test="(tei:note[@type='msGroup']/@n = '' or contains(tei:note[@type='msGroup']/@n, 'FR1') or contains(tei:note[@type='msGroup']/@n, 'FR2') or contains(tei:note[@type='msGroup']/@n, 'BE1') or contains(tei:note[@type='msGroup']/@n, 'GB1') or contains(tei:note[@type='msGroup']/@n, 'GB3') or contains(tei:note[@type='msGroup']/@n, 'GB5') or contains(tei:note[@type='msGroup']/@n, 'AT1') or contains(tei:note[@type='msGroup']/@n, 'AT2') or contains(tei:note[@type='msGroup']/@n, 'ES1') or contains(tei:note[@type='msGroup']/@n, 'IT1') or contains(., 'DE1') or contains(tei:note[@type='msGroup']/@n, 'DE2') or contains(tei:note[@type='msGroup']/@n, 'DE3') or contains(tei:note[@type='msGroup']/@n, 'DE4') or contains(tei:note[@type='msGroup']/@n, 'DE5')) and tei:note[@type='graphversion']/@n = '1'">
+                Wrong subgroup chosen. You selected Version 1, the chosen subgroup does not belong to this grouping. Check the Manuscript Graphversion and the Manuscript Sub-Group fields.
+            </assert>
+            
+        </rule>
+    </pattern>
 
+
+    <pattern>
+        <rule context="tei:msItem[1][tei:note[@type='graphversion']/@n = '2']">
+        <assert test="(tei:note[@type='msGroup']/@n = '' or contains(tei:note[@type='msGroup']/@n, 'FR3') or contains(tei:note[@type='msGroup']/@n, 'FR4') or contains(tei:note[@type='msGroup']/@n, 'FR5') or contains(tei:note[@type='msGroup']/@n, 'GB4') or contains(tei:note[@type='msGroup']/@n, 'AT3')) and tei:note[@type='graphversion']/@n = '2'">
+        Wrong subgroup chosen. You selected Version 2, the chosen subgroup does not belong to this grouping. Check the Manuscript Graphversion and the Manuscript Sub-Group fields.
+    </assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:msItem[1][tei:note[@type='graphversion']/@n = '3']">
+            <assert test="(tei:note[@type='msGroup']/@n = '' or contains(tei:note[@type='msGroup']/@n, 'GB2')) and tei:note[@type='graphversion']/@n = '3'">
+                Wrong subgroup chosen. You selected Version 3, the chosen subgroup does not belong to this grouping. Check the Manuscript Graphversion and the Manuscript Sub-Group fields.
+            </assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:msItem[1][tei:note[@type='graphversion']/@n = '4']">
+            <assert test="(tei:note[@type='msGroup']/@n = '' or contains(tei:note[@type='msGroup']/@n, 'CH1')) and tei:note[@type='graphversion']/@n = '4'">
+                Wrong subgroup chosen. You selected Version 4, the chosen subgroup does not belong to this grouping. Check the Manuscript Graphversion and the Manuscript Sub-Group fields.
+            </assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:msItem[1][tei:note[@type='graphversion']/@n = '5']">
+            <assert test="(tei:note[@type='msGroup']/@n = '' or contains(tei:note[@type='msGroup']/@n, 'IT2')) and tei:note[@type='graphversion']/@n = '5'">
+                Wrong subgroup chosen. You selected Version 5, the chosen subgroup does not belong to this grouping. Check the Manuscript Graphversion and the Manuscript Sub-Group fields.
+            </assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:msItem[1][tei:note[@type='graphversion']/@n = '6']">
+            <assert test="(tei:note[@type='msGroup']/@n = '' or contains(tei:note[@type='msGroup']/@n, 'NL1')) and tei:note[@type='graphversion']/@n = '6'">
+                Wrong subgroup chosen. You selected Version 3, the chosen subgroup does not belong to this grouping. Check the Manuscript Graphversion and the Manuscript Sub-Group fields.
+            </assert>
+        </rule>
+    </pattern>
+    
    
 </sch:schema>

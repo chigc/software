@@ -91,7 +91,7 @@ revisionDesc,
 listBibl {
     display: block;
     border-bottom: solid grey 0.1px;
-    padding-bottom: 2em; 
+    padding-bottom: 2em;
 
 }
 
@@ -114,7 +114,7 @@ publicationStmt:before {
     font-weight: bold;
     padding-bottom: 15px;
     width: 10%;
-    font:inherit;
+    font: inherit;
     content: "Project PID:      "
 }
 
@@ -338,13 +338,13 @@ msIdentifier > idno:before {
     content: "Signature:"
 }
 
-msIdentifier > altIdentifier[type='sigla'] > idno:before {
+msIdentifier > altIdentifier[type = 'sigla'] > idno:before {
     display: inline-block;
     width: 20%;
     content: "Sigla:"
 }
 
-msIdentifier > altIdentifier[type='former'] > idno:before {
+msIdentifier > altIdentifier[type = 'former'] > idno:before {
     display: inline-block;
     width: 10%;
     content: "Former Shelfmark:"
@@ -380,22 +380,29 @@ msItem > textLang[otherLangs]:before {
     content: "Other Language:"
 }
 msItem > note[type = "extension"]:before {
-font-weight:bold;
+    font-weight: bold;
     display: inline-block;
     width: 20%;
     content: 'Extension:'
 }
 msItem > note[type = "version"]:before {
-font-weight:bold;
+    font-weight: bold;
     display: inline-block;
     width: 20%;
     content: 'Version:'
 }
 msItem > note[type = "msGroup"]:before {
-font-weight:bold;
+    font-weight: bold;
     display: inline-block;
     width: 20%;
     content: 'Manuscript Sub-Group:'
+}
+
+msItem > note[type = "graphversion"]:before {
+    font-weight: bold;
+    display: inline-block;
+    width: 20%;
+    content: 'Manuscript Graphversion:'
 }
 msItem > note[type = 'citation']:before {
     display: inline-block;
@@ -411,7 +418,7 @@ msItem > note[type = 'internal']:before {
 
 msItem > note[type = 'significant-passages']:before {
     display: inline-block;
-    font-weight:bold;
+    font-weight: bold;
     width: 20%;
     content: 'Contains the text passages:'
 }
@@ -434,7 +441,7 @@ msItem[n = transmission-context] > note:before {
 
 extent:before {
     display: block;
-    font-weight:bold;
+    font-weight: bold;
     margin-top: 10px;
     color: black;
     content: 'Measurement:'
@@ -455,25 +462,25 @@ width:before {
 }
 condition:before {
     display: inline-block;
-    font-weight:bold;
+    font-weight: bold;
     width: 20%;
     content: "Condition:"
 }
 layoutDesc:before {
-    font-weight:bold;
+    font-weight: bold;
     display: inline-block;
     width: 20%;
-    content: oxy_label(text, "Layout Description:    ")    
+    content: oxy_label(text, "Layout Description:    ")
 }
 
 history > provenance:before {
-    font-weight:bold;
+    font-weight: bold;
     display: inline-block;
     content: "Provenance:"
 }
 
 history > origin:before {
-    font-weight:bold;
+    font-weight: bold;
     display: inline-block;
     content: "Origin:"
 }
@@ -488,7 +495,7 @@ adminInfo:before {
 }
 
 surrogates:before {
-    font-weight:bold;
+    font-weight: bold;
     display: block;
     width: 20%;
     color: black;
@@ -503,7 +510,7 @@ titleStmt > title {
 }
 titleStmt > author {
     content: "Peter of Poitiers   "
-    oxy_label(text, ' Viaf URL:  ', styles, 'font-weight: bold;') oxy_getSomeText(attr(ref), 200);
+ oxy_label(text, ' Viaf URL:  ', styles, 'font-weight: bold;') oxy_getSomeText(attr(ref), 200);
 }
 publicationStmt > idno:empty {
     content: 
@@ -511,8 +518,8 @@ publicationStmt > idno:empty {
 }
 publicationStmt > idno:not(empty) {
     content: 
-    oxy_xpath("text()")   
-    oxy_editor(type, button, actionID, delete_content, transparent, true, color, #FF0000)}
+    oxy_xpath("text()")
+ oxy_editor(type, button, actionID, delete_content, transparent, true, color, #FF0000)}
 
 /* ############################################################### MANUSCRIPT GENERAL INFORMATION #################################################################### */
 
@@ -537,7 +544,7 @@ msIdentifier > settlement > country {
 msIdentifier > repository {
     content: 
     oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Archivliste/Archives_List.xml')//org[@xml:id]/concat('#',@xml:id), ',')"), width, 10%)
-    oxy_editor(type, text, edit, "#text", width, 50%)
+ oxy_editor(type, text, edit, "#text", width, 50%)
 }
 msIdentifier > idno {
     content: 
@@ -569,17 +576,17 @@ msContents:before {
 }
 
 msContents > summary {
-    display:block;
+    display: block;
     margin-top: 2em;
-    content:
-    oxy_label(text,'Type of Manuscript:   ', styles, 'font-weight:bold;')   
-    oxy_combobox(edit, "@n", editable, false, values, oxy_xpath("concat(@n, ', single-text', ', historical-miscellany', ', theological-miscellany', ', other-miscellany,')"))
+    content: 
+    oxy_label(text, 'Type of Manuscript:   ', styles, 'font-weight:bold;')
+ oxy_combobox(edit, "@n", editable, false, values, oxy_xpath("concat(@n, ', single-text', ', historical-miscellany', ', theological-miscellany', ', other-miscellany,')"))
 }
 
 summary:after {
-    content:
+    content: 
     oxy_label(text, '  Notes:')
-    oxy_textArea(edit, '#text')
+ oxy_textArea(edit, '#text')
 }
 
 
@@ -639,7 +646,7 @@ msItem[*|id] > author {
 }
 
 msItem[*|id] > author {
-    display: none; 
+    display: none;
     /*content: 
     oxy_editor(type, text, edit, '#text', width, 30%)
  oxy_label(text, "                              language: en ")
@@ -647,8 +654,8 @@ msItem[*|id] > author {
 }
 
 msItem[*|id] > title[type = uniform] {
-    display:none;
-   /* content: 
+    display: none;
+    /* content: 
     oxy_label(text, 'Compendium Historiae')
  oxy_label(text, "                   language: la")*/
 }
@@ -712,10 +719,25 @@ msItem > note[type = 'msGroup'] > p {
  oxy_textArea(edit, '#text')
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
-msItem > note[type = 'msGroup'] {
-    
+
+msItem > note[type = "graphversion"] {
     content: 
- oxy_editor(type,text, edit, '@n', width, 30%)
+    oxy_combobox(edit, '@n', editable, false, values, '1,2,3,4,5,6', labels, 'Version 1, Version 2, Version 3, Version 4, Version 5, Version 6', width, 10%)
+}
+
+msItem > note[type = 'graphversion'] > p {
+    font-style: italic;
+    font-size: small;
+    content: 
+    oxy_label(text, 'Notes:  ')
+ oxy_textArea(edit, '#text')
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+}
+msItem > note[type = 'msGroup'] {
+
+    content: 
+    oxy_combobox(edit, '@n', editable, false, values, 'FR1,FR2,BE1,GB1,GB3,GB5,AT1,AT2,ES1,IT1,DE1,DE2,DE3,DE4,DE5,FR3,FR4,FR5,GB4,AT3,GB3,CH1,IT2,NL1', labels, 'Version 1 - FR1, Version 1 - FR2,Version 1 - BE1,Version 1 - GB1,Version 1 - GB3,Version 1 - GB5,Version 1 - AT1,Version 1 - AT2,Version 1 - ES1,Version 1 - IT1,Version 1 - DE1,Version 1 - DE2,Version 1 - DE3,Version 1 - DE4,Version 1 - DE5, Version 2 - FR3,Version 2 - FR4,Version 2 - FR5,Version 2 - GB4,Version 2 - AT3,Version 3 - GB2,Version 4 - CH1,Version 5 - IT2,Version 6 - NL1',  width, 10%)
+
 }
 msItem[*|id] > note[type = 'extension'] {
     content: 
@@ -825,7 +847,7 @@ supportDesc > condition {
 }
 
 supportDesc > condition > p {
-    font-style:italic;
+    font-style: italic;
     content: 
     oxy_label(text, 'Notes on Condition:    ')
  oxy_textArea(edit, '#text')
@@ -833,26 +855,26 @@ supportDesc > condition > p {
 
 layout {
     margin-top: 10px;
-    display:block;
-    font-weight:bold;
-    content: 'Secundo Folio' 
-    
+    display: block;
+    font-weight: bold;
+    content: 'Secundo Folio'
+
 }
 
-layoutDesc > layout > secFol{
+layoutDesc > layout > secFol {
     margin-top: 10px;
-    display:block;
-    content:
+    display: block;
+    content: 
     oxy_label(text, 'ID: ', styles, 'font-weight:bold; font-style:italic')
-    oxy_editor(type,combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure/Superstructure_List.xml')//list[@type='nodes']/item/concat( '#',@xml:id), ',')"), width, 20%)
-    oxy_label(text, '   Node:    ', styles, 'font-weight:bold;')
-    oxy_editor(type, text, edit, '#text', width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("string-join(doc('./../lists/Superstructure/Superstructure_List.xml')//list[@type='nodes']/item/concat( '#',@xml:id), ',')"), width, 20%)
+ oxy_label(text, '   Node:    ', styles, 'font-weight:bold;')
+ oxy_editor(type, text, edit, '#text', width, 20%)
 }
 
 secFol > dim {
     content: 
     oxy_label(text, '   Folio:  ', styles, 'font-weight:bold;')
-    oxy_editor(type,text,edit,'#text', width, 10%)
+ oxy_editor(type, text, edit, '#text', width, 10%)
 }
 
 
@@ -869,7 +891,7 @@ item > note {
     font-size: small;
     font-style: italic;
     content: 'Notes:     '
-    oxy_textArea(edit, '#text');
+ oxy_textArea(edit, '#text');
 }
 
 note > list > item[rend]:after {
@@ -890,7 +912,7 @@ item[n = 'orientation'][ana = 'chigc:graphOrientation'] {
 }
 item[n = 'orientation'] > p > seg {
     content: 
- oxy_editor(type, combo, edit, '#text', editable, false, values, 'vertical, horizontal', width, 20%)
+    oxy_editor(type, combo, edit, '#text', editable, false, values, 'vertical, horizontal', width, 20%)
 }
 
 item[n = 'linea-christi'] > list > item[n = "presence"] {
@@ -921,25 +943,25 @@ item[n = 'inscriptions'] > list > item[n = "female-male"] {
 
 item[n = 'other-inscription'] {
 
-content:
-'Other Inscription:'
-    oxy_label(text, '   ')
+    content: 
+    'Other Inscription:'
+ oxy_label(text, '   ')
  oxy_label(text, '    Y/N:  ', styles, ' font-weight:bold;')
  oxy_combobox(edit, '@rend', editable, false, labels, 'yes, no', values, 'yes, no', width, 20%)
- }
- 
+}
+
 item[n = 'other-inscription'] > seg {
-     display: block;
+    display: block;
     content: 
-     oxy_textArea(edit, '#text')
+    oxy_textArea(edit, '#text')
 }
 item[n = 'color-coding'] {
-    display:block;
+    display: block;
     content: oxy_label(text, 'Color Coding across page breaks', styles, 'font-weight:bold;')
 }
 
 item[n = 'letter-coding'] {
-    display:block;
+    display: block;
     content: oxy_label(text, 'Letter Coding (to show how lines continue across page-breaks)', styles, 'font-weight:bold;')
 }
 
@@ -963,7 +985,7 @@ item[n = 'medallion-color'] > seg {
     oxy_combobox(edit, '#text', values, 'red,black,mixed (red and black), other', width, 15%)
 }
 
-item[n='medallion-rendition'] > list > item[n = 'adam-eve'] > seg {
+item[n = 'medallion-rendition'] > list > item[n = 'adam-eve'] > seg {
     content: 
     oxy_label(text, '   ')
  oxy_combobox(edit, '#text', editable, false, values, 'One Medallion, Two Medallions', width, 20%)
@@ -1052,73 +1074,73 @@ item[n = 'six-ages-pictured'] > list > item[rend]:after {
  oxy_label(text, '   ')
 }
 
-item[n = 'six-ages-pictured'] > list > item[n='adam-single'] {
+item[n = 'six-ages-pictured'] > list > item[n = 'adam-single'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
-    oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-adam', ', #p-adamA', ', #p-adamB', ', #p-adamC',', #p-adamD,')"), width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-adam', ', #p-adamA', ', #p-adamB', ', #p-adamC',', #p-adamD,')"), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
-item[n = 'six-ages-pictured'] > list > item[n='eva-single'] {
+item[n = 'six-ages-pictured'] > list > item[n = 'eva-single'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-eua', ', #p-euaA', ', #p-euaB', ', #p-euaC',', #p-euaD,')"), width, 20%) 
-oxy_label(text, '   ')
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-eua', ', #p-euaA', ', #p-euaB', ', #p-euaC',', #p-euaD,')"), width, 20%)
+ oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
-item[n = 'six-ages-pictured'] > list > item[n='adam-eve'] {
+item[n = 'six-ages-pictured'] > list > item[n = 'adam-eve'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-adamEua', ', #p-adamEuaA', ', #p-adamEuaB', ', #p-adamEuaC',', #p-adamEuaD',', #p-adamEuaE,')"), width, 20%) 
-oxy_label(text, '   ')
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-adamEua', ', #p-adamEuaA', ', #p-adamEuaB', ', #p-adamEuaC',', #p-adamEuaD',', #p-adamEuaE,')"), width, 20%)
+ oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
-item[n = 'six-ages-pictured'] > list > item[n='noah'] {
+item[n = 'six-ages-pictured'] > list > item[n = 'noah'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-noe', ', #p-noeA', ', #p-noeB', ', #p-noeC',', #p-noeD,')"), width, 20%) 
-oxy_label(text, '   ')
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-noe', ', #p-noeA', ', #p-noeB', ', #p-noeC',', #p-noeD,')"), width, 20%)
+ oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
-item[n = 'six-ages-pictured'] > list > item[n='abraham'] {
+item[n = 'six-ages-pictured'] > list > item[n = 'abraham'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-abraham', ', #p-abrahamA', ', #p-abrahamB,')"), width, 20%) 
-oxy_label(text, '   ')
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-abraham', ', #p-abrahamA', ', #p-abrahamB,')"), width, 20%)
+ oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
-item[n = 'six-ages-pictured'] > list > item[n='david'] {
+item[n = 'six-ages-pictured'] > list > item[n = 'david'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-david', ', #p-davidA', ', #p-davidB', ', #p-davidC,')"), width, 20%)
-oxy_label(text, '   ')
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-david', ', #p-davidA', ', #p-davidB', ', #p-davidC,')"), width, 20%)
+ oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
-item[n = 'six-ages-pictured'] > list > item[n='zedekiah'] {
+item[n = 'six-ages-pictured'] > list > item[n = 'zedekiah'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '     ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, '#p-sedechias', ', #p-sedechiasA', ', #p-sedechiasB', ', #p-sedechiasC,')"), width, 20%)
-oxy_label(text, '   ')
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, '#p-sedechias', ', #p-sedechiasA', ', #p-sedechiasB', ', #p-sedechiasC,')"), width, 20%)
+ oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
@@ -1161,8 +1183,8 @@ item[n = 'all-pictured']:before {
 }
 item[n = 'six-ages-pictured']:before {
     content: 
-    
-    
+
+
     oxy_label(text, 'Six Ages:  ', styles, 'font-weight:bold;')
 }
 item[n = 'jesus-pictured']:before {
@@ -1180,7 +1202,8 @@ item[n = 'other-medallions']:before {
  oxy_label(text, '   ')
 }
 
-item[n = 'all-pictured'], item[n = 'six-ages-pictured']  {
+item[n = 'all-pictured'],
+item[n = 'six-ages-pictured'] {
     content: 
     oxy_label(text, '   ')
  oxy_label(text, '    Y/N:  ', styles, 'font-weight:bold;')
@@ -1188,7 +1211,8 @@ item[n = 'all-pictured'], item[n = 'six-ages-pictured']  {
  oxy_label(text, '   ')
 }
 
-item[n = 'all-pictured'] > p, item[n = 'six-ages-pictured'] > p {
+item[n = 'all-pictured'] > p,
+item[n = 'six-ages-pictured'] > p {
     visibility: hidden;
 }
 
@@ -1200,43 +1224,43 @@ item[n = 'all-pictured'] > p, item[n = 'six-ages-pictured'] > p {
  oxy_label(text, '   ')
 }*/
 
-item[n = 'jesus-pictured'] > list > item[n='jesus-natus'] {
+item[n = 'jesus-pictured'] > list > item[n = 'jesus-natus'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-natusA', ', #p-natusB')"), width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-natusA', ', #p-natusB')"), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
-item[n = 'jesus-pictured'] > list > item[n='jesus-puer'] {
+item[n = 'jesus-pictured'] > list > item[n = 'jesus-puer'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, '#p-puer', ', #p-puerA', ', #p-puerB', ', #p-puerC', ', #p-puerD,')"), width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, '#p-puer', ', #p-puerA', ', #p-puerB', ', #p-puerC', ', #p-puerD,')"), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
-item[n = 'jesus-pictured'] > list > item[n='jesus-passus'] {
+item[n = 'jesus-pictured'] > list > item[n = 'jesus-passus'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath('@corresp'), width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath('@corresp'), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
-item[n = 'jesus-pictured'] > list > item[n='jesus-resurgens'] {
+item[n = 'jesus-pictured'] > list > item[n = 'jesus-resurgens'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-resurgens', ', #p-resurgensA', ', #p-resurgensB', ', #p-resurgensC,')"), width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-resurgens', ', #p-resurgensA', ', #p-resurgensB', ', #p-resurgensC,')"), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
-item[n = 'jesus-pictured'] > list > item[n='jesus-other'] {
+item[n = 'jesus-pictured'] > list > item[n = 'jesus-other'] {
     display: block;
     font-style: italic;
     content: 
@@ -1259,42 +1283,42 @@ item[n = 'jesus-pictured'] > list:before {
     margin-top: 15px;
 }
 
-item[n = 'extras'] > list > item[n='moses'] {
+item[n = 'extras'] > list > item[n = 'moses'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-moyses', ', #p-moysesA', ', #p-moysesB,')"), width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-moyses', ', #p-moysesA', ', #p-moysesB,')"), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
-item[n = 'extras'] > list > item[n='aaron'] {
+item[n = 'extras'] > list > item[n = 'aaron'] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-aaron', ', #p-aaronA', ', #p-aaronB', ', #p-aaronC,')"), width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath("concat(@corresp, ', #p-aaron', ', #p-aaronA', ', #p-aaronB', ', #p-aaronC,')"), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
-item[n = 'extras'] > list > item[n="nebuchadnezzar"] {
+item[n = 'extras'] > list > item[n = "nebuchadnezzar"] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath('@corresp'), width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath('@corresp'), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
 
-item[n = 'extras'] > list > item[n="alexander"] {
+item[n = 'extras'] > list > item[n = "alexander"] {
     display: block;
     font-style: italic;
     content: 
     oxy_label(text, '   ID: ', styles, 'font-weight:bold; font-style:normal;')
-oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath('@corresp'), width, 20%)
+ oxy_editor(type, combo, edit, '@corresp', editable, false, values, oxy_xpath('@corresp'), width, 20%)
  oxy_label(text, '   ')
  oxy_xpath('text()')
 }
@@ -1342,7 +1366,7 @@ item[n = 'significant-pictures'] > list > item {
  oxy_xpath('text()')
 }
 
-item[n = 'significant-pictures'] > list > item[n='cain-abel'] {
+item[n = 'significant-pictures'] > list > item[n = 'cain-abel'] {
     display: block;
     font-style: italic;
     content: 
@@ -1373,17 +1397,17 @@ item[n = 'other-pictures'] > list > item {
 item[n = 'other-pictures'] > list > item:after {
     margin-left: 44em;
     content: 
-    oxy_label(text, 'Delete Picture: ',  styles, 'color:red;')
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000);
+    oxy_label(text, 'Delete Picture: ', styles, 'color:red;')
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000);
 
 }
 
 item[n = 'other-pictures'] > list > item > note {
-    display:block;
+    display: block;
     font-style: italic;
     content: 
     oxy_label(text, 'Notes: ')
-   oxy_textArea(edit, '#text')
+ oxy_textArea(edit, '#text')
 
 }
 
@@ -1391,7 +1415,7 @@ item[n = 'other-pictures'] > list > item > note {
 item[n = 'other-pictures'] > list > item > label {
     content: 
     oxy_label(text, '  Label:   ')
-    oxy_editor(type, text, edit, '#text', width, 30%)
+ oxy_editor(type, text, edit, '#text', width, 30%)
 
 }
 item[n = 'significant-pictures'] > list > item[rend]:after {
@@ -1450,14 +1474,14 @@ decoNote[type = 'diagrams'] > list > item > note {
 
 msItem[*|id] > docDate > date[when] {
     content: 
- oxy_label(text, '  Index Date: ', styles, 'font-size:small;')
+    oxy_label(text, '  Index Date: ', styles, 'font-size:small;')
  oxy_editor(type, text, edit, '@when', width, 10%)
  oxy_label(text, ' [Format: 0000]   ', styles, 'font-size:smaller;')
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000);
 }
 msItem[*|id] > docDate > date[notBefore] {
-    content:     
- oxy_label(text, ' Start Date: ', styles, 'font-size:small;')
+    content: 
+    oxy_label(text, ' Start Date: ', styles, 'font-size:small;')
  oxy_editor(type, text, edit, '@notBefore', width, 10%)
  oxy_label(text, ' End Date: ', styles, 'font-size:small;')
  oxy_editor(type, text, edit, '@notAfter', width, 10%)
@@ -1466,9 +1490,9 @@ msItem[*|id] > docDate > date[notBefore] {
 }
 
 msItem[*|id] > docDate > note {
-    content:
+    content: 
     oxy_label(text, 'Date (literal/catalogue entry):   ', styles, 'font-size:small;')
-    oxy_textArea(edit, '#text', width, 20%)
+ oxy_textArea(edit, '#text', width, 20%)
 }
 
 msItem > docDate > date[when] {
@@ -1493,18 +1517,18 @@ msItem > docDate > date[notBefore] {
 }
 
 history > origin > p:first-child {
-    display:block;
+    display: block;
     content: 
     oxy_label(text, 'Origin (Catalogue):  ')
-    oxy_editor(type, text, edit, '#text', width, 80%)
+ oxy_editor(type, text, edit, '#text', width, 80%)
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 history > origin > p {
-    display:block;
+    display: block;
     content: 
     oxy_label(text, 'Origin (Normalized): ')
-    oxy_textArea(edit, '#text', width, 80%)
-    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+ oxy_textArea(edit, '#text', width, 80%)
+ oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 history > provenance > p {
     margin-left: 12em;
@@ -1566,8 +1590,8 @@ change[status] {
     display: block;
     content: 
     oxy_label(text, 'Presence: ', styles, 'font-weight: bold;')
-    oxy_combobox(edit, '@status', editable, false, values, 'sure, unsure', width, 15%)
-    oxy_label(text, '  ')
+ oxy_combobox(edit, '@status', editable, false, values, 'sure, unsure', width, 15%)
+ oxy_label(text, '  ')
 }
 change > p > persName {
     content: 
@@ -1591,25 +1615,24 @@ change[n = 'compendiumPresence'][status = 'sure']:after {
 change[n = 'contentCheck']:after {
     content: 
     oxy_label(text, '   READY FOR PUBLICATION  ', styles, 'font-weight:bold; color:#00ba00;')
-  oxy_editor(type, button, actionID, add_change-readyForPublication, transparent, true, color, #FF0000)
+ oxy_editor(type, button, actionID, add_change-readyForPublication, transparent, true, color, #FF0000)
 
 }
 change[n = 'manuscriptLiveView']:after {
-    
+
     content: 
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 change[n = 'NOmanuscriptLiveView'] {
-    display:block;
-  }
-  change[n = 'NOmanuscriptLiveView']:after {
-        display: inline-block;
-        content: 
+    display: block;
+}
+change[n = 'NOmanuscriptLiveView']:after {
+    display: inline-block;
+    content: 
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 
 change[n = 'readyForPublication'] {
     margin-top: 50px;
 }
-
 

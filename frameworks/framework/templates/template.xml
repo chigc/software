@@ -70,7 +70,7 @@
                         <idno ana="chigc:signature" type="signature"/>
                     </msIdentifier>
                     <msContents>
-                        <summary n="single-text" ana="chigc:contentType"></summary>
+                        <summary n="single-text" ana="chigc:contentType"/>
                         <msItem ana="chigc:Item" xml:id="compendium-historiae">
                             <locus from="" to=""/>
                             <!-- Mehrere Möglich -->
@@ -94,6 +94,9 @@
                             <note n="" type="version" ana="chigc:version">
                                 <p/>
                             </note>
+                            <note n="" type="graphversion" ana="chigc:graphVersion">
+                                <p/>
+                            </note>
                             <note n="" type="msGroup" ana="chigc:msGroup">
                                 <p/>
                             </note>
@@ -102,7 +105,7 @@
                                     <item/>
                                 </list>
                             </note>
-                        </msItem>                       
+                        </msItem>
                     </msContents><physDesc>
                         <objectDesc ana="chigc:manifestationType" form="codex">
                             <supportDesc ana="dcterms:medium" material="material">
