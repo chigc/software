@@ -736,7 +736,7 @@ msItem > note[type = 'graphversion'] > p {
 msItem > note[type = 'msGroup'] {
 
     content: 
-    oxy_combobox(edit, '@n', editable, false, values, 'FR1,FR2,BE1,GB1,GB3,GB5,AT1,AT2,ES1,IT1,DE1,DE2,DE3,DE4,DE5,FR3,FR4,FR5,GB4,AT3,GB3,CH1,IT2,NL1', labels, 'Version 1 - FR1, Version 1 - FR2,Version 1 - BE1,Version 1 - GB1,Version 1 - GB3,Version 1 - GB5,Version 1 - AT1,Version 1 - AT2,Version 1 - ES1,Version 1 - IT1,Version 1 - DE1,Version 1 - DE2,Version 1 - DE3,Version 1 - DE4,Version 1 - DE5, Version 2 - FR3,Version 2 - FR4,Version 2 - FR5,Version 2 - GB4,Version 2 - AT3,Version 3 - GB2,Version 4 - CH1,Version 5 - IT2,Version 6 - NL1',  width, 20%)
+    oxy_combobox(edit, '@n', editable, false, values, 'FR1,FR2,BE1,GB1,GB3,GB5,GB6,AT1,AT2,ES1,IT1,DE1,DE2,DE3,DE4,DE5,CH2,FR3,FR4,FR5,GB4,AT3,GB3,CH1,IT2,NL1', labels, 'Version 1 - FR1, Version 1 - FR2,Version 1 - BE1,Version 1 - GB1,Version 1 - GB3,Version 1 - GB5,Version 1 - GB6,Version 1 - AT1,Version 1 - AT2,Version 1 - ES1,Version 1 - IT1,Version 1 - DE1,Version 1 - DE2,Version 1 - DE3,Version 1 - DE4,Version 1 - DE5, Version 2 - CH2, Version 2 - FR3,Version 2 - FR4,Version 2 - FR5,Version 2 - GB4,Version 2 - AT3,Version 3 - GB2,Version 4 - CH1,Version 5 - IT2,Version 6 - NL1',  width, 20%)
 
 }
 msItem[*|id] > note[type = 'extension'] {
