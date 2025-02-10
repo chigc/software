@@ -125,7 +125,7 @@ msItem[n = co-transmission] {
     content: 
     oxy_label(text, 'Graphical Co-Transmission', styles, "font-weight: bold; font-size: medium;")
  oxy_concat(' (ID: ')
- oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Graphical_Co_Transmission_List.xml')//item/concat( '#',@xml:id), ',')"), width, 20%) ')'
+ oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Cotransmissions/Graphical_Co_Transmission_List.xml')//item/concat( '#',@xml:id), ',')"), width, 20%) ')'
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 
@@ -136,7 +136,7 @@ msItem[n = transmission-context] {
     content: 
     oxy_label(text, 'Textual Co-Transmission', styles, "font-weight: bold; font-size: medium")
  oxy_concat(' (ID: ')
- oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Textual_Co_Transmission_List.xml')//item/concat('#',@xml:id), ',')"), width, 20%) ')'
+ oxy_editor(type, combo, edit, "@corresp", editable, false, values, oxy_xpath("string-join(doc('./../lists/Cotransmissions/Textual_Co_Transmission_List.xml')//item/concat('#',@xml:id), ',')"), width, 20%) ')'
  oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
  oxy_label(text, '                             Elaborate Textual Co-Transmission', styles, "font-weight: normal; font-size: small; font-style: italic")
  oxy_editor(type, button, actionID, elaborate_item, transparent, true, color, #FF0000)
