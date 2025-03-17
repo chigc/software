@@ -528,7 +528,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;locus xmlns="http://www.tei-c.org/ns/1.0" from="" to="">&lt;/locus></String>
+																<String>&lt;locus xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:locus" from="" to="">&lt;/locus></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
