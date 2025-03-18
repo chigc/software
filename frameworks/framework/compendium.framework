@@ -761,15 +761,13 @@
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>not(//msItem[@xml:id='compendium-historiae']/title[@type='archival'])</String>
-													</field>
+												<actionMode>													
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;title xmlns="http://www.tei-c.org/ns/1.0" type="archival" xml:lang="">&lt;/title></String>
+																<String>&lt;rubric xmlns="http://www.tei-c.org/ns/1.0">&lt;title type="alternative" place="">&lt;/title>
+																&lt;note xmlns="http://www.tei-c.org/ns/1.0" type="attribution">&lt;/note>&lt;/rubric></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>

@@ -283,6 +283,8 @@ msItem > locus,
 msItem > incipit,
 msItem > author,
 msItem > title,
+rubric > title,
+title > note,
 msItem > textLang,
 msItem > note,
 msItem > note > p,
@@ -565,7 +567,7 @@ msContents:before {
  oxy_editor(type, button, actionID, add_folio-pagination, transparent, true, color, #FF0000)
  oxy_label(text, '        Add Explicit', styles, 'font-size:small; ')
  oxy_editor(type, button, actionID, add_explicit, transparent, true, color, #FF0000)
- oxy_label(text, '        Add Title (Archival)', styles, 'font-size:small;')
+ oxy_label(text, '        Add Title (Alternative)', styles, 'font-size:small;')
  oxy_editor(type, button, actionID, add_archival, transparent, true, color, #FF0000)
  oxy_label(text, '        Add Text Language', styles, 'font-size:small;')
  oxy_editor(type, button, actionID, add_otherLang, transparent, true, color, #FF0000)
@@ -660,13 +662,25 @@ msItem[*|id] > title[type = uniform] {
  oxy_label(text, "                   language: la")*/
 }
 
-msItem[*|id] > title[type = archival] {
+msItem[*|id] > rubric > title[type = alternative] {
     content: 
-    oxy_label(text, 'Title (Archival):', styles, 'width:20%')
- oxy_editor(type, text, edit, "#text", width, 40%)
- oxy_label(text, " language: ")
- oxy_editor(type, combo, edit, '@xml:lang', editable, true, values, ',la,en,de,fr,it' width, 20%)
- oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+    oxy_label(text, 'Title (Alternative):', styles, 'width:20%')
+    oxy_label(text, 'Placement:', styles, 'font-size:small;')
+    oxy_combobox(edit, '#place', editable, false, values, 'top,bottom,margin,inline',  width, 10%)
+ oxy_textArea(edit, "#text", width, 40%)
+}
+
+rubric:after {
+    font-weight:bold;
+    content:
+    '                                                                                             Delete Alternative Title Section'
+    oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
+}
+
+msItem[*|id] > rubric > note[type = attribution] {
+    content:
+    oxy_label(text, 'Attribution:', styles, 'width:20%')
+    oxy_combobox(edit, '#text', editable, false, values, 'Attributed to Peter, Attributed to another author, Not attributed',  width, 10%)
 }
 /*msItem[*|id] > textLang[mainLang] {
     content: 
