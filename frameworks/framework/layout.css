@@ -684,7 +684,7 @@ rubric:after {
 rubric {
 content:
     oxy_label(text, 'Alternative Title Placement:        ', styles, 'font-size:small;')
-    oxy_combobox(edit, '#place', editable, false, values, 'top,bottom,margin,inline',  width, 10%)
+    oxy_combobox(edit, '@place', editable, false, values, 'top,bottom,margin,inline',  width, 10%)
 }
 msItem[*|id] > rubric > note[type = attribution] {
     content:
