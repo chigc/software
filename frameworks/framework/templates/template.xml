@@ -71,14 +71,13 @@
                     </msIdentifier>
                     <msContents>
                         <summary n="single-text" ana="chigc:contentType"/>
-                        <msItem ana="chigc:Item" xml:id="compendium-historiae">
+                        <msItem xml:id="compendium-historiae" ana="chigc:CompendiumHistoriae">
                             <locus from="" to=""/>
                             <!-- Mehrere Möglich -->
                             <incipit ana="chigc:incipit"/>
                             <author xml:lang="en">Peter of Poitiers</author>
                             <title ana="rdfs:label" type="uniform" xml:lang="la">Compendium
-                                Historiae</title><rubric><title type="alternative" place=""/>
-                                <note type="attribution"/></rubric>
+                                Historiae</title>
                             <!-- Alternativ -->
                             <docDate ana="chigc:date">
                                 <date notAfter="" notBefore=""/>

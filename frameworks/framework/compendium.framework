@@ -761,13 +761,18 @@
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
-												<actionMode>													
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;rubric xmlns="http://www.tei-c.org/ns/1.0">&lt;title type="alternative" place="">&lt;/title>
-																&lt;note xmlns="http://www.tei-c.org/ns/1.0" type="attribution">&lt;/note>&lt;/rubric></String>
+																<String>&lt;rubric xmlns="http://www.tei-c.org/ns/1.0" place="">&lt;title type="alternative">&lt;/title>
+																	&lt;note xmlns="http://www.tei-c.org/ns/1.0" type="alternativetitlenote">&lt;/note>
+																&lt;note xmlns="http://www.tei-c.org/ns/1.0" type="attribution" subtype="">&lt;/note>
+&lt;/rubric></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -2615,6 +2620,9 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 														<String>${framework}/scheme/compedium.sch</String>
 													</field>
 												</validationUnitSchema>
+											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
 											</field>
 										</validationUnit>
 									</list>

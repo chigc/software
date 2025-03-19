@@ -665,11 +665,15 @@ msItem[*|id] > title[type = uniform] {
 msItem[*|id] > rubric > title[type = alternative] {
     content: 
     oxy_label(text, 'Title (Alternative):', styles, 'width:20%')
-    oxy_label(text, 'Placement:', styles, 'font-size:small;')
-    oxy_combobox(edit, '#place', editable, false, values, 'top,bottom,margin,inline',  width, 10%)
- oxy_textArea(edit, "#text", width, 40%)
+    oxy_editor(type,text,edit, "#text", width, 40%)
 }
 
+msItem[*|id] > rubric > note[type=alternativetitlenote] {
+    display: block;
+    content:
+     oxy_label(text, 'Notes for alternative title:', styles, 'width:20%')
+     oxy_textArea(edit, "#text", width, 40%)
+}
 rubric:after {
     font-weight:bold;
     content:
@@ -677,10 +681,16 @@ rubric:after {
     oxy_editor(type, button, actionID, delete_element, transparent, true, color, #FF0000)
 }
 
+rubric {
+content:
+    oxy_label(text, 'Alternative Title Placement:        ', styles, 'font-size:small;')
+    oxy_combobox(edit, '#place', editable, false, values, 'top,bottom,margin,inline',  width, 10%)
+}
 msItem[*|id] > rubric > note[type = attribution] {
     content:
     oxy_label(text, 'Attribution:', styles, 'width:20%')
-    oxy_combobox(edit, '#text', editable, false, values, 'Attributed to Peter, Attributed to another author, Not attributed',  width, 10%)
+    oxy_combobox(edit, '@subtype', editable, false, labels, 'Attributed to Peter, Attributed to another author, Not attributed', values, 'attributed-to-peter, attributed-to-other-author , not-attributed', width, 20%)
+    oxy_textArea(edit, "#text", width, 40%)
 }
 /*msItem[*|id] > textLang[mainLang] {
     content: 
