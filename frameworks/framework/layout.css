@@ -70,6 +70,7 @@ distributor,
 availability,
 pubPlace,
 item[ana = 'chigc:externalManifest'] > locus,
+seriesStmt,
 publicationStmt > date,
 publicationStmt > ref,
 body > p
