@@ -4,6 +4,33 @@
             <titleStmt>
                 <title ana="rdfs:label" type="main"/>
                 <author ref="https://viaf.org/viaf/17579848/">Peter of Poitiers</author>
+                <editor ref="https://orcid.org/0009-0006-6575-8180" role="manuscript_description_editor">Eleanor Goerss</editor>
+                <respStmt>
+                    <resp>file creation, data modeling and data curation</resp>
+                    <persName ref="https://orcid.org/0000-0003-4674-1042">Roman Bleier</persName>
+                    <persName>Sina Krottmaier</persName>
+                    <persName>Jakob Sonnberger</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>manuscript description</resp>
+                    <persName ref="https://orcid.org/0009-0006-6575-8180" role="supervision">Eleanor Goerss</persName>
+                    <persName>Katharina Bauer</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>bibliography</resp>
+                    <persName>Maria Streicher</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>project principal investigators</resp>
+                    <persName ref="https://orcid.org/0000-0001-6881-9571">Andrea Worm</persName>
+                    <persName ref="https://orcid.org/0000-0003-4674-1042">Roman Bleier</persName>
+                    <persName ref="https://orcid.org/0000-0002-8648-2033">Patrick Sahle</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Mercator Fellows</resp>
+                    <persName ref="https://orcid.org/0000-0003-3616-5782">Laura Cleaver</persName>
+                    <persName ref="https://orcid.org/0000-0002-2162-5531">Franz Fischer</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>
@@ -15,9 +42,8 @@
                     <orgName ref="https://d-nb.info/gnd/64944-2">University of Wuppertal</orgName>
                 </publisher>
                 <publisher>
-                    <ref target="https://informationsmodellierung.uni-graz.at"/>
-                    <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling
-                        (ZIM), University of Graz</orgName>
+                    <ref target="https://digital-humanities.uni-graz.at/en/"/>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">Department of Digital Humanities(DDH), University of Graz</orgName>
                 </publisher>
                 <authority>
                     <ref target="https://uni-tuebingen.de"/>
@@ -28,9 +54,8 @@
                     <orgName ref="https://d-nb.info/gnd/64944-2">University of Wuppertal</orgName>
                 </authority>
                 <authority>
-                    <ref target="https://informationsmodellierung.uni-graz.at"/>
-                    <orgName ref="http://d-nb.info/gnd/1137284463">Center for Information Modelling
-                        (ZIM), University of Graz</orgName>
+                    <ref target="https://digital-humanities.uni-graz.at/en/"/>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">Department of Digital Humanities (DDH), University of Graz</orgName>
                 </authority>
                 <authority>
                     <ref target="https://www.unive.it/pag/39287"/>
@@ -58,7 +83,16 @@
                 <idno ana="dcterms:identifier" type="PID"/>
                 <ref target="info:fedora/context:chigc" type="context"/>
                 <ref target="info:fedora/context:chigc.ed" type="context"/>
+            
             </publicationStmt>
+            <seriesStmt>
+                <title>Peter of Poitiers' Compendium historiae: a research platform and edition</title>
+                <editor ref="https://orcid.org/0000-0001-6881-9571">Andrea Worm</editor>
+                <editor ref="https://orcid.org/0000-0003-4674-1042">Roman Bleier</editor>
+                <editor ref="https://orcid.org/0000-0002-8648-2033">Patrick Sahle</editor>
+                <editor ref="https://orcid.org/0000-0003-3616-5782">Laura Cleaver</editor>
+                <editor ref="https://orcid.org/0000-0002-2162-5531">Franz Fischer</editor>
+            </seriesStmt>
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
