@@ -1587,7 +1587,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="" sameAs="" >&lt;label>&lt;/label>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="">&lt;label>&lt;/label>
                                                 &lt;note>&lt;/note>&lt;/item></String>
 															</entry>
 															<entry>
@@ -1763,7 +1763,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="#" sameAs="">
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" corresp="#">
                                         &lt;label ana="rdfs:label"/>
                                         &lt;locus/>
                                         &lt;note/>
@@ -1923,7 +1923,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 															<entry>
 																<String>fragment</String>
 																<String>&lt;decoNote type="illustrations" ana="chigc:Pictures" xmlns="http://www.tei-c.org/ns/1.0">
-                        &lt;list>&lt;item n="significant-pictures" corresp="#" sameAs="" >
+                        &lt;list>&lt;item n="significant-pictures" corresp="#">
                                     &lt;list>
                                         &lt;item corresp="#p-cross" n="cross" rend="" >Cross (above Adam and Eve)&lt;/item>
                                         &lt;item corresp="#p-cainAbel" n="cain-abel" rend="">Cain and Abel&lt;/item>
@@ -1962,7 +1962,7 @@ xmlns="http://www.tei-c.org/ns/1.0"  n="NOmanuscriptLiveView" >&lt;p>Manuscript 
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:Picture" corresp="#" sameAs="">
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" ana="chigc:Picture" corresp="#">
                                         &lt;p/>
                                         &lt;note/>
                                     &lt;/item></String>
