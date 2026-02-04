@@ -1122,6 +1122,20 @@
                   <country key="IT">Italy</country>
                </place>
             </org>
+            
+            <org xml:id="pap">
+               <orgName>Archiv Prazského Hradu, Knihovna Metropolitní Kapituly</orgName>
+               <place>
+                  <settlement>
+                     <placeName>Praha</placeName>
+                     <idno type="geoNames">3067696</idno>
+                     <geo decls="#WGS">50.08804 14.42076</geo>
+                  </settlement>
+                  <country key="CZ">Czech Republic</country>
+               </place>
+            </org>
+            
+            
             <org xml:id="pba">
                <orgName>Bibliothèque de l'Arsenal</orgName>
                <place>
