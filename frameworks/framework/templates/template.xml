@@ -14,7 +14,6 @@
                 <respStmt>
                     <resp>manuscript description</resp>
                     <persName ref="https://orcid.org/0009-0006-6575-8180" role="supervision">Eleanor Goerss</persName>
-                    <persName>Katharina Bauer</persName>
                 </respStmt>
                 <respStmt>
                     <resp>bibliography</resp>
@@ -79,7 +78,7 @@
                         BY-NC-SA 4.0 </licence>
                 </availability>
                 <pubPlace>Graz/Tübingen/Wuppertal/Venice/London</pubPlace>
-                <date when="2023">2023</date>
+                <date when="2026">2026</date>
                 <idno ana="dcterms:identifier" type="PID"/>
                 <ref target="info:fedora/context:chigc" type="context"/>
                 <ref target="info:fedora/context:chigc.ed" type="context"/>
@@ -90,7 +89,6 @@
                 <editor ref="https://orcid.org/0000-0001-6881-9571">Andrea Worm</editor>
                 <editor ref="https://orcid.org/0000-0003-4674-1042">Roman Bleier</editor>
                 <editor ref="https://orcid.org/0000-0002-8648-2033">Patrick Sahle</editor>
-                <editor ref="https://orcid.org/0000-0003-3616-5782">Laura Cleaver</editor>
                 <editor ref="https://orcid.org/0000-0002-2162-5531">Franz Fischer</editor>
             </seriesStmt>
             <sourceDesc>
@@ -102,6 +100,9 @@
                         </settlement>
                         <repository ana="chigc:hostedBy" corresp=""/>
                         <idno ana="chigc:signature" type="signature"/>
+                        <altIdentifier ana="chigc:hasSigla" type="sigla">
+                            <idno>???</idno>
+                        </altIdentifier>
                     </msIdentifier>
                     <msContents>
                         <summary n="single-text" ana="chigc:contentType"/>
